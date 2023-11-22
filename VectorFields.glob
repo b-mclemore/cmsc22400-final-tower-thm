@@ -1,0 +1,797 @@
+DIGEST 41893eadaf791b811f60d56b55bc26d2
+FLF.VectorFields
+R88:91 Coq.setoid_ring.Ring <> <> lib
+R101:112 Coq.setoid_ring.Ring_polynom <> <> mod
+R114:121 Coq.setoid_ring.Ring_tac <> <> mod
+R123:133 Coq.setoid_ring.Ring_theory <> <> mod
+R135:145 Coq.setoid_ring.InitialRing <> <> mod
+R147:152 Coq.Setoids.Setoid <> <> mod
+R154:157 Coq.Lists.List <> <> mod
+R159:167 Coq.Classes.Morphisms <> <> mod
+R178:182 Coq.setoid_ring.Field <> <> lib
+R192:203 Coq.setoid_ring.Field_theory <> <> mod
+R221:226 Coq.Setoids.Setoid <> <> lib
+R228:236 Coq.Classes.Morphisms <> <> lib
+R238:252 Coq.Classes.RelationClasses <> <> lib
+mod 301:312 <> VectorAxioms
+ax 2166:2166 VectorAxioms R
+rec 2184:2187 VectorAxioms Ring
+proj 2204:2211 VectorAxioms r_add_id
+proj 2219:2227 VectorAxioms r_mult_id
+proj 2235:2239 VectorAxioms r_add
+proj 2257:2261 VectorAxioms r_min
+proj 2279:2284 VectorAxioms r_mult
+proj 2302:2306 VectorAxioms r_inv
+proj 2319:2324 VectorAxioms R_ring
+binder 2189:2189 <> R:2
+R2215:2215 LF.VectorFields <> R:2 var
+R2231:2231 LF.VectorFields <> R:2 var
+R2244:2247 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2243:2243 LF.VectorFields <> R:2 var
+R2249:2252 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2248:2248 LF.VectorFields <> R:2 var
+R2253:2253 LF.VectorFields <> R:2 var
+R2266:2269 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2265:2265 LF.VectorFields <> R:2 var
+R2271:2274 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2270:2270 LF.VectorFields <> R:2 var
+R2275:2275 LF.VectorFields <> R:2 var
+R2289:2292 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2288:2288 LF.VectorFields <> R:2 var
+R2294:2297 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2293:2293 LF.VectorFields <> R:2 var
+R2298:2298 LF.VectorFields <> R:2 var
+R2311:2314 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2310:2310 LF.VectorFields <> R:2 var
+R2315:2315 LF.VectorFields <> R:2 var
+R2328:2338 Coq.setoid_ring.Ring_theory <> ring_theory rec
+R2384:2385 Coq.Init.Logic <> eq ind
+R2378:2382 LF.VectorFields <> r_inv:9 meth
+R2372:2376 LF.VectorFields <> r_min:7 meth
+R2365:2370 LF.VectorFields <> r_mult:8 meth
+R2359:2363 LF.VectorFields <> r_add:6 meth
+R2349:2357 LF.VectorFields <> r_mult_id:5 meth
+R2340:2347 LF.VectorFields <> r_add_id:4 meth
+R2689:2692 LF.VectorFields VectorAxioms Ring class
+R2694:2694 LF.VectorFields VectorAxioms R prfax
+binder 2689:2694 <> H:11
+rec 2704:2708 VectorAxioms Field
+proj 2735:2739 VectorAxioms f_div
+proj 2757:2761 VectorAxioms f_inv
+proj 2774:2780 VectorAxioms F_field
+binder 2710:2710 <> R:12
+R2714:2717 LF.VectorFields VectorAxioms Ring class
+R2719:2719 LF.VectorFields <> R:12 var
+binder 2714:2719 <> H0:13
+R2744:2747 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2743:2743 LF.VectorFields <> R:12 var
+R2749:2752 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2748:2748 LF.VectorFields <> R:12 var
+R2753:2753 LF.VectorFields <> R:12 var
+R2766:2769 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2765:2765 LF.VectorFields <> R:12 var
+R2770:2770 LF.VectorFields <> R:12 var
+R2784:2795 Coq.setoid_ring.Field_theory <> field_theory rec
+R2853:2854 Coq.Init.Logic <> eq ind
+R2847:2851 LF.VectorFields <> f_inv:16 meth
+R2841:2845 LF.VectorFields <> f_div:15 meth
+R2835:2839 LF.VectorFields VectorAxioms r_inv meth
+R2829:2833 LF.VectorFields VectorAxioms r_min meth
+R2822:2827 LF.VectorFields VectorAxioms r_mult meth
+R2816:2820 LF.VectorFields VectorAxioms r_add meth
+R2806:2814 LF.VectorFields VectorAxioms r_mult_id meth
+R2797:2804 LF.VectorFields VectorAxioms r_add_id meth
+R3144:3148 LF.VectorFields VectorAxioms r_add meth
+not 3136:3136 VectorAxioms ::field_scope:x_'+s'_x
+R3199:3204 LF.VectorFields VectorAxioms r_mult meth
+not 3192:3192 VectorAxioms ::field_scope:x_'*'_x
+R3246:3250 LF.VectorFields VectorAxioms r_inv meth
+not 3238:3238 VectorAxioms ::field_scope:'-s'
+R3291:3295 LF.VectorFields VectorAxioms f_inv meth
+not 3283:3283 VectorAxioms ::field_scope:'/s'
+R3332:3336 LF.VectorFields VectorAxioms f_div meth
+not 3325:3325 VectorAxioms ::field_scope:x_'/'_x
+R3377:3384 LF.VectorFields VectorAxioms r_add_id meth
+not 3370:3370 VectorAxioms :::'0'
+R3410:3418 LF.VectorFields VectorAxioms r_mult_id meth
+not 3403:3403 VectorAxioms :::'1'
+ax 3555:3559 VectorAxioms Sclrs
+ax 3561:3561 VectorAxioms V
+R3582:3586 LF.VectorFields VectorAxioms Field class
+R3588:3592 LF.VectorFields VectorAxioms Sclrs prfax
+binder 3582:3592 <> H1:21
+ax 3603:3607 VectorAxioms vec_0
+R3611:3611 LF.VectorFields VectorAxioms V prfax
+R3632:3636 LF.VectorFields VectorAxioms vec_0 prfax
+not 3624:3624 VectorAxioms :::'0v'
+ax 3646:3650 VectorAxioms v_add
+ax 3668:3675 VectorAxioms s_v_mult
+R3655:3658 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3654:3654 LF.VectorFields VectorAxioms V prfax
+R3660:3663 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3659:3659 LF.VectorFields VectorAxioms V prfax
+R3664:3664 LF.VectorFields VectorAxioms V prfax
+R3684:3687 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3679:3683 LF.VectorFields VectorAxioms Sclrs prfax
+R3689:3692 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3688:3688 LF.VectorFields VectorAxioms V prfax
+R3693:3693 LF.VectorFields VectorAxioms V prfax
+ax 3703:3708 VectorAxioms vec_eq
+R3714:3717 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3713:3713 LF.VectorFields VectorAxioms V prfax
+R3719:3722 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3718:3718 LF.VectorFields VectorAxioms V prfax
+R3745:3750 LF.VectorFields VectorAxioms vec_eq prfax
+not 3736:3736 VectorAxioms :::x_'==v'_x
+R3781:3785 LF.VectorFields VectorAxioms v_add prfax
+not 3773:3773 VectorAxioms :::x_'+v'_x
+R3816:3823 LF.VectorFields VectorAxioms s_v_mult prfax
+not 3808:3808 VectorAxioms :::x_'*v'_x
+rec 5149:5167 VectorAxioms vector_space_theory
+proj 5294:5299 VectorAxioms v_comm
+proj 5341:5347 VectorAxioms v_assoc
+proj 5405:5408 VectorAxioms v_id
+proj 5444:5448 VectorAxioms v_inv
+proj 5500:5506 VectorAxioms s_assoc
+proj 5573:5578 VectorAxioms s_dist
+proj 5653:5658 VectorAxioms v_dist
+proj 5733:5736 VectorAxioms s_id
+R5181:5184 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5180:5180 LF.VectorFields VectorAxioms V prfax
+R5186:5189 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5185:5185 LF.VectorFields VectorAxioms V prfax
+R5190:5190 LF.VectorFields VectorAxioms V prfax
+binder 5172:5176 <> v_add:26
+R5210:5213 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5205:5209 LF.VectorFields VectorAxioms Sclrs prfax
+R5215:5218 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5214:5214 LF.VectorFields VectorAxioms V prfax
+R5219:5219 LF.VectorFields VectorAxioms V prfax
+binder 5194:5201 <> s_v_mult:27
+R5233:5233 LF.VectorFields VectorAxioms V prfax
+binder 5225:5229 <> vec_0:28
+R5247:5250 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5246:5246 LF.VectorFields VectorAxioms V prfax
+R5252:5255 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5251:5251 LF.VectorFields VectorAxioms V prfax
+binder 5237:5242 <> vec_eq:29
+R5317:5317 LF.VectorFields VectorAxioms V prfax
+binder 5311:5311 <> x:31
+binder 5313:5313 <> y:32
+R5327:5331 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5322:5325 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5321:5321 LF.VectorFields <> x:31 var
+R5326:5326 LF.VectorFields <> y:32 var
+R5333:5336 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5332:5332 LF.VectorFields <> y:32 var
+R5337:5337 LF.VectorFields <> x:31 var
+R5367:5367 LF.VectorFields VectorAxioms V prfax
+binder 5359:5359 <> x:34
+binder 5361:5361 <> y:35
+binder 5363:5363 <> z:36
+R5384:5388 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5372:5376 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5383:5383 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5371:5371 LF.VectorFields <> x:34 var
+R5378:5381 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5377:5377 LF.VectorFields <> y:35 var
+R5382:5382 LF.VectorFields <> z:36 var
+R5389:5389 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5396:5400 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5391:5394 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5390:5390 LF.VectorFields <> x:34 var
+R5395:5395 LF.VectorFields <> y:35 var
+R5401:5401 LF.VectorFields <> z:36 var
+R5424:5424 LF.VectorFields VectorAxioms V prfax
+binder 5420:5420 <> x:38
+R5435:5439 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5429:5432 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5428:5428 LF.VectorFields <> x:38 var
+R5433:5434 LF.VectorFields VectorAxioms :::'0v' not
+R5440:5440 LF.VectorFields <> x:38 var
+R5464:5464 LF.VectorFields VectorAxioms V prfax
+binder 5460:5460 <> x:40
+R5468:5475 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R5481:5483 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R5480:5480 LF.VectorFields VectorAxioms V prfax
+binder 5476:5476 <> y:41
+R5490:5494 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5485:5488 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5484:5484 LF.VectorFields <> x:40 var
+R5489:5489 LF.VectorFields <> y:41 var
+R5495:5496 LF.VectorFields VectorAxioms :::'0v' not
+R5522:5522 LF.VectorFields VectorAxioms V prfax
+binder 5518:5518 <> x:43
+R5532:5536 LF.VectorFields VectorAxioms Sclrs prfax
+binder 5526:5526 <> a:44
+binder 5528:5528 <> b:45
+R5553:5557 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5541:5545 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5552:5552 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5540:5540 LF.VectorFields <> a:44 var
+R5547:5550 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5546:5546 LF.VectorFields <> b:45 var
+R5551:5551 LF.VectorFields <> x:43 var
+R5558:5558 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5564:5568 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5560:5562 LF.VectorFields VectorAxioms ::field_scope:x_'*'_x not
+R5559:5559 LF.VectorFields <> a:44 var
+R5563:5563 LF.VectorFields <> b:45 var
+R5569:5569 LF.VectorFields <> x:43 var
+R5594:5594 LF.VectorFields VectorAxioms V prfax
+binder 5590:5590 <> x:47
+R5604:5608 LF.VectorFields VectorAxioms Sclrs prfax
+binder 5598:5598 <> a:48
+binder 5600:5600 <> b:49
+R5625:5629 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5612:5612 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5619:5623 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5614:5617 LF.VectorFields VectorAxioms ::field_scope:x_'+s'_x not
+R5613:5613 LF.VectorFields <> a:48 var
+R5618:5618 LF.VectorFields <> b:49 var
+R5624:5624 LF.VectorFields <> x:47 var
+R5630:5630 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5637:5642 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5649:5649 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5632:5635 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5631:5631 LF.VectorFields <> a:48 var
+R5636:5636 LF.VectorFields <> x:47 var
+R5644:5647 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5643:5643 LF.VectorFields <> b:49 var
+R5648:5648 LF.VectorFields <> x:47 var
+R5676:5676 LF.VectorFields VectorAxioms V prfax
+binder 5670:5670 <> x:51
+binder 5672:5672 <> y:52
+R5684:5688 LF.VectorFields VectorAxioms Sclrs prfax
+binder 5680:5680 <> a:53
+R5705:5709 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5693:5697 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5704:5704 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5692:5692 LF.VectorFields <> a:53 var
+R5699:5702 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5698:5698 LF.VectorFields <> x:51 var
+R5703:5703 LF.VectorFields <> y:52 var
+R5710:5710 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5717:5722 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5729:5729 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R5712:5715 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5711:5711 LF.VectorFields <> a:53 var
+R5716:5716 LF.VectorFields <> x:51 var
+R5724:5727 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5723:5723 LF.VectorFields <> a:53 var
+R5728:5728 LF.VectorFields <> y:52 var
+R5752:5752 LF.VectorFields VectorAxioms V prfax
+binder 5748:5748 <> x:55
+R5762:5766 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R5757:5760 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R5761:5761 LF.VectorFields <> x:55 var
+R5767:5767 LF.VectorFields <> x:55 var
+rec 6214:6225 VectorAxioms Vector_Space
+proj 6240:6245 VectorAxioms v_add'
+proj 6263:6271 VectorAxioms s_v_mult'
+proj 6293:6293 VectorAxioms e
+proj 6350:6363 VectorAxioms V_vector_space
+R6250:6253 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6249:6249 LF.VectorFields VectorAxioms V prfax
+R6255:6258 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6254:6254 LF.VectorFields VectorAxioms V prfax
+R6259:6259 LF.VectorFields VectorAxioms V prfax
+R6280:6283 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6275:6279 LF.VectorFields VectorAxioms Sclrs prfax
+R6285:6288 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6284:6284 LF.VectorFields VectorAxioms V prfax
+R6289:6289 LF.VectorFields VectorAxioms V prfax
+R6297:6297 LF.VectorFields VectorAxioms V prfax
+R6367:6385 LF.VectorFields VectorAxioms vector_space_theory rec
+R6387:6392 LF.VectorFields <> v_add':58 meth
+R6394:6402 LF.VectorFields <> s_v_mult':59 meth
+R6404:6404 LF.VectorFields <> e:60 meth
+R6406:6411 LF.VectorFields VectorAxioms vec_eq prfax
+rec 6629:6647 VectorAxioms vector_space_eq_ext
+proj 6672:6680 VectorAxioms v_add_ext
+proj 6730:6741 VectorAxioms s_v_mult_ext
+R6684:6689 Coq.Classes.Morphisms <> Proper class
+R6722:6726 LF.VectorFields VectorAxioms v_add prfax
+R6698:6702 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R6692:6697 LF.VectorFields VectorAxioms vec_eq prfax
+R6709:6713 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R6703:6708 LF.VectorFields VectorAxioms vec_eq prfax
+R6714:6719 LF.VectorFields VectorAxioms vec_eq prfax
+R6745:6750 Coq.Classes.Morphisms <> Proper class
+R6779:6786 LF.VectorFields VectorAxioms s_v_mult prfax
+R6755:6759 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R6753:6754 Coq.Init.Logic <> eq ind
+R6766:6770 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R6760:6765 LF.VectorFields VectorAxioms vec_eq prfax
+R6771:6776 LF.VectorFields VectorAxioms vec_eq prfax
+sec 6893:6901 VectorAxioms MORPHISMS
+var 6915:6916 VectorAxioms.MORPHISMS CS
+var 6918:6919 VectorAxioms.MORPHISMS CV
+var 6940:6945 VectorAxioms.MORPHISMS Cvec_0
+R6949:6950 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+var 6964:6969 VectorAxioms.MORPHISMS Cv_add
+var 6990:6998 VectorAxioms.MORPHISMS Cs_v_mult
+R6975:6978 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6973:6974 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+R6981:6984 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R6979:6980 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+R6985:6986 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+R7004:7007 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7002:7003 LF.VectorFields <> VectorAxioms.MORPHISMS.CS var
+R7010:7013 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7008:7009 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+R7014:7015 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+var 7029:7036 VectorAxioms.MORPHISMS Cvec_eqb
+R7042:7045 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7040:7041 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+R7048:7051 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7046:7047 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+R7052:7055 Coq.Init.Datatypes <> bool ind
+var 7069:7072 VectorAxioms.MORPHISMS Sphi
+var 7090:7093 VectorAxioms.MORPHISMS Vphi
+R7078:7081 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7076:7077 LF.VectorFields <> VectorAxioms.MORPHISMS.CS var
+R7082:7086 LF.VectorFields VectorAxioms Sclrs prfax
+R7099:7102 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7097:7098 LF.VectorFields <> VectorAxioms.MORPHISMS.CV var
+R7103:7103 LF.VectorFields VectorAxioms V prfax
+R7122:7129 LF.VectorFields <> VectorAxioms.MORPHISMS.Cvec_eqb var
+not 7113:7113 VectorAxioms.MORPHISMS :::x_'?=!'_x
+R7160:7165 LF.VectorFields <> VectorAxioms.MORPHISMS.Cv_add var
+not 7152:7152 VectorAxioms.MORPHISMS :::x_'+!'_x
+R7196:7204 LF.VectorFields <> VectorAxioms.MORPHISMS.Cs_v_mult var
+not 7188:7188 VectorAxioms.MORPHISMS :::x_'*!'_x
+R7244:7247 LF.VectorFields <> VectorAxioms.MORPHISMS.Sphi var
+not 7230:7230 VectorAxioms.MORPHISMS :::'['_x_']Sc'
+R7275:7278 LF.VectorFields <> VectorAxioms.MORPHISMS.Vphi var
+not 7262:7262 VectorAxioms.MORPHISMS :::'['_x_']V'
+rec 7292:7309 VectorAxioms vector_space_morph
+proj 7336:7343 VectorAxioms morph_id
+proj 7370:7380 VectorAxioms morph_v_add
+proj 7432:7445 VectorAxioms morph_s_v_mult
+proj 7496:7503 VectorAxioms morph_eq
+R7360:7364 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R7349:7350 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7357:7359 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7351:7356 LF.VectorFields <> VectorAxioms.MORPHISMS.Cvec_0 var
+R7365:7366 LF.VectorFields VectorAxioms :::'0v' not
+binder 7392:7392 <> x:75
+binder 7394:7394 <> y:76
+R7408:7412 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R7397:7398 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7405:7407 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7400:7403 LF.VectorFields VectorAxioms.MORPHISMS :::x_'+!'_x not
+R7399:7399 LF.VectorFields <> x:75 var
+R7404:7404 LF.VectorFields <> y:76 var
+R7419:7422 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R7413:7414 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7416:7418 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7415:7415 LF.VectorFields <> x:75 var
+R7423:7424 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7426:7428 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7425:7425 LF.VectorFields <> y:76 var
+binder 7457:7457 <> x:78
+binder 7459:7459 <> y:79
+R7471:7475 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R7462:7462 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7469:7470 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7464:7467 LF.VectorFields VectorAxioms.MORPHISMS :::x_'*!'_x not
+R7463:7463 LF.VectorFields <> x:78 var
+R7468:7468 LF.VectorFields <> y:79 var
+R7483:7486 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R7476:7477 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']Sc' not
+R7479:7482 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']Sc' not
+R7478:7478 LF.VectorFields <> x:78 var
+R7487:7488 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7490:7492 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7489:7489 LF.VectorFields <> y:79 var
+binder 7516:7516 <> x:81
+binder 7518:7518 <> y:82
+R7537:7540 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7521:7521 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7529:7532 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7523:7527 LF.VectorFields VectorAxioms.MORPHISMS :::x_'?=!'_x not
+R7522:7522 LF.VectorFields <> x:81 var
+R7528:7528 LF.VectorFields <> y:82 var
+R7533:7536 Coq.Init.Datatypes <> true constr
+R7547:7551 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R7541:7542 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7544:7546 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7543:7543 LF.VectorFields <> x:81 var
+R7552:7553 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7555:7557 LF.VectorFields VectorAxioms.MORPHISMS :::'['_x_']V' not
+R7554:7554 LF.VectorFields <> y:82 var
+R7568:7576 LF.VectorFields VectorAxioms.MORPHISMS <> sec
+ax 7586:7592 VectorAxioms vec_eqb
+R7597:7600 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7596:7596 LF.VectorFields VectorAxioms V prfax
+R7602:7605 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7601:7601 LF.VectorFields VectorAxioms V prfax
+R7606:7609 Coq.Init.Datatypes <> bool ind
+def 7623:7626 VectorAxioms Vsth
+R7631:7641 Coq.Classes.RelationClasses <> Equivalence class
+R7643:7648 LF.VectorFields VectorAxioms vec_eq prfax
+def 7662:7673 VectorAxioms morph_vec_eq
+binder 7685:7685 <> x:85
+binder 7687:7687 <> y:86
+R7710:7713 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7690:7690 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7702:7705 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7691:7697 LF.VectorFields VectorAxioms vec_eqb prfax
+R7699:7699 LF.VectorFields <> x:85 var
+R7701:7701 LF.VectorFields <> y:86 var
+R7706:7709 Coq.Init.Datatypes <> true constr
+R7715:7719 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R7714:7714 LF.VectorFields <> x:85 var
+R7720:7720 LF.VectorFields <> y:86 var
+def 7734:7739 VectorAxioms VIDphi
+R7746:7746 LF.VectorFields VectorAxioms V prfax
+binder 7742:7742 <> x:87
+R7752:7752 LF.VectorFields <> x:87 var
+def 7766:7771 VectorAxioms SIDphi
+R7778:7782 LF.VectorFields VectorAxioms Sclrs prfax
+binder 7774:7774 <> y:88
+R7788:7788 LF.VectorFields <> y:88 var
+prf 7797:7803 VectorAxioms IDmorph
+R7807:7824 LF.VectorFields VectorAxioms vector_space_morph rec
+R7867:7872 LF.VectorFields VectorAxioms VIDphi def
+R7860:7865 LF.VectorFields VectorAxioms SIDphi def
+R7852:7858 LF.VectorFields VectorAxioms vec_eqb prfax
+R7843:7850 LF.VectorFields VectorAxioms s_v_mult prfax
+R7837:7841 LF.VectorFields VectorAxioms v_add prfax
+R7834:7835 LF.VectorFields VectorAxioms :::'0v' not
+R7832:7832 LF.VectorFields VectorAxioms V prfax
+R7826:7830 LF.VectorFields VectorAxioms Sclrs prfax
+R7906:7917 LF.VectorFields VectorAxioms <> mod
+modtype 7933:7944 <> VectorSpaces
+R7955:7966 LF.VectorFields VectorAxioms <> modtype
+ax 8227:8230 VectorSpaces r_th
+R8234:8244 Coq.setoid_ring.Ring_theory <> ring_theory rec
+R8275:8276 Coq.Init.Logic <> eq ind
+R8269:8273 LF.VectorFields VectorSpaces r_inv meth
+R8262:8267 LF.VectorFields VectorSpaces r_mult meth
+R8256:8260 LF.VectorFields VectorSpaces r_min meth
+R8250:8254 LF.VectorFields VectorSpaces r_add meth
+R8300:8303 LF.VectorFields VectorSpaces r_th prfax
+ax 8312:8315 VectorSpaces f_th
+R8319:8330 Coq.setoid_ring.Field_theory <> field_theory rec
+R8373:8374 Coq.Init.Logic <> eq ind
+R8367:8371 LF.VectorFields VectorSpaces f_inv meth
+R8361:8365 LF.VectorFields VectorSpaces f_div meth
+R8355:8359 LF.VectorFields VectorSpaces r_inv meth
+R8348:8353 LF.VectorFields VectorSpaces r_mult meth
+R8342:8346 LF.VectorFields VectorSpaces r_min meth
+R8336:8340 LF.VectorFields VectorSpaces r_add meth
+R8400:8403 LF.VectorFields VectorSpaces f_th prfax
+ax 8412:8415 VectorSpaces v_th
+R8419:8437 LF.VectorFields VectorSpaces vector_space_theory rec
+R8439:8443 LF.VectorFields VectorSpaces v_add prfax
+R8445:8452 LF.VectorFields VectorSpaces s_v_mult prfax
+R8454:8455 LF.VectorFields VectorAxioms :::'0v' not
+R8457:8462 LF.VectorFields VectorSpaces vec_eq prfax
+prf 8472:8486 VectorSpaces Eq_vector_space
+R8490:8500 Coq.Classes.RelationClasses <> Equivalence class
+R8504:8505 Coq.Init.Logic <> eq ind
+R8507:8507 LF.VectorFields VectorSpaces V prfax
+R8540:8549 Coq.Classes.RelationClasses <> Transitive class
+def 8602:8606 VectorSpaces Vsth'
+R8611:8621 Coq.Classes.RelationClasses <> Equivalence class
+R8623:8628 LF.VectorFields VectorSpaces vec_eq prfax
+def 8643:8646 VectorSpaces Veqe
+R8651:8669 LF.VectorFields VectorSpaces vector_space_eq_ext rec
+R8710:8714 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R8708:8709 Coq.Init.Logic <> eq ind
+R8717:8721 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R8715:8716 Coq.Init.Logic <> eq ind
+R8722:8723 Coq.Init.Logic <> eq ind
+R8686:8690 LF.VectorFields VectorSpaces v_add prfax
+R8800:8804 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R8798:8799 Coq.Init.Logic <> eq ind
+R8807:8811 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R8805:8806 Coq.Init.Logic <> eq ind
+R8812:8813 Coq.Init.Logic <> eq ind
+R8773:8780 LF.VectorFields VectorSpaces s_v_mult prfax
+prf 9191:9200 VectorSpaces v_comm_thm
+R9218:9218 LF.VectorFields VectorSpaces V prfax
+binder 9212:9212 <> a:92
+binder 9214:9214 <> b:93
+R9228:9232 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R9223:9226 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9222:9222 LF.VectorFields <> a:92 var
+R9227:9227 LF.VectorFields <> b:93 var
+R9234:9237 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9233:9233 LF.VectorFields <> b:93 var
+R9238:9238 LF.VectorFields <> a:92 var
+R9258:9261 LF.VectorFields VectorSpaces v_th prfax
+prf 9291:9301 VectorSpaces v_assoc_thm
+R9321:9321 LF.VectorFields VectorSpaces V prfax
+binder 9313:9313 <> a:94
+binder 9315:9315 <> b:95
+binder 9317:9317 <> c:96
+R9338:9342 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R9326:9330 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9337:9337 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9325:9325 LF.VectorFields <> a:94 var
+R9332:9335 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9331:9331 LF.VectorFields <> b:95 var
+R9336:9336 LF.VectorFields <> c:96 var
+R9343:9343 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9350:9354 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9345:9348 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9344:9344 LF.VectorFields <> a:94 var
+R9349:9349 LF.VectorFields <> b:95 var
+R9355:9355 LF.VectorFields <> c:96 var
+R9375:9378 LF.VectorFields VectorSpaces v_th prfax
+prf 9522:9529 VectorSpaces v_id_thm
+R9545:9545 LF.VectorFields VectorSpaces V prfax
+binder 9541:9541 <> a:97
+R9556:9560 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R9550:9553 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9549:9549 LF.VectorFields <> a:97 var
+R9554:9555 LF.VectorFields VectorAxioms :::'0v' not
+R9561:9561 LF.VectorFields <> a:97 var
+R9580:9581 LF.VectorFields VectorSpaces H1 prfax
+prf 9598:9606 VectorSpaces v_inv_thm
+R9622:9622 LF.VectorFields VectorSpaces V prfax
+binder 9618:9618 <> a:98
+R9626:9633 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R9639:9641 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R9638:9638 LF.VectorFields VectorSpaces V prfax
+binder 9634:9634 <> b:99
+R9648:9652 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R9643:9646 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9642:9642 LF.VectorFields <> a:98 var
+R9647:9647 LF.VectorFields <> b:99 var
+R9653:9654 LF.VectorFields VectorAxioms :::'0v' not
+R9673:9674 LF.VectorFields VectorSpaces H1 prfax
+prf 9691:9701 VectorSpaces s_assoc_thm
+R9717:9717 LF.VectorFields VectorSpaces V prfax
+binder 9713:9713 <> a:100
+R9727:9731 LF.VectorFields VectorSpaces Sclrs prfax
+binder 9721:9721 <> m:101
+binder 9723:9723 <> n:102
+R9748:9752 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R9736:9740 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9747:9747 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9735:9735 LF.VectorFields <> m:101 var
+R9742:9745 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9741:9741 LF.VectorFields <> n:102 var
+R9746:9746 LF.VectorFields <> a:100 var
+R9753:9753 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9759:9763 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9755:9757 LF.VectorFields VectorAxioms ::field_scope:x_'*'_x not
+R9754:9754 LF.VectorFields <> m:101 var
+R9758:9758 LF.VectorFields <> n:102 var
+R9764:9764 LF.VectorFields <> a:100 var
+R9783:9784 LF.VectorFields VectorSpaces H1 prfax
+prf 9801:9810 VectorSpaces s_dist_thm
+R9826:9826 LF.VectorFields VectorSpaces V prfax
+binder 9822:9822 <> a:103
+R9836:9840 LF.VectorFields VectorSpaces Sclrs prfax
+binder 9830:9830 <> m:104
+binder 9832:9832 <> n:105
+R9857:9861 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R9844:9844 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9851:9855 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9846:9849 LF.VectorFields VectorAxioms ::field_scope:x_'+s'_x not
+R9845:9845 LF.VectorFields <> m:104 var
+R9850:9850 LF.VectorFields <> n:105 var
+R9856:9856 LF.VectorFields <> a:103 var
+R9862:9862 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9869:9874 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9881:9881 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9864:9867 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9863:9863 LF.VectorFields <> m:104 var
+R9868:9868 LF.VectorFields <> a:103 var
+R9876:9879 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9875:9875 LF.VectorFields <> n:105 var
+R9880:9880 LF.VectorFields <> a:103 var
+R9900:9901 LF.VectorFields VectorSpaces H1 prfax
+prf 9918:9927 VectorSpaces v_dist_thm
+R9945:9945 LF.VectorFields VectorSpaces V prfax
+binder 9939:9939 <> a:106
+binder 9941:9941 <> b:107
+R9953:9957 LF.VectorFields VectorSpaces Sclrs prfax
+binder 9949:9949 <> m:108
+R9974:9978 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R9962:9966 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9973:9973 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9961:9961 LF.VectorFields <> m:108 var
+R9968:9971 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9967:9967 LF.VectorFields <> a:106 var
+R9972:9972 LF.VectorFields <> b:107 var
+R9979:9979 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9986:9991 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9998:9998 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R9981:9984 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9980:9980 LF.VectorFields <> m:108 var
+R9985:9985 LF.VectorFields <> a:106 var
+R9993:9996 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R9992:9992 LF.VectorFields <> m:108 var
+R9997:9997 LF.VectorFields <> b:107 var
+R10017:10018 LF.VectorFields VectorSpaces H1 prfax
+prf 10035:10042 VectorSpaces s_id_thm
+R10058:10058 LF.VectorFields VectorSpaces V prfax
+binder 10054:10054 <> a:109
+R10068:10072 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R10063:10066 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R10067:10067 LF.VectorFields <> a:109 var
+R10073:10073 LF.VectorFields <> a:109 var
+R10092:10093 LF.VectorFields VectorSpaces H1 prfax
+prf 10328:10337 VectorSpaces v_refl_thm
+R10353:10353 LF.VectorFields VectorSpaces V prfax
+binder 10349:10349 <> a:110
+R10359:10363 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R10358:10358 LF.VectorFields <> a:110 var
+R10364:10364 LF.VectorFields <> a:110 var
+prf 10393:10402 VectorSpaces v_symm_thm
+R10420:10420 LF.VectorFields VectorSpaces V prfax
+binder 10414:10414 <> a:111
+binder 10416:10416 <> b:112
+R10424:10424 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10432:10437 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10445:10445 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10426:10430 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R10425:10425 LF.VectorFields <> a:111 var
+R10431:10431 LF.VectorFields <> b:112 var
+R10439:10443 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R10438:10438 LF.VectorFields <> b:112 var
+R10444:10444 LF.VectorFields <> a:111 var
+prf 10473:10483 VectorSpaces v_trans_thm
+R10503:10503 LF.VectorFields VectorSpaces V prfax
+binder 10495:10495 <> a:113
+binder 10497:10497 <> b:114
+binder 10499:10499 <> c:115
+R10507:10507 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10515:10519 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10509:10513 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R10508:10508 LF.VectorFields <> a:113 var
+R10514:10514 LF.VectorFields <> b:114 var
+R10520:10520 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10528:10533 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10541:10541 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10522:10526 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R10521:10521 LF.VectorFields <> b:114 var
+R10527:10527 LF.VectorFields <> c:115 var
+R10535:10539 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R10534:10534 LF.VectorFields <> a:113 var
+R10540:10540 LF.VectorFields <> c:115 var
+R10588:10588 LF.VectorFields VectorSpaces V prfax
+R10590:10595 LF.VectorFields VectorSpaces vec_eq prfax
+R10588:10588 LF.VectorFields VectorSpaces V prfax
+R10590:10595 LF.VectorFields VectorSpaces vec_eq prfax
+R10620:10629 LF.VectorFields VectorSpaces v_refl_thm prfax
+R10588:10588 LF.VectorFields VectorSpaces V prfax
+R10590:10595 LF.VectorFields VectorSpaces vec_eq prfax
+R10651:10660 LF.VectorFields VectorSpaces v_symm_thm prfax
+R10588:10588 LF.VectorFields VectorSpaces V prfax
+R10590:10595 LF.VectorFields VectorSpaces vec_eq prfax
+R10686:10696 LF.VectorFields VectorSpaces v_trans_thm prfax
+R10588:10588 LF.VectorFields VectorSpaces V prfax
+R10590:10595 LF.VectorFields VectorSpaces vec_eq prfax
+R10620:10629 LF.VectorFields VectorSpaces v_refl_thm prfax
+R10651:10660 LF.VectorFields VectorSpaces v_symm_thm prfax
+R10686:10696 LF.VectorFields VectorSpaces v_trans_thm prfax
+R10752:10756 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R10746:10751 LF.VectorFields VectorSpaces vec_eq prfax
+R10763:10767 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R10757:10762 LF.VectorFields VectorSpaces vec_eq prfax
+R10768:10773 LF.VectorFields VectorSpaces vec_eq prfax
+R10724:10728 LF.VectorFields VectorSpaces v_add prfax
+R10848:10852 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R10846:10847 Coq.Init.Logic <> eq ind
+R10859:10863 Coq.Classes.Morphisms ProperNotations ::signature_scope:x_'==>'_x not
+R10853:10858 LF.VectorFields VectorSpaces vec_eq prfax
+R10864:10869 LF.VectorFields VectorSpaces vec_eq prfax
+R10821:10828 LF.VectorFields VectorSpaces s_v_mult prfax
+prf 10974:10982 VectorSpaces id_unique
+R11002:11002 LF.VectorFields VectorSpaces V prfax
+binder 10994:10994 <> a:116
+binder 10996:10996 <> b:117
+binder 10998:10998 <> c:118
+R11018:11021 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11012:11016 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11007:11010 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11006:11006 LF.VectorFields <> a:116 var
+R11011:11011 LF.VectorFields <> b:117 var
+R11017:11017 LF.VectorFields <> a:116 var
+R11023:11027 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11022:11022 LF.VectorFields <> b:117 var
+R11028:11029 LF.VectorFields VectorAxioms :::'0v' not
+R11058:11061 LF.VectorFields VectorSpaces v_th prfax
+prf 11319:11338 VectorSpaces additive_injectivity
+R11358:11358 LF.VectorFields VectorSpaces V prfax
+binder 11350:11350 <> a:119
+binder 11352:11352 <> b:120
+binder 11354:11354 <> c:121
+R11379:11382 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11368:11372 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11363:11366 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11362:11362 LF.VectorFields <> a:119 var
+R11367:11367 LF.VectorFields <> b:120 var
+R11374:11377 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11373:11373 LF.VectorFields <> a:119 var
+R11378:11378 LF.VectorFields <> c:121 var
+R11384:11388 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11383:11383 LF.VectorFields <> b:120 var
+R11389:11389 LF.VectorFields <> c:121 var
+R11409:11412 LF.VectorFields VectorSpaces r_th prfax
+R11425:11428 LF.VectorFields VectorSpaces v_th prfax
+R11617:11621 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11612:11615 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11623:11626 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11617:11621 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11612:11615 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11623:11626 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11702:11706 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11697:11700 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11708:11711 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11702:11706 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11697:11700 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11708:11711 LF.VectorFields VectorAxioms :::x_'+v'_x not
+prf 11876:11885 VectorSpaces inv_unique
+R11905:11905 LF.VectorFields VectorSpaces V prfax
+binder 11897:11897 <> a:122
+binder 11899:11899 <> b:123
+binder 11901:11901 <> c:124
+R11922:11925 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11915:11919 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11910:11913 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11909:11909 LF.VectorFields <> a:122 var
+R11914:11914 LF.VectorFields <> b:123 var
+R11920:11921 LF.VectorFields VectorAxioms :::'0v' not
+R11939:11942 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11932:11936 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11927:11930 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R11926:11926 LF.VectorFields <> a:122 var
+R11931:11931 LF.VectorFields <> c:124 var
+R11937:11938 LF.VectorFields VectorAxioms :::'0v' not
+R11944:11948 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R11943:11943 LF.VectorFields <> b:123 var
+R11949:11949 LF.VectorFields <> c:124 var
+R11996:12015 LF.VectorFields VectorSpaces additive_injectivity thm
+R11996:12015 LF.VectorFields VectorSpaces additive_injectivity thm
+prf 12108:12126 VectorSpaces zero_sc_is_zero_vec
+R12142:12142 LF.VectorFields VectorSpaces V prfax
+binder 12138:12138 <> a:125
+R12152:12156 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R12147:12150 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12151:12151 LF.VectorFields <> a:125 var
+R12157:12158 LF.VectorFields VectorAxioms :::'0v' not
+R12278:12281 LF.VectorFields VectorSpaces r_th prfax
+R12294:12297 LF.VectorFields VectorSpaces v_th prfax
+R12324:12328 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R12319:12322 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12330:12333 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12324:12328 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R12319:12322 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12330:12333 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12444:12447 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12444:12447 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12444:12447 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12471:12490 LF.VectorFields VectorSpaces additive_injectivity thm
+R12471:12490 LF.VectorFields VectorSpaces additive_injectivity thm
+prf 12576:12592 VectorSpaces sc_inv_is_vec_inv
+R12610:12610 LF.VectorFields VectorSpaces V prfax
+binder 12604:12604 <> a:126
+binder 12606:12606 <> b:127
+R12627:12630 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12620:12624 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R12615:12618 LF.VectorFields VectorAxioms :::x_'+v'_x not
+R12614:12614 LF.VectorFields <> a:126 var
+R12619:12619 LF.VectorFields <> b:127 var
+R12625:12626 LF.VectorFields VectorAxioms :::'0v' not
+R12642:12646 LF.VectorFields VectorAxioms :::x_'==v'_x not
+R12631:12631 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12636:12640 LF.VectorFields VectorAxioms :::x_'*v'_x not
+R12632:12635 LF.VectorFields VectorAxioms ::field_scope:'-s' not
+R12641:12641 LF.VectorFields <> a:126 var
+R12647:12647 LF.VectorFields <> b:127 var
+R12734:12737 LF.VectorFields VectorSpaces r_th prfax
+R12750:12753 LF.VectorFields VectorSpaces v_th prfax
+R12778:12796 LF.VectorFields VectorSpaces zero_sc_is_zero_vec thm
+R12778:12796 LF.VectorFields VectorSpaces zero_sc_is_zero_vec thm
+R12778:12796 LF.VectorFields VectorSpaces zero_sc_is_zero_vec thm
+R13060:13079 LF.VectorFields VectorSpaces additive_injectivity thm
+R13060:13079 LF.VectorFields VectorSpaces additive_injectivity thm
+R13111:13122 LF.VectorFields VectorSpaces <> modtype
