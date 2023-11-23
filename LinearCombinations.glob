@@ -1,0 +1,5 @@
+DIGEST 6fd6a3b3e5cc43d6f6d069d408f99e33
+FLF.LinearCombinations
+R103:114 LF.VectorFields <> <> lib
+modtype 161:178 <> LinearCombinations
+R186:203 LF.LinearCombinations LinearCombinations <> modtype

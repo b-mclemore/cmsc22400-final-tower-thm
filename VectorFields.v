@@ -75,7 +75,6 @@ Class Ring R : Type :=
 	as we need to use its ring identities, ring inverses, etc
 *)
 
-Context `{Ring R}.
 Class Field R `{Ring R} : Type :=
 {
 	f_div : R -> R -> R;
@@ -232,7 +231,7 @@ Check vector_space_morph.
 Lemma IDmorph : vector_space_morph Sclrs V 0v v_add s_v_mult vec_eqb SIDphi VIDphi.
 Proof.
 	split; intros; try (intros; compute; reflexivity).
-	intros. compute. apply morph_vec_eq in H2. assumption.
+	intros. compute. apply morph_vec_eq in H1. assumption.
 Qed.
 
 End VectorAxioms.
@@ -256,8 +255,8 @@ Axiom v_th : vector_space_theory v_add s_v_mult 0v eq.
 Lemma Eq_vector_space : Equivalence (@eq V).
 Proof.
 	split; auto.
-	unfold Transitive. intros.
-	rewrite H2. assumption.
+	unfold Transitive; intros.
+	rewrite H1. assumption.
 Qed.
 
 Add Morphism v_add with signature (eq ==> eq ==> eq) as v_add_ext'.
@@ -322,11 +321,10 @@ Theorem id_unique : forall (a b c : V), a +v b = a -> b = 0v.
 Proof. 
 	intros. destruct v_th.
 	specialize (v_inv0 a); inversion v_inv0.
-	rewrite <- H3. rewrite <- H2. rewrite <- v_comm0. rewrite v_assoc0.
-	rewrite v_comm0 with (y := a). rewrite H3. 
+	rewrite <- H2. rewrite <- H1. rewrite <- v_comm0. rewrite v_assoc0.
+	rewrite v_comm0 with (y := a). rewrite H2. 
 	symmetry. rewrite v_comm0. apply v_id0.
 Qed.	
-
 
 (* Useful helper lemma for injectivity *)
 Theorem additive_injectivity : forall (a b c : V), a +v b = a +v c -> b = c.
@@ -338,21 +336,21 @@ Proof.
 	Informally: b = b + 0 = b + c - c = a + c - c = a
 	*)
 	rewrite <- (v_id0 b) at 1. specialize (v_inv0 a); inversion v_inv0.
-	rewrite <- H3. rewrite v_assoc0.
+	rewrite <- H2. rewrite v_assoc0.
 	assert (a +v b = b +v a) as E1.
 	{ apply v_comm0. } 
-	rewrite <- E1. rewrite H2. 
+	rewrite <- E1. rewrite H1. 
 	assert (a +v c = c +v a) as E2.
 	{ apply v_comm0. } 
-	rewrite E2. rewrite <- v_assoc0. rewrite H3. rewrite v_id0.
+	rewrite E2. rewrite <- v_assoc0. rewrite H2. rewrite v_id0.
 	reflexivity.
 Qed.
 
 (* (LADW 1.6) Additive inverse is unique *)
 Theorem inv_unique : forall (a b c : V), a +v b = 0v -> a +v c = 0v -> b = c.
 Proof.
-	intros. rewrite <- H3 in H2.
-	apply additive_injectivity in H2.
+	intros. rewrite <- H2 in H1.
+	apply additive_injectivity in H1.
 	assumption.
 Qed.
 
@@ -386,13 +384,13 @@ Proof.
 	destruct r_th.
 	destruct v_th.
 	intros.
-	rewrite <- (zero_sc_is_zero_vec a) in H2.
-	rewrite <- s_id0 in H2.
-	specialize (Ropp_def 1). rewrite <- Ropp_def in H2. rewrite s_dist0 in H2.
-	rewrite v_dist0 in H2. rewrite s_id0 in H2 at 1. symmetry in H2.
-	rewrite <- (s_id0 a) in H2 at 3. 
-	rewrite s_id0 in H2; rewrite s_id0 in H2.
-	apply additive_injectivity in H2.
+	rewrite <- (zero_sc_is_zero_vec a) in H1.
+	rewrite <- s_id0 in H1.
+	specialize (Ropp_def 1). rewrite <- Ropp_def in H1. rewrite s_dist0 in H1.
+	rewrite v_dist0 in H1. rewrite s_id0 in H1 at 1. symmetry in H1.
+	rewrite <- (s_id0 a) in H1 at 3. 
+	rewrite s_id0 in H1; rewrite s_id0 in H1.
+	apply additive_injectivity in H1.
 	assumption.
 Qed.
 
