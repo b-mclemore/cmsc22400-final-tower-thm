@@ -17,18 +17,14 @@ Module Type LinearCombinations.
 Global Notation "[ ]" := (nil _) (format "[ ]").
 Global Notation "h :: t" := (cons _ h _ t) (at level 60, right associativity).
 
-(*	Vector addition *)
-Definition vec_add : forall {n : nat} (v1 : t V n) (v2 : t V n), t V n :=
-	fix vec_add_fix {n} (v1 : t V n) (v2 : t V n) : t V n := 
-		((map2 v_add) v1 v2).
-
-(* Scalar - vector multiplication *)
-Definition s_vec_mult : forall {n : nat} (s : Sclrs) (v: t V n), t V n :=
-	fix s_vec_mult_fix {n} (s : Sclrs) (v : t V n) : t V n := 
-		match v with
-		| [] => []
-		| hd :: tl => (s *v hd) :: (s_vec_mult_fix s tl)
-		end.
+(*
+	Multiply set of coefficients (Sclrs vector) by set of vectors (V vector) 
+	map2 takes fn g, vec s1 s2 ..., vec v1 v2 ..., and returns 
+	vec (g s1 v1) (g s2 v2) ... (g sn vn)
+*)
+Definition linear_com : forall {n : nat} (s : t Sclrs n) (v : t V n), t V n :=
+	fix linear_com_fix {n} (s : t Sclrs n) (v : t V n) : t V n := 
+		(map2 s_v_mult) s v.
 
 (* The zero vector *)
 Global Notation "[0v]" := (nil V).
@@ -41,6 +37,18 @@ Global Notation "[0v]" := (nil V).
 (* TODO *)
 (* Define basis *)
 
+(*
+	A linear combination of vectors is a sum
+	(a1v1 + a2v2 + a3v3 + ...) where a_i are scalars.
+	A set of vectors is linearly independent if ONLY the trivial 
+	combination is equal to 0.
+*)
+Definition lin_indep {n : nat} (vs : t V n) : Prop :=
+  forall (coeffs : t Sclrs n),
+    fold_left v_add 0v (linear_com coeffs vs) = 0v ->
+	(* Forall is a vector proposition that a proposition holds over all elements *)
+    Forall (fun y => y = 0) coeffs.
+
 (* 
 	Create spanning set:
 	Multiply nats by each vector in the set and add.
@@ -48,10 +56,12 @@ Global Notation "[0v]" := (nil V).
 	f b x1 ... xn = f ... (f (f b x1) x2) ... xn
 
 	Proposition of span: a spans b if some coefficients
-	exist to create b as linear combination
+	exist to create b as linear combination of vecs in a
 *)
-Definition span_comb {n : nat} (a : t V n) : V -> Prop :=
-	fun b => exists alpha, b = fold_left v_add 0v (s_vec_mult alpha a).
+Definition in_span {n : nat} (a : t V n) (b : V) : Prop :=
+	exists alpha, b = fold_left v_add 0v (linear_com alpha a).
+
+
 
 End LinearCombinations.
 
