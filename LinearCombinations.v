@@ -1,12 +1,12 @@
 Set Warnings "-notation-overridden,-parsing,-deprecated-hint-without-locality".
 From LF Require Export VectorFields.
 Set Default Goal Selector "!".
-Require Import Ensembles.
 Require Import Vector.
-Require Import Logic.FunctionalExtensionality.
-Require Import Logic.PropExtensionality.
+(* In order to use Full_set in span *)
+Require Import Ensembles.
 
 Module Type LinearCombinations.
+Axiom v_th : vector_space_theory v_add s_v_mult 0v eq.
 (* 
 	We'll use the Coq standard library's definition of vectors, which is
 	"a list of size n whose elements belong to a set A."
@@ -55,13 +55,32 @@ Definition lin_indep {n : nat} (vs : t V n) : Prop :=
 	fold_left in the standard library works by:
 	f b x1 ... xn = f ... (f (f b x1) x2) ... xn
 
-	Proposition of span: a spans b if some coefficients
+	Proposition of in_span: a spans b if some coefficients
 	exist to create b as linear combination of vecs in a
 *)
 Definition in_span {n : nat} (a : t V n) (b : V) : Prop :=
 	exists alpha, b = fold_left v_add 0v (linear_com alpha a).
 
+(*
+	Proposition of generates: the set of vectors in the span
+	of some set of vectors is equal to the entire vector space.
+	This is equivalent to vs being a basis for V.
+*)
+Definition generates {n : nat} (vs : t V n) : Prop
+  :=
+    in_span vs = Full_set V.
 
+(* 
+	"shiftin" in the standard library adds an element to the end
+	of a vector
+*)
+Infix "++" := shiftin.
+(* (LADW 2.5) A vector not in the span is linearly independent *)
+Theorem not_span_lin_indep: forall (n : nat) (a : t V n) (b : V),
+	~ in_span a b <-> lin_indep (b ++ a).
+Proof. 
+	intros; split; intros.
+	- Admitted.
 
 End LinearCombinations.
 
