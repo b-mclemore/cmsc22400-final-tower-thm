@@ -91,8 +91,9 @@ Declare Scope field_scope.
 Delimit Scope field_scope with fieldsc.
 Open Scope field_scope.
 Bind Scope field_scope with Field.
+
 Global Infix "+s" := r_add (at level 50) : field_scope.
-Global Infix "*" := r_mult 	: field_scope.
+Global Infix "*s" := r_mult (at level 60): field_scope.
 Global Notation "-s" := r_inv	: field_scope.
 Global Notation "/s" := f_inv : field_scope.
 Global Infix "/" := f_div		: field_scope.
@@ -103,13 +104,17 @@ Global Notation "1" := r_mult_id.
 	Now let's match the pattern used in the standard library's definition
 	of rings to define notations for vector spaces:
 *)
-Axiom (Sclrs V : Type).
+(* We make these local Variables instead of Axioms so we can use V in other files *)
+Variable (Sclrs V : Type).
 Context `{Field Sclrs}.
 Axiom (vec_0 : V).
 Notation "0v" := vec_0.
 Axiom (v_add : V -> V -> V) (s_v_mult : Sclrs -> V -> V).
+Axiom (s_add : Sclrs -> Sclrs -> Sclrs) (s_mult : Sclrs -> Sclrs -> Sclrs).
+Axiom (scl_1 : Sclrs).
+Notation "1" := scl_1.
 Infix "+v" := v_add (at level 50).
-Infix "*v" := s_v_mult (at level 60).
+Infix "*v" := s_v_mult (at level 60). 
 
 (*
 	Now we can finally define the inductive proposition for vector fields.
@@ -149,19 +154,20 @@ Infix "*v" := s_v_mult (at level 60).
 	with implicit arguments.
 *)
 
-Record vector_space_theory
+Record vector_space_theory (V Sclrs : Type)
 	(v_add : V -> V -> V) (s_v_mult : Sclrs -> V -> V) 
-	(vec_0 : V) 
+	(vec_0 : V) (s_add : Sclrs -> Sclrs -> Sclrs) (s_mult : Sclrs -> Sclrs -> Sclrs)
+	(scl_1 : Sclrs)
 	: Prop := mk_vector_space
   {
-	v_comm	: forall (x y : V), x +v y = y +v x;
-	v_assoc	: forall (x y z : V), x +v (y +v z) = (x +v y) +v z;
-	v_id	: forall (x : V), x +v 0v = x;
-	v_inv	: forall (x : V), exists (y : V), x +v y = 0v;
-	s_assoc : forall (x : V) (a b : Sclrs), a *v (b *v x) = (a * b) *v x;
-	s_dist	: forall (x : V) (a b : Sclrs), (a +s b) *v x = (a *v x) +v (b *v x);
-	v_dist	: forall (x y : V) (a : Sclrs), a *v (x +v y) = (a *v x) +v (a *v y);
-	s_id	: forall (x : V), 1 *v x = x;
+	v_comm	: forall (x y : V), v_add x y = v_add y x;
+	v_assoc	: forall (x y z : V), v_add x (v_add y z) = v_add (v_add x y) z;
+	v_id	: forall (x : V), v_add x vec_0 = x;
+	v_inv	: forall (x : V), exists (y : V), v_add x y = vec_0;
+	s_assoc : forall (x : V) (a b : Sclrs), s_v_mult a (s_v_mult b x) = s_v_mult (s_mult a b) x;
+	s_dist	: forall (x : V) (a b : Sclrs), s_v_mult (s_add a b) x = v_add (s_v_mult a x) (s_v_mult b x);
+	v_dist	: forall (x y : V) (a : Sclrs), s_v_mult a (v_add x y) = v_add (s_v_mult a x) (s_v_mult a y);
+	s_id	: forall (x : V), s_v_mult scl_1 x = x;
   }.
 
 (*
@@ -175,13 +181,15 @@ Record vector_space_theory
 	some naming headaches from our definitions above
 *)
 
+(*
 Class Vector_Space : Type :=
 {
 	v_add' : V -> V -> V;
 	s_v_mult' : Sclrs -> V -> V;
 	e : V; (* Call the identity e for cleaner code later *)
-	V_vector_space : vector_space_theory v_add' s_v_mult' e;
+	V_vector_space : vector_space_theory v_add' s_v_mult' e ;
 }.
+*)
 
 (*
 	We'll also try to define here that equality is extensional. I'm not
@@ -250,7 +258,7 @@ Axiom r_th : ring_theory 0 1 r_add r_min r_mult r_inv eq.
 Add Ring SclrsRing : r_th.
 Axiom f_th : field_theory 0 1 r_add r_min r_mult r_inv f_div f_inv eq.
 Add Field SclrsField : f_th.
-Axiom v_th : vector_space_theory v_add s_v_mult 0v.
+Axiom v_th : vector_space_theory V Sclrs v_add s_v_mult 0v r_add r_mult 1.
 
 Lemma Eq_vector_space : Equivalence (@eq V).
 Proof.
@@ -298,7 +306,7 @@ Proof. by_axiom H1. Qed.
 Theorem v_inv_thm : forall (a : V), exists (b : V), a +v b = 0v.
 Proof. by_axiom H1. Qed.
 
-Theorem s_assoc_thm : forall (a : V) (m n : Sclrs), m *v (n *v a) = (m * n) *v a.
+Theorem s_assoc_thm : forall (a : V) (m n : Sclrs), m *v (n *v a) = (m *s n) *v a.
 Proof. by_axiom H1. Qed.
 
 Theorem s_dist_thm : forall (a : V) (m n : Sclrs), (m +s n) *v a = (m *v a) +v (n *v a).

@@ -1,4 +1,4 @@
-DIGEST 5c78172fe3dc058c379e8befadfd7c6a
+DIGEST 70c768334d82a43689c34bd31fb0cbb8
 FLF.LinearCombinations
 R103:114 LF.VectorFields <> <> lib
 R163:168 Coq.Vectors.Vector <> <> lib
@@ -7,237 +7,245 @@ R233:256 Coq.Logic.PropExtensionality <> <> lib
 modtype 272:289 <> LinearCombinations
 ax 298:301 LinearCombinations v_th
 R305:323 LF.VectorFields VectorAxioms vector_space_theory rec
-R325:329 LF.VectorFields VectorAxioms v_add prfax
-R331:338 LF.VectorFields VectorAxioms s_v_mult prfax
-R340:341 LF.VectorFields VectorAxioms :::'0v' not
-R1138:1140 Coq.Vectors.Vector <> nil constr
-not 1128:1128 LinearCombinations :::'['_']'
-R1190:1193 Coq.Vectors.Vector <> cons constr
-not 1177:1177 LinearCombinations :::x_'::'_x
-def 1433:1442 LinearCombinations linear_com
-R1458:1460 Coq.Init.Datatypes <> nat ind
-binder 1454:1454 <> n:2
-R1468:1468 Coq.Vectors.Vector <> t ind
-R1470:1474 LF.VectorFields VectorAxioms Sclrs prfax
-R1476:1476 LF.LinearCombinations <> n:2 var
-binder 1464:1464 <> s:3
-R1484:1484 Coq.Vectors.Vector <> t ind
-R1486:1486 LF.VectorFields VectorAxioms V prfax
-R1488:1488 LF.LinearCombinations <> n:2 var
-binder 1480:1480 <> v:4
-R1492:1492 LF.VectorFields VectorAxioms V prfax
-binder 1518:1518 <> n:5
-R1526:1526 Coq.Vectors.Vector <> t ind
-R1528:1532 LF.VectorFields VectorAxioms Sclrs prfax
-R1534:1534 LF.LinearCombinations <> n:5 var
-binder 1522:1522 <> s:6
-R1542:1542 Coq.Vectors.Vector <> t ind
-R1544:1544 LF.VectorFields VectorAxioms V prfax
-R1546:1546 LF.LinearCombinations <> n:5 var
-binder 1538:1538 <> v:7
-R1551:1551 LF.VectorFields VectorAxioms V prfax
-R1559:1567 Coq.Vectors.Vector <> fold_left def
-R1580:1583 Coq.Vectors.Vector <> map2 def
-R1585:1592 LF.VectorFields VectorAxioms s_v_mult prfax
-R1595:1595 LF.LinearCombinations <> s:6 var
-R1597:1597 LF.LinearCombinations <> v:7 var
-R1575:1576 LF.VectorFields VectorAxioms :::'0v' not
-R1569:1573 LF.VectorFields VectorAxioms v_add prfax
-R1614:1623 LF.LinearCombinations LinearCombinations linear_com def
-def 1680:1692 LinearCombinations first_element
-binder 1695:1695 <> n:9
-R1703:1703 Coq.Vectors.Vector <> t ind
-R1705:1705 LF.VectorFields VectorAxioms V prfax
-R1707:1707 LF.LinearCombinations <> n:9 var
-binder 1699:1699 <> v:10
-R1712:1712 LF.VectorFields VectorAxioms V prfax
-R1724:1724 LF.LinearCombinations <> v:10 var
-R1734:1735 LF.LinearCombinations LinearCombinations :::'['_']' not
-R1740:1741 LF.VectorFields VectorAxioms :::'0v' not
-R1749:1752 LF.LinearCombinations LinearCombinations :::x_'::'_x not
-R1746:1748 Coq.Init.Datatypes <> fst def
-R1821:1823 Coq.Vectors.Vector <> nil constr
-R1825:1825 LF.VectorFields VectorAxioms V prfax
-not 1810:1810 LinearCombinations :::'[0v]'
-R2084:2102 LF.VectorFields VectorAxioms vector_space_theory rec
-def 2529:2537 LinearCombinations lin_indep
-R2544:2546 Coq.Init.Datatypes <> nat ind
-binder 2540:2540 <> n:12
-R2555:2555 Coq.Vectors.Vector <> t ind
-R2557:2557 LF.VectorFields VectorAxioms V prfax
-R2559:2559 LF.LinearCombinations <> n:12 var
-binder 2550:2551 <> vs:13
-R2591:2591 Coq.Vectors.Vector <> t ind
-R2593:2597 LF.VectorFields VectorAxioms Sclrs prfax
-R2599:2599 LF.LinearCombinations <> n:12 var
-binder 2582:2587 <> coeffs:14
-R2634:2722 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R2607:2607 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2628:2631 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2608:2617 LF.LinearCombinations LinearCombinations linear_com def
-R2626:2627 LF.LinearCombinations <> vs:13 var
-R2619:2624 LF.LinearCombinations <> coeffs:14 var
-R2632:2633 LF.VectorFields VectorAxioms :::'0v' not
-R2723:2728 Coq.Vectors.Vector <> Forall ind
-R2747:2752 LF.LinearCombinations <> coeffs:14 var
-binder 2735:2735 <> y:15
-R2741:2743 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2740:2740 LF.LinearCombinations <> y:15 var
-R2762:2770 LF.LinearCombinations LinearCombinations lin_indep def
-R2779:2788 LF.LinearCombinations LinearCombinations linear_com def
-R2803:2811 LF.LinearCombinations LinearCombinations lin_indep def
-prf 2948:2963 LinearCombinations empty_set_unique
-binder 2966:2966 <> A:16
-R2992:2992 Coq.Vectors.Vector <> t ind
-R2994:2994 LF.LinearCombinations <> A:16 var
-binder 2986:2988 <> set:17
-R3003:3005 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3000:3002 LF.LinearCombinations <> set:17 var
-R3006:3008 Coq.Vectors.Vector <> nil constr
-R3010:3010 LF.LinearCombinations <> A:16 var
-R3028:3032 Coq.Vectors.Vector <> case0 def
-R3028:3032 Coq.Vectors.Vector <> case0 def
-prf 3144:3176 LinearCombinations empty_set_is_linearly_independent
-R3180:3188 LF.LinearCombinations LinearCombinations lin_indep def
-R3192:3194 Coq.Vectors.Vector <> nil constr
-R3196:3196 LF.VectorFields VectorAxioms V prfax
-R3215:3223 LF.LinearCombinations LinearCombinations lin_indep def
-R3248:3263 LF.LinearCombinations LinearCombinations empty_set_unique thm
-R3248:3263 LF.LinearCombinations LinearCombinations empty_set_unique thm
-def 3593:3599 LinearCombinations in_span
-R3606:3608 Coq.Init.Datatypes <> nat ind
-binder 3602:3602 <> n:18
-R3619:3619 Coq.Vectors.Vector <> t ind
-R3621:3621 LF.VectorFields VectorAxioms V prfax
-R3623:3623 LF.LinearCombinations <> n:18 var
-binder 3612:3615 <> vecs:19
-R3631:3631 LF.VectorFields VectorAxioms V prfax
-binder 3627:3627 <> v:20
-R3645:3651 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-R3658:3659 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-binder 3652:3657 <> coeffs:21
-R3661:3664 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3687:3687 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3660:3660 LF.LinearCombinations <> v:20 var
-R3665:3674 LF.LinearCombinations LinearCombinations linear_com def
-R3683:3686 LF.LinearCombinations <> vecs:19 var
-R3676:3681 LF.LinearCombinations <> coeffs:21 var
-prf 3779:3793 LinearCombinations span_empty_zero
-R3813:3815 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3797:3803 LF.LinearCombinations LinearCombinations in_span def
-R3807:3809 Coq.Vectors.Vector <> nil constr
-R3811:3811 LF.VectorFields VectorAxioms V prfax
-R3825:3825 LF.VectorFields VectorAxioms V prfax
-binder 3821:3821 <> x:22
-R3832:3834 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3831:3831 LF.LinearCombinations <> x:22 var
-R3835:3836 LF.VectorFields VectorAxioms :::'0v' not
-R3854:3878 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
-binder 3904:3904 <> x:23
-R3910:3912 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3909:3909 LF.LinearCombinations <> x:23 var
-R3913:3914 LF.VectorFields VectorAxioms :::'0v' not
-R3881:3887 LF.LinearCombinations LinearCombinations in_span def
-R3891:3893 Coq.Vectors.Vector <> nil constr
-R3895:3895 LF.VectorFields VectorAxioms V prfax
-R3854:3878 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
-binder 3904:3904 <> x:24
-R3910:3912 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3909:3909 LF.LinearCombinations <> x:24 var
-R3913:3914 LF.VectorFields VectorAxioms :::'0v' not
-R3881:3887 LF.LinearCombinations LinearCombinations in_span def
-R3891:3893 Coq.Vectors.Vector <> nil constr
-R3895:3895 LF.VectorFields VectorAxioms V prfax
-R3935:3941 LF.LinearCombinations LinearCombinations in_span def
-R3951:3978 Coq.Logic.PropExtensionality <> propositional_extensionality prfax
-R3951:3978 Coq.Logic.PropExtensionality <> propositional_extensionality prfax
-R4020:4026 LF.LinearCombinations LinearCombinations in_span def
-def 4178:4186 LinearCombinations generates
-R4193:4195 Coq.Init.Datatypes <> nat ind
-binder 4189:4189 <> n:25
-R4204:4204 Coq.Vectors.Vector <> t ind
-R4206:4206 LF.VectorFields VectorAxioms V prfax
-R4208:4208 LF.LinearCombinations <> n:25 var
-binder 4199:4200 <> vs:26
-R4235:4235 LF.VectorFields VectorAxioms V prfax
-binder 4231:4231 <> v:27
-R4239:4245 LF.LinearCombinations LinearCombinations in_span def
-R4250:4250 LF.LinearCombinations <> v:27 var
-R4247:4248 LF.LinearCombinations <> vs:26 var
-R4266:4274 LF.LinearCombinations LinearCombinations generates def
-def 4365:4369 LinearCombinations basis
-R4376:4378 Coq.Init.Datatypes <> nat ind
-binder 4372:4372 <> n:28
-R4387:4387 Coq.Vectors.Vector <> t ind
-R4389:4389 LF.VectorFields VectorAxioms V prfax
-R4391:4391 LF.LinearCombinations <> n:28 var
-binder 4382:4383 <> vs:29
-R4417:4420 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R4405:4413 LF.LinearCombinations LinearCombinations generates def
-R4415:4416 LF.LinearCombinations <> vs:29 var
-R4421:4429 LF.LinearCombinations LinearCombinations lin_indep def
-R4431:4432 LF.LinearCombinations <> vs:29 var
-def 4508:4518 LinearCombinations cardinality
-R4525:4527 Coq.Init.Datatypes <> nat ind
-binder 4521:4521 <> n:30
-R4536:4536 Coq.Vectors.Vector <> t ind
-R4538:4538 LF.VectorFields VectorAxioms V prfax
-R4540:4540 LF.LinearCombinations <> n:30 var
-binder 4531:4532 <> vs:31
+R325:325 LF.VectorFields VectorAxioms V prfax
+R327:331 LF.VectorFields VectorAxioms Sclrs prfax
+R333:337 LF.VectorFields VectorAxioms v_add prfax
+R339:346 LF.VectorFields VectorAxioms s_v_mult prfax
+R348:349 LF.VectorFields VectorAxioms :::'0v' not
+R351:355 LF.VectorFields VectorAxioms r_add meth
+R357:362 LF.VectorFields VectorAxioms r_mult meth
+R1161:1163 Coq.Vectors.Vector <> nil constr
+not 1151:1151 LinearCombinations :::'['_']'
+R1213:1216 Coq.Vectors.Vector <> cons constr
+not 1200:1200 LinearCombinations :::x_'::'_x
+def 1456:1465 LinearCombinations linear_com
+R1481:1483 Coq.Init.Datatypes <> nat ind
+binder 1477:1477 <> n:2
+R1491:1491 Coq.Vectors.Vector <> t ind
+R1493:1497 LF.VectorFields VectorAxioms Sclrs prfax
+R1499:1499 LF.LinearCombinations <> n:2 var
+binder 1487:1487 <> s:3
+R1507:1507 Coq.Vectors.Vector <> t ind
+R1509:1509 LF.VectorFields VectorAxioms V prfax
+R1511:1511 LF.LinearCombinations <> n:2 var
+binder 1503:1503 <> v:4
+R1515:1515 LF.VectorFields VectorAxioms V prfax
+binder 1541:1541 <> n:5
+R1549:1549 Coq.Vectors.Vector <> t ind
+R1551:1555 LF.VectorFields VectorAxioms Sclrs prfax
+R1557:1557 LF.LinearCombinations <> n:5 var
+binder 1545:1545 <> s:6
+R1565:1565 Coq.Vectors.Vector <> t ind
+R1567:1567 LF.VectorFields VectorAxioms V prfax
+R1569:1569 LF.LinearCombinations <> n:5 var
+binder 1561:1561 <> v:7
+R1574:1574 LF.VectorFields VectorAxioms V prfax
+R1582:1590 Coq.Vectors.Vector <> fold_left def
+R1603:1606 Coq.Vectors.Vector <> map2 def
+R1608:1615 LF.VectorFields VectorAxioms s_v_mult prfax
+R1618:1618 LF.LinearCombinations <> s:6 var
+R1620:1620 LF.LinearCombinations <> v:7 var
+R1598:1599 LF.VectorFields VectorAxioms :::'0v' not
+R1592:1596 LF.VectorFields VectorAxioms v_add prfax
+R1637:1646 LF.LinearCombinations LinearCombinations linear_com def
+def 1703:1715 LinearCombinations first_element
+binder 1718:1718 <> n:9
+R1726:1726 Coq.Vectors.Vector <> t ind
+R1728:1728 LF.VectorFields VectorAxioms V prfax
+R1730:1730 LF.LinearCombinations <> n:9 var
+binder 1722:1722 <> v:10
+R1735:1735 LF.VectorFields VectorAxioms V prfax
+R1747:1747 LF.LinearCombinations <> v:10 var
+R1757:1758 LF.LinearCombinations LinearCombinations :::'['_']' not
+R1763:1764 LF.VectorFields VectorAxioms :::'0v' not
+R1772:1775 LF.LinearCombinations LinearCombinations :::x_'::'_x not
+R1769:1771 Coq.Init.Datatypes <> fst def
+R1844:1846 Coq.Vectors.Vector <> nil constr
+R1848:1848 LF.VectorFields VectorAxioms V prfax
+not 1833:1833 LinearCombinations :::'[0v]'
+R2107:2125 LF.VectorFields VectorAxioms vector_space_theory rec
+def 2552:2560 LinearCombinations lin_indep
+R2567:2569 Coq.Init.Datatypes <> nat ind
+binder 2563:2563 <> n:12
+R2578:2578 Coq.Vectors.Vector <> t ind
+R2580:2580 LF.VectorFields VectorAxioms V prfax
+R2582:2582 LF.LinearCombinations <> n:12 var
+binder 2573:2574 <> vs:13
+R2614:2614 Coq.Vectors.Vector <> t ind
+R2616:2620 LF.VectorFields VectorAxioms Sclrs prfax
+R2622:2622 LF.LinearCombinations <> n:12 var
+binder 2605:2610 <> coeffs:14
+R2657:2745 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2630:2630 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2651:2654 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2631:2640 LF.LinearCombinations LinearCombinations linear_com def
+R2649:2650 LF.LinearCombinations <> vs:13 var
+R2642:2647 LF.LinearCombinations <> coeffs:14 var
+R2655:2656 LF.VectorFields VectorAxioms :::'0v' not
+R2746:2751 Coq.Vectors.Vector <> Forall ind
+R2770:2775 LF.LinearCombinations <> coeffs:14 var
+binder 2758:2758 <> y:15
+R2764:2766 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2763:2763 LF.LinearCombinations <> y:15 var
+R2785:2793 LF.LinearCombinations LinearCombinations lin_indep def
+R2802:2811 LF.LinearCombinations LinearCombinations linear_com def
+R2826:2834 LF.LinearCombinations LinearCombinations lin_indep def
+prf 2971:2986 LinearCombinations empty_set_unique
+binder 2989:2989 <> A:16
+R3015:3015 Coq.Vectors.Vector <> t ind
+R3017:3017 LF.LinearCombinations <> A:16 var
+binder 3009:3011 <> set:17
+R3026:3028 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3023:3025 LF.LinearCombinations <> set:17 var
+R3029:3031 Coq.Vectors.Vector <> nil constr
+R3033:3033 LF.LinearCombinations <> A:16 var
+R3051:3055 Coq.Vectors.Vector <> case0 def
+R3051:3055 Coq.Vectors.Vector <> case0 def
+prf 3167:3199 LinearCombinations empty_set_is_linearly_independent
+R3203:3211 LF.LinearCombinations LinearCombinations lin_indep def
+R3215:3217 Coq.Vectors.Vector <> nil constr
+R3219:3219 LF.VectorFields VectorAxioms V prfax
+R3238:3246 LF.LinearCombinations LinearCombinations lin_indep def
+R3271:3286 LF.LinearCombinations LinearCombinations empty_set_unique thm
+R3271:3286 LF.LinearCombinations LinearCombinations empty_set_unique thm
+def 3616:3622 LinearCombinations in_span
+R3629:3631 Coq.Init.Datatypes <> nat ind
+binder 3625:3625 <> n:18
+R3642:3642 Coq.Vectors.Vector <> t ind
+R3644:3644 LF.VectorFields VectorAxioms V prfax
+R3646:3646 LF.LinearCombinations <> n:18 var
+binder 3635:3638 <> vecs:19
+R3654:3654 LF.VectorFields VectorAxioms V prfax
+binder 3650:3650 <> v:20
+R3668:3674 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R3681:3682 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 3675:3680 <> coeffs:21
+R3684:3687 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3710:3710 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3683:3683 LF.LinearCombinations <> v:20 var
+R3688:3697 LF.LinearCombinations LinearCombinations linear_com def
+R3706:3709 LF.LinearCombinations <> vecs:19 var
+R3699:3704 LF.LinearCombinations <> coeffs:21 var
+prf 3802:3816 LinearCombinations span_empty_zero
+R3836:3838 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3820:3826 LF.LinearCombinations LinearCombinations in_span def
+R3830:3832 Coq.Vectors.Vector <> nil constr
+R3834:3834 LF.VectorFields VectorAxioms V prfax
+R3848:3848 LF.VectorFields VectorAxioms V prfax
+binder 3844:3844 <> x:22
+R3855:3857 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3854:3854 LF.LinearCombinations <> x:22 var
+R3858:3859 LF.VectorFields VectorAxioms :::'0v' not
+R3877:3901 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
+binder 3927:3927 <> x:23
+R3933:3935 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3932:3932 LF.LinearCombinations <> x:23 var
+R3936:3937 LF.VectorFields VectorAxioms :::'0v' not
+R3904:3910 LF.LinearCombinations LinearCombinations in_span def
+R3914:3916 Coq.Vectors.Vector <> nil constr
+R3918:3918 LF.VectorFields VectorAxioms V prfax
+R3877:3901 Coq.Logic.FunctionalExtensionality <> functional_extensionality thm
+binder 3927:3927 <> x:24
+R3933:3935 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3932:3932 LF.LinearCombinations <> x:24 var
+R3936:3937 LF.VectorFields VectorAxioms :::'0v' not
+R3904:3910 LF.LinearCombinations LinearCombinations in_span def
+R3914:3916 Coq.Vectors.Vector <> nil constr
+R3918:3918 LF.VectorFields VectorAxioms V prfax
+R3958:3964 LF.LinearCombinations LinearCombinations in_span def
+R3974:4001 Coq.Logic.PropExtensionality <> propositional_extensionality prfax
+R3974:4001 Coq.Logic.PropExtensionality <> propositional_extensionality prfax
+R4043:4049 LF.LinearCombinations LinearCombinations in_span def
+def 4201:4209 LinearCombinations generates
+R4216:4218 Coq.Init.Datatypes <> nat ind
+binder 4212:4212 <> n:25
+R4227:4227 Coq.Vectors.Vector <> t ind
+R4229:4229 LF.VectorFields VectorAxioms V prfax
+R4231:4231 LF.LinearCombinations <> n:25 var
+binder 4222:4223 <> vs:26
+R4258:4258 LF.VectorFields VectorAxioms V prfax
+binder 4254:4254 <> v:27
+R4262:4268 LF.LinearCombinations LinearCombinations in_span def
+R4273:4273 LF.LinearCombinations <> v:27 var
+R4270:4271 LF.LinearCombinations <> vs:26 var
+R4289:4297 LF.LinearCombinations LinearCombinations generates def
+def 4388:4392 LinearCombinations basis
+R4399:4401 Coq.Init.Datatypes <> nat ind
+binder 4395:4395 <> n:28
+R4410:4410 Coq.Vectors.Vector <> t ind
+R4412:4412 LF.VectorFields VectorAxioms V prfax
+R4414:4414 LF.LinearCombinations <> n:28 var
+binder 4405:4406 <> vs:29
+R4440:4443 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R4428:4436 LF.LinearCombinations LinearCombinations generates def
+R4438:4439 LF.LinearCombinations <> vs:29 var
+R4444:4452 LF.LinearCombinations LinearCombinations lin_indep def
+R4454:4455 LF.LinearCombinations <> vs:29 var
+def 4531:4541 LinearCombinations cardinality
 R4548:4550 Coq.Init.Datatypes <> nat ind
-binder 4544:4544 <> m:32
-R4564:4571 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-R4582:4584 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-R4577:4577 Coq.Vectors.Vector <> t ind
-R4579:4579 LF.VectorFields VectorAxioms V prfax
-R4581:4581 LF.LinearCombinations <> m:32 var
-binder 4572:4573 <> es:33
-R4585:4589 LF.LinearCombinations LinearCombinations basis def
-R4591:4592 LF.LinearCombinations <> es:33 var
-R4608:4616 LF.LinearCombinations LinearCombinations generates def
-prf 4685:4702 LinearCombinations basis_without_zero
-R4718:4720 Coq.Init.Datatypes <> nat ind
-binder 4714:4714 <> n:34
-R4724:4731 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-R4742:4858 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
-R4737:4737 Coq.Vectors.Vector <> t ind
-R4739:4739 LF.VectorFields VectorAxioms V prfax
-R4741:4741 LF.LinearCombinations <> n:34 var
-binder 4732:4733 <> vs:35
-R4871:4874 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
-R4859:4867 LF.LinearCombinations LinearCombinations generates def
-R4869:4870 LF.LinearCombinations <> vs:35 var
-R4875:4876 Coq.Init.Logic <> ::type_scope:'~'_x not
-R4877:4882 Coq.Vectors.Vector <> Exists ind
+binder 4544:4544 <> n:30
+R4559:4559 Coq.Vectors.Vector <> t ind
+R4561:4561 LF.VectorFields VectorAxioms V prfax
+R4563:4563 LF.LinearCombinations <> n:30 var
+binder 4554:4555 <> vs:31
+R4571:4573 Coq.Init.Datatypes <> nat ind
+binder 4567:4567 <> m:32
+R4587:4594 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R4605:4607 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R4600:4600 Coq.Vectors.Vector <> t ind
+R4602:4602 LF.VectorFields VectorAxioms V prfax
+R4604:4604 LF.LinearCombinations <> m:32 var
+binder 4595:4596 <> es:33
+R4608:4612 LF.LinearCombinations LinearCombinations basis def
+R4614:4615 LF.LinearCombinations <> es:33 var
+R4631:4639 LF.LinearCombinations LinearCombinations generates def
+prf 4708:4725 LinearCombinations basis_without_zero
+R4741:4743 Coq.Init.Datatypes <> nat ind
+binder 4737:4737 <> n:34
+R4747:4754 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R4765:4881 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R4760:4760 Coq.Vectors.Vector <> t ind
+R4762:4762 LF.VectorFields VectorAxioms V prfax
+R4764:4764 LF.LinearCombinations <> n:34 var
+binder 4755:4756 <> vs:35
+R4894:4897 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R4882:4890 LF.LinearCombinations LinearCombinations generates def
 R4892:4893 LF.LinearCombinations <> vs:35 var
-R4885:4886 Coq.Init.Logic <> eq ind
-R4888:4889 LF.VectorFields VectorAxioms :::'0v' not
-R5094:5100 Coq.Vectors.Vector <> shiftin def
-not 5086:5086 LinearCombinations :::x_'++'_x
-prf 5177:5194 LinearCombinations not_span_lin_indep
-R5209:5211 Coq.Init.Datatypes <> nat ind
-binder 5205:5205 <> n:36
-R5219:5219 Coq.Vectors.Vector <> t ind
-R5221:5221 LF.VectorFields VectorAxioms V prfax
-R5223:5223 LF.LinearCombinations <> n:36 var
-binder 5215:5215 <> a:37
-R5231:5231 LF.VectorFields VectorAxioms V prfax
-binder 5227:5227 <> b:38
-R5249:5252 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R5236:5237 Coq.Init.Logic <> ::type_scope:'~'_x not
-R5238:5244 LF.LinearCombinations LinearCombinations in_span def
-R5248:5248 LF.LinearCombinations <> b:38 var
-R5246:5246 LF.LinearCombinations <> a:37 var
-R5253:5261 LF.LinearCombinations LinearCombinations lin_indep def
-R5265:5268 LF.LinearCombinations LinearCombinations :::x_'++'_x not
-R5264:5264 LF.LinearCombinations <> b:38 var
+R4898:4899 Coq.Init.Logic <> ::type_scope:'~'_x not
+R4900:4905 Coq.Vectors.Vector <> Exists ind
+R4915:4916 LF.LinearCombinations <> vs:35 var
+R4908:4909 Coq.Init.Logic <> eq ind
+R4911:4912 LF.VectorFields VectorAxioms :::'0v' not
+R5117:5123 Coq.Vectors.Vector <> shiftin def
+not 5109:5109 LinearCombinations :::x_'++'_x
+prf 5200:5217 LinearCombinations not_span_lin_indep
+R5232:5234 Coq.Init.Datatypes <> nat ind
+binder 5228:5228 <> n:36
+R5242:5242 Coq.Vectors.Vector <> t ind
+R5244:5244 LF.VectorFields VectorAxioms V prfax
+R5246:5246 LF.LinearCombinations <> n:36 var
+binder 5238:5238 <> a:37
+R5254:5254 LF.VectorFields VectorAxioms V prfax
+binder 5250:5250 <> b:38
+R5272:5275 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5259:5260 Coq.Init.Logic <> ::type_scope:'~'_x not
+R5261:5267 LF.LinearCombinations LinearCombinations in_span def
+R5271:5271 LF.LinearCombinations <> b:38 var
 R5269:5269 LF.LinearCombinations <> a:37 var
-R5312:5314 Coq.Init.Logic <> not def
-R5344:5361 LF.LinearCombinations LinearCombinations <> modtype
-modtype 5377:5385 <> Subspaces
-ax 5394:5397 Subspaces v_th
-R5401:5419 LF.VectorFields VectorAxioms vector_space_theory rec
-R5421:5425 LF.VectorFields VectorAxioms v_add prfax
-R5427:5434 LF.VectorFields VectorAxioms s_v_mult prfax
-R5436:5437 LF.VectorFields VectorAxioms :::'0v' not
-R5555:5563 LF.LinearCombinations Subspaces <> modtype
+R5276:5284 LF.LinearCombinations LinearCombinations lin_indep def
+R5288:5291 LF.LinearCombinations LinearCombinations :::x_'++'_x not
+R5287:5287 LF.LinearCombinations <> b:38 var
+R5292:5292 LF.LinearCombinations <> a:37 var
+R5335:5337 Coq.Init.Logic <> not def
+R5367:5384 LF.LinearCombinations LinearCombinations <> modtype
+modtype 5400:5408 <> Subspaces
+ax 5417:5420 Subspaces v_th
+R5424:5442 LF.VectorFields VectorAxioms vector_space_theory rec
+R5444:5444 LF.VectorFields VectorAxioms V prfax
+R5446:5450 LF.VectorFields VectorAxioms Sclrs prfax
+R5452:5456 LF.VectorFields VectorAxioms v_add prfax
+R5458:5465 LF.VectorFields VectorAxioms s_v_mult prfax
+R5467:5468 LF.VectorFields VectorAxioms :::'0v' not
+R5470:5474 LF.VectorFields VectorAxioms r_add meth
+R5476:5481 LF.VectorFields VectorAxioms r_mult meth
+R5601:5609 LF.LinearCombinations Subspaces <> modtype

@@ -6,7 +6,7 @@ Require Import Logic.FunctionalExtensionality.
 Require Import Logic.PropExtensionality.
 
 Module Type LinearCombinations.
-Axiom v_th : vector_space_theory v_add s_v_mult 0v.
+Axiom v_th : vector_space_theory V Sclrs v_add s_v_mult 0v r_add r_mult 1.
 (* 
 	We'll use the Coq standard library's definition of vectors, which is
 	"a list of size n whose elements belong to a set A."
@@ -169,7 +169,7 @@ Proof.
 End LinearCombinations.
 
 Module Type Subspaces.
-Axiom v_th : vector_space_theory v_add s_v_mult 0v.
+Axiom v_th : vector_space_theory V Sclrs v_add s_v_mult 0v r_add r_mult 1.
 
 (* A vector space V2 is a subspace of a vector space V1 if V1 can be described
 	as a vector space over V2 *)
