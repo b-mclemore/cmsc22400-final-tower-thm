@@ -149,9 +149,9 @@ Infix "*v" := s_v_mult (at level 60).
 	with implicit arguments.
 *)
 
-Record vector_space_theory 
+Record vector_space_theory
 	(v_add : V -> V -> V) (s_v_mult : Sclrs -> V -> V) 
-	(vec_0 : V) (vec_eq : V -> V -> Prop)
+	(vec_0 : V) 
 	: Prop := mk_vector_space
   {
 	v_comm	: forall (x y : V), x +v y = y +v x;
@@ -180,7 +180,7 @@ Class Vector_Space : Type :=
 	v_add' : V -> V -> V;
 	s_v_mult' : Sclrs -> V -> V;
 	e : V; (* Call the identity e for cleaner code later *)
-	V_vector_space : vector_space_theory v_add' s_v_mult' e eq;
+	V_vector_space : vector_space_theory v_add' s_v_mult' e;
 }.
 
 (*
@@ -250,7 +250,7 @@ Axiom r_th : ring_theory 0 1 r_add r_min r_mult r_inv eq.
 Add Ring SclrsRing : r_th.
 Axiom f_th : field_theory 0 1 r_add r_min r_mult r_inv f_div f_inv eq.
 Add Field SclrsField : f_th.
-Axiom v_th : vector_space_theory v_add s_v_mult 0v eq.
+Axiom v_th : vector_space_theory v_add s_v_mult 0v.
 
 Lemma Eq_vector_space : Equivalence (@eq V).
 Proof.

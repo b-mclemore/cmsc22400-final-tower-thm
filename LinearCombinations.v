@@ -6,7 +6,7 @@ Require Import Logic.FunctionalExtensionality.
 Require Import Logic.PropExtensionality.
 
 Module Type LinearCombinations.
-Axiom v_th : vector_space_theory v_add s_v_mult 0v eq.
+Axiom v_th : vector_space_theory v_add s_v_mult 0v.
 (* 
 	We'll use the Coq standard library's definition of vectors, which is
 	"a list of size n whose elements belong to a set A."
@@ -69,7 +69,9 @@ Check vector_space_theory.
 	(a1v1 + a2v2 + a3v3 + ...) where a_i are scalars.
 	A set of vectors is linearly independent if ONLY the trivial 
 	combination is equal to 0.
-	Here the proposition is stating that for all linear combinations
+	Here the proposition is stating that all linear combinations
+	of a set of vectors which sum to zero must have only zero as the 
+	coefficient.
 *)
 Definition lin_indep {n : nat} (vs : t V n) : Prop :=
   forall (coeffs : t Sclrs n),
@@ -135,6 +137,10 @@ Hint Unfold generates : datatypes.
 Definition basis {n : nat} (vs : t V n) : Prop
 	:= generates vs /\ lin_indep vs.
 
+(* The cardinality (degree) of a basis is simply its size *)
+Definition cardinality {n : nat} (vs : t V n) (m : nat) : Prop
+	:= exists (es : t V m), basis es.
+
 Hint Unfold generates : datatypes.
 
 (* (LADW 2.2) A basis need not contain 0v *)
@@ -146,14 +152,6 @@ Proof.
 	(* How to prove non-constructively? *)
 	(* Might be a poorly described theorem *)
 	Admitted.
-
-(* 
-	Lemma 1 For tower theorem:
-	If V3 is a V2 vector space and V2 is a V1 vector space, V3 is a V1
-	vector space
-*)
-(* Theorem vector_field_extension : forall (n : nat), *)
-
 
 (* 
 	"shiftin" in the standard library adds an element to the end
@@ -170,3 +168,10 @@ Proof.
 
 End LinearCombinations.
 
+Module Type Subspaces.
+Axiom v_th : vector_space_theory v_add s_v_mult 0v.
+
+(* A vector space V2 is a subspace of a vector space V1 if V1 can be described
+	as a vector space over V2 *)
+
+End Subspaces.
