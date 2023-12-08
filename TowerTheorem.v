@@ -4,6 +4,7 @@ Set Default Goal Selector "!".
 Require Field.
 Import Field_theory.
 Require Import Vector.
+Require Import Logic.FunctionalExtensionality.
 
 (* 
 	Tower theorem:
@@ -115,6 +116,12 @@ Definition linear_com_31 : forall {n : nat} (s : t F1 n) (v : t F3 n), F3 :=
 	fix linear_com_fix {n} (s : t F1 n) (v : t F3 n) : F3 := 
 		fold_left add_3 0_3 ((map2 mult_31) s v).
 
+(* Injectivity lemmas *)
+Lemma linear_com_32_inj : forall (n : nat) (x y : t F2 n) (U : t F3 n), 
+	linear_com_32 x U = linear_com_32 y U -> x = y.
+Proof.
+	intros. Admitted.
+
 (*
 	A linear combination of vectors is a sum
 	(a1v1 + a2v2 + a3v3 + ...) where a_i are scalars.
@@ -224,7 +231,7 @@ Proof.
 Qed.
 
 (* The vector length is the same as the list length *)
-Lemma vec_length : forall (n : nat) (F : Type) (U : t F n),
+Lemma vec_length { F : Type}: forall (n : nat) (U : t F n),
 	length (to_list U) = n.
 Proof.
 	intros. induction U. 
@@ -238,7 +245,7 @@ Ltac by_simple_induction lst :=
 	induction lst; simpl; auto.
 
 (* Appending two lists has a length equal to the sum of their lengths *)
-Lemma app_lst_length : forall (lst lst2 : list F3),
+Lemma app_lst_length {F : Type} : forall (lst lst2 : list F),
 	length (lst ++ lst2) = (length lst) + (length lst2).
 Proof.
 	by_simple_induction lst.
@@ -318,6 +325,8 @@ Lemma empty_vector {F : Type} : forall (x : t F 0), x = [].
 Proof.
 	apply case0; auto.
 Qed.
+
+(* TODO: Delete these empty helpers if they prove unnecessary *)
 (* Helpers that linear combinations of [] and [] are 0 for that extension *)
 Lemma comb_0_3 : linear_com_32 [] [] = 0_3.
 Proof. trivial. Qed.
@@ -325,24 +334,53 @@ Proof. trivial. Qed.
 Lemma comb_0_2 : linear_com_21 [] [] = 0_2.
 Proof. trivial. Qed.
 
-(* Proof that this set spans *)
+(* 
+	Helper theorems that any vector in F3 is a linear_com_32 on top of a bunch of 
+	linear_com_21's
+*)
+Local Notation "h :: t" := (Vector.cons _ h _ t) (at level 60, right associativity).
+
+Theorem expand_vector_2 : forall (m n : nat) (V : t F2 n) (vs : t F2 m),
+	generates_21 V -> exists (cs : t (t F1 n) m), 
+	vs = (Vector.map (fun com => linear_com_21 com V) cs).
+Proof.
+	intros. unfold generates_21 in H5. unfold in_span_21 in H5.
+	induction vs.
+	- exists []. auto.
+	(* Second case : need to just add on the coeffs to the new vector *)
+	- 	specialize (H5 h). inversion IHvs; inversion H5. 
+		exists (x0 :: x). simpl. rewrite H7. rewrite H6. auto.
+Qed.
+
+Theorem expand_vector_3 : forall (m n : nat) (U : t F3 m) (V : t F2 n) (v : F3),
+	generates_32 U -> generates_21 V ->
+	exists (coeffs : t (t F1 n) m), v = linear_com_32 (Vector.map (fun com => linear_com_21 com V) coeffs) U.
+Proof.
+	unfold generates_32; unfold in_span_32. intros.
+	specialize (H5 v). inversion H5. rewrite H7.
+	specialize (expand_vector_2 m n V x); intros. apply H8 in H6. inversion H6.
+	subst. exists x0. auto.
+Qed.
+
+(* Therefore any linear_com_31 can be expressed in the same way *)
+Theorem expand_linear_com : forall (m n : nat) (U : t F3 m) (V : t F2 n) (v : F3),
+	generates_32 U -> generates_21 V ->
+	exists (coeffs: t F1 (length (cart_vec U V))), v = linear_com_31 coeffs (of_list (cart_vec U V)).
+Proof.
+	intros.
+	specialize (expand_vector_3 m n U V v); intros. apply H7 in H5; auto.
+	inversion H5. rewrite H8. 
+	(* What to do now? *)
+	Admitted.
+
+(* Main proof that this set spans *)
 Theorem product_spans : forall (m n : nat) (U : t F3 m) (V : t F2 n),
 	generates_32 U -> generates_21 V -> generates_31 (of_list (cart_vec U V)).
 Proof.
-	unfold generates_32; unfold in_span_32; unfold in_span_21.
-	unfold generates_31; unfold in_span_31. 
-	intros.
-	specialize (H5 v).
-	inversion H5.
-	induction U.
-	- 	specialize (empty_vector x); intros. rewrite H7.
-		rewrite H8 in H7. rewrite comb_0_3 in H7. subst. exists []. auto.
-	- 	induction V. 
-		+ 	assert (Fempty: generates_21 [] -> forall (f : F2), f = 0_2).
-			{ 	intros. unfold generates_21 in H8; unfold in_span_21 in H8.
-				specialize (H8 f). inversion H8. specialize (empty_vector x0); intros.
-				subst. apply comb_0_2. }
-			Admitted.
+	intros. unfold generates_31; unfold in_span_31.
+	intros. specialize (expand_linear_com m n U V v). intros.
+	apply H7 in H5; auto.
+Qed.
 
 (* Proof that this set forms a basis *)
 Theorem product_is_basis : forall (m n : nat) (U : t F3 m) (V : t F2 n),
@@ -358,10 +396,6 @@ Proof.
 Qed.
 
 (* Proof of the Tower Theorem for field extensions *)
-(* 
-	NOTE: currently this equality is only in one direction.
-	Need (... /\ ...) <-> ... instead
-*)
 Theorem tower_theorem : forall (m n : nat),
 	cardinality_32 m -> cardinality_21 n -> cardinality_31 (m * n).
 Proof.
