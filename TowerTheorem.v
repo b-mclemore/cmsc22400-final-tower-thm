@@ -3,6 +3,7 @@ From LF Require Export VectorFields.
 Set Default Goal Selector "!".
 Require Field.
 Import Field_theory.
+Require Import List.
 Require Import Vector.
 Require Import Logic.FunctionalExtensionality.
 
@@ -212,22 +213,19 @@ Definition cardinality_31 (m : nat) : Prop
 	We also want a helper lemma that the length of a set-combination is equal to
 	the product of the lengths of each set.
 *)
-Definition cart_prod' : forall {m n : nat} (U : t F3 m) (V : t F2 n), t (t F3 n) m :=
-	fix cart_prod_fix {m} {n} (U : t F3 m) (V : t F2 n) : t (t F3 n) m := 
-		map (fun u => map (fun v => mult_32 v u) V) U.
+Local Infix "++" := Vector.append.
+Local Notation "h :: t" := (Vector.cons _ h _ t) (at level 60, right associativity).
 
-Fixpoint cart_prod (U : list F3) (V : list F2) : list F3 :=
-	match U with
-	| nil => nil
-	| cons x t => (map (fun y:F2 => (mult_32 y x)) V) ++ (cart_prod t V)
-	end.
-
-Definition cart_vec {m n : nat} (U : t F3 m) (V : t F2 n) : list F3 :=
-	(cart_prod (to_list U) (to_list V)).
+Definition cart_prod : forall {m n : nat} (U : t F3 m) (V : t F2 n), t F3 (m * n) :=
+	fix cart_prod_fix {m} {n} (U : t F3 m) (V : t F2 n) : t F3 (m * n) := 
+		match U with
+		| [] => []
+		| hd :: lst => (map (fun v => mult_32 v hd) V) ++ cart_prod_fix lst V
+		end.
 
 (* Cons-ing before turning vec into list is the same as cons-ing after *)
 Lemma preserve_cons : forall (n : nat) (F : Type) (h : F) (U : t F n),
-	(to_list (Vector.cons F h n U)) = (cons h nil) ++ (to_list U).
+	(to_list (h :: U)) = List.app (List.cons h List.nil) (to_list U).
 Proof.
 	trivial. (* <--- I wish this worked more often! *)
 Qed.
@@ -241,41 +239,11 @@ Proof.
 	- auto. rewrite preserve_cons. simpl. auto.
 Qed.
 
-(* Helper tactic for the assertions we'll be making *)
-Ltac by_simple_induction lst :=
-	intros;
-	induction lst; simpl; auto.
-
-(* Appending two lists has a length equal to the sum of their lengths *)
-Lemma app_lst_length {F : Type} : forall (lst lst2 : list F),
-	length (lst ++ lst2) = (length lst) + (length lst2).
-Proof.
-	by_simple_induction lst.
-Qed.
-
-(* Mapping onto a list preserves length *)
-Lemma map_lst_length : forall (lst : list F2) (f : F2 -> F3),
-	length (map f lst) = length lst.
-Proof.
-	by_simple_induction lst.
-Qed.
-
-(* Length of a product is product of lengths, for lists *)
-Lemma list_product_length: forall (U : list F3) (V : list F2),
-	length (cart_prod U V) = (length U) * (length V).
-Proof.
-	intros. unfold cart_vec.
-	induction U; simpl; auto.
-	rewrite app_lst_length. rewrite IHU. 
-	rewrite map_lst_length. auto.
-Qed.
-
 (* Length of a product is product of lengths, for vectors *)
 Theorem product_length : forall (m n : nat) (U : t F3 m) (V : t F2 n),
-	length (cart_vec U V) = m * n.
+	length (to_list (cart_prod U V)) = m * n.
 Proof.
-	intros. unfold cart_vec. rewrite list_product_length.
-	rewrite vec_length. rewrite vec_length. auto.
+	intros. remember (cart_prod U V). auto. rewrite vec_length. auto.
 Qed.
 
 (* Helper that a length 0 vector is empty *)
@@ -284,13 +252,19 @@ Proof.
 	apply case0; auto.
 Qed.
 
+(* Flatten a vector *)
+Definition flatten_vec : forall {m n : nat} (x : t (t F1 n) m), t F1 (m * n) :=
+	fix flatten_vec_fix {m} {n} (x : t (t F1 n) m) : t F1 (m * n) := 
+		match x with
+		| [] => []
+		| hd :: lst => hd ++ flatten_vec_fix lst
+		end.
+
 (* ============================================================================== *)
 
 (*	Main theorem	*)
 
 (* ============================================================================== *)
-
-Local Notation "h :: t" := (Vector.cons _ h _ t) (at level 60, right associativity).
 
 (* Proof that this set is linearly independent *)
 (* 
@@ -315,14 +289,19 @@ Lemma chain_linear_com : forall (n0 : nat) (h : F3) (tl : t F3 n0) (coeffs: t F1
 intros.
 	Admitted.
 
-(* TODO: Should this be an axiom? Might want to remove *)
-Axiom lengths_typecheck : forall (m n : nat) (F : Type),
-	m = n ->
-	(t F m) = (t F n).
-
 Theorem product_independent : forall (m n : nat) (U : t F3 m) (V : t F2 n),
-	lin_indep_32 U -> lin_indep_21 V -> lin_indep_31 (of_list (cart_vec U V)).
+	lin_indep_32 U -> lin_indep_21 V -> lin_indep_31 (cart_prod U V).
 Proof.
+	intros. unfold lin_indep_31. intros.
+	induction U.
+	- 	specialize (empty_vector coeffs); intros.
+		rewrite H8; econstructor.
+	-	induction V.
+		+ specialize (empty_vector coeffs).
+		unfold lin_indep_21 in H6. Admitted.
+	(*
+	unfold lin_indep_21 in H6.
+
 	intros. unfold lin_indep_31. intros.
 	induction coeffs. as [| Uhd Un Utl UIH].
 	- 	specialize (empty_vector coeffs); intros.
@@ -336,7 +315,7 @@ Proof.
 			specialize (H6 coeffs).
 			Admitted.
 
-	(*
+
 
 	induction (of_list (cart_vec U V)) as [| hd n0 tl IH].
 	- 	specialize (empty_vector coeffs); intros. 
@@ -397,36 +376,82 @@ Proof.
 	subst. exists x0. auto.
 Qed.
 
-Axiom skip: forall p: Prop, True -> p.
-
 (* Therefore any linear_com_31 can be expressed in the same way *)
+
+(* Lemmas that mapping to 0 and taking a combination results in 0 vector *)
+Lemma map_to_0_2 {F : Type }: forall (n : nat) (U : t F3 n) (x0 : t F n),
+	linear_com_32 (map (fun _ : _ => 0_2) x0) U = 0_3.
+Proof.
+	intros.
+	(* Will want to use field properties here *)
+	Admitted.
+
+Lemma map_to_0_1 {F : Type} : forall (n : nat) (U : t F3 n) (x0 : t F n),
+	linear_com_31 (map (fun _ : _ => 0_1) x0) U = 0_3.
+Proof.
+	Admitted.
+
+Lemma split_combination_21 {m n : nat} : forall (coeffs : t (t F1 n) m) (V : t F2 n) (h : (t F1 n)),
+	map (fun com : t F1 n => linear_com_21 com V) (h :: coeffs) =
+	(linear_com_21 h V :: []) ++
+	map (fun com : t F1 n => linear_com_21 com V) coeffs.
+Proof.
+	Admitted.
+
+(* Taking linear combinations can be one or two step *)
+(* I think this may be redundant with the next theorem (or it obfuscates it) *)
+Theorem telescope_linear_coms {m n : nat} : forall (U : t F3 m) (V : t F2 n) (coeffs : t (t F1 n) m),
+	linear_com_32 (map (fun com : t F1 n => linear_com_21 com V) coeffs) U =
+	linear_com_31 (flatten_vec coeffs) (cart_prod U V).
+Proof.
+	intros. (* induction coeffs.
+	- specialize (empty_vector U); intros. subst. auto.
+	- 	specialize (IHcoeffs (tl U)).
+		assert ((map (fun com : t F1 n => linear_com_21 com V) (h :: coeffs)) = 
+			((linear_com_21 h V) :: [] ) ++ (map (fun com : t F1 n => linear_com_21 com V) coeffs)).
+			{ intros. apply split_combination_21. }
+			rewrite H5. apply split_combination_21.
+		simpl.
+	Admitted.
+	*) induction U.
+	- specialize (empty_vector coeffs); intros. subst. auto.
+	- induction V.
+		+	assert (forall (com : t F1 0), linear_com_21 com [] = 0_2).
+			{ intros. specialize (empty_vector com); intros. rewrite H5.  auto. }
+			assert ((fun com : t F1 0 => linear_com_21 com []) = (fun com : t F1 0 => 0_2)).
+			{ intros. apply functional_extensionality; assumption. }
+			rewrite H6.
+			specialize (map_to_0_2 (S n0) (h :: U) coeffs); intros.
+			rewrite H7. simpl. Admitted. (* induction coeffs. unfold flatten_vec. rewrite H8. auto. *)
+
 Theorem expand_linear_com : forall (m n : nat) (U : t F3 m) (V : t F2 n) (v : F3),
 	generates_32 U -> generates_21 V ->
-	exists (coeffs: t F1 (length (cart_vec U V))), v = linear_com_31 coeffs (of_list (cart_vec U V)).
+	exists (coeffs: t F1 (m * n)), v = linear_com_31 coeffs (cart_prod U V).
 Proof.
 	intros.
 	specialize (expand_vector_3 m n U V v); intros. apply H7 in H5; auto.
 	inversion H5.
-	induction x.
-	- 	specialize (empty_vector U); intros. rewrite H9 in H8. simpl in H8. subst.
-		assert (cart_vec [] V = nil).
-		{ auto. }
-		rewrite H8. simpl. exists []. auto.
-	- 	induction h.
-		+ 	specialize (empty_vector V); intros. rewrite H9 in H8. 
-			assert (cart_vec U [] = nil).
-			{ auto. }
-			rewrite H9; rewrite H10. simpl. exists []. simpl. rewrite H8.
+	induction U.
+	- 	exists []. 
+		inversion H5. specialize (empty_vector x0); intros. rewrite H10 in H9.
+		simpl in H9. simpl. assumption.
+	- 	induction V. 
+		+ 	inversion H5. simpl. rewrite H9.
 			assert (forall (com : t F1 0), linear_com_21 com [] = 0_2).
-			{ intros. specialize (empty_vector com); intros. rewrite H11. auto. }
+			{ intros. specialize (empty_vector com); intros. rewrite H10. auto. }
 			assert ((fun com : t F1 0 => linear_com_21 com []) = (fun com : t F1 0 => 0_2)).
 			{ intros. apply functional_extensionality; assumption. }
-			rewrite H12.
-			Admitted.
+			exists (map (fun x => 0_1) (cart_prod U [])).
+			rewrite H11.
+			specialize (map_to_0_2 (S n0) (h :: U) x0); intros.
+			specialize (map_to_0_1 (n0 * 0) (cart_prod U []) (cart_prod U [])); intros.
+			rewrite H12. rewrite H13. auto.
+		+ rewrite H8. exists (flatten_vec x). apply telescope_linear_coms.
+Qed.
 
 (* Main proof that this set spans *)
 Theorem product_spans : forall (m n : nat) (U : t F3 m) (V : t F2 n),
-	generates_32 U -> generates_21 V -> generates_31 (of_list (cart_vec U V)).
+	generates_32 U -> generates_21 V -> generates_31 (cart_prod U V).
 Proof.
 	intros. unfold generates_31; unfold in_span_31.
 	intros. specialize (expand_linear_com m n U V v). intros.
@@ -435,13 +460,13 @@ Qed.
 
 (* Proof that this set forms a basis *)
 Theorem product_is_basis : forall (m n : nat) (U : t F3 m) (V : t F2 n),
-	basis_32 U -> basis_21 V -> basis_31 (of_list (cart_vec U V)).
+	basis_32 U -> basis_21 V -> basis_31 (cart_prod U V).
 Proof.
 	intros. inversion H5; inversion H6.
 	unfold basis_31.
-	assert (IndependentLemma: lin_indep_31 (of_list (cart_vec U V))).
+	assert (IndependentLemma: lin_indep_31 (cart_prod U V)).
 	{ apply product_independent; assumption. }
-	assert (SpansLemma: generates_31 (of_list (cart_vec U V))).
+	assert (SpansLemma: generates_31 (cart_prod U V)).
 	{ apply product_spans; assumption. }
 	split; assumption.
 Qed.
@@ -451,12 +476,10 @@ Theorem tower_theorem : forall (m n : nat),
 	cardinality_32 m -> cardinality_21 n -> cardinality_31 (m * n).
 Proof.
 	intros. inversion H5; inversion H6.
-	assert (B31: basis_31 (of_list (cart_vec x x0))).
+	assert (B31: basis_31 (cart_prod x x0)).
 	{ specialize (product_is_basis m n x x0 H7 H8). auto. }
 	simpl in B31.
 	unfold cardinality_31.
-	assert (LengthLemma: length (cart_vec x x0) = m * n).
-	{ apply product_length. }
-	rewrite <- LengthLemma.
-	exists (of_list (cart_vec x x0)). assumption.
+	exists (cart_prod x x0).
+	assumption.
 Qed.
