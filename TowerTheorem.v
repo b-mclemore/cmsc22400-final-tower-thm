@@ -282,25 +282,67 @@ Qed.
 	exists. Then we have that either v_j's are dependent (a contradiction, 
 	since we assume it's a basis for V3/V2), or each combination of c_k * u_i 
 	is zero. But u_j's are also independent. Hence this set is independent.
+
+	Informal coq version:
+	1.) V3/V2 independent means that for any combination b_1u_1 + b_2u_2 + ...
+		we have that the b_i's are all zero
+	2.) V2/V1 independent means that for any b_i (which lies in V2), it must
+		be the case that for b_i = c_1v_1 + c_2v_2 + ... we have that
+		all c_i's are zero
+	3.) Therefore since we construct c_1 * u_1 * v_1 ... we see all c_i's
+		are zero so dependent
 *)
 Theorem product_independent : forall (m n : nat) (U : t F3 m) (V : t F2 n),
 	lin_indep_32 U -> lin_indep_21 V -> lin_indep_31 (of_list (cart_vec U V)).
 Proof.
+	unfold lin_indep_32; unfold lin_indep_21; intros. unfold lin_indep_31. intros.
 	Admitted.
 
-(* Proof that this set spans *)
 (*
+	To prove that this set spans:
 	Informally:
-	Let l be a vector in V3. Then it can be written with V to be a combination 
-	of vectors b_j*v_j, where b_j is in F2. Then b_j can be written as a combination 
+	Let v be a vector in V3. Then it can be written with V to be a combination 
+	of vectors b_j*u_j, where b_j is in F2. Then b_j can be written as a combination 
 	of vectors c_iu_i, where c_i is in F1. Each product u_i*v_j is in F3 and each
 	coefficient c_i is in F1, so we can describe any vector as a linear combination 
 	of vector products u_i*v_j, so this set indeed spans.
+
+	Informal coq version:
+	1. By H5, there are some coeffs in F2 to lin com. v out of vectors u
+	2. By H6, each coeff can be made of lin com. v's w/ coeffs in F1
+	3. Each element is then a product c_ij * (u_i * v_j), so generates.
 *)
+
+(* Helper that a length 0 vector is empty *)
+Lemma empty_vector {F : Type} : forall (x : t F 0), x = [].
+Proof.
+	apply case0; auto.
+Qed.
+(* Helpers that linear combinations of [] and [] are 0 for that extension *)
+Lemma comb_0_3 : linear_com_32 [] [] = 0_3.
+Proof. trivial. Qed.
+
+Lemma comb_0_2 : linear_com_21 [] [] = 0_2.
+Proof. trivial. Qed.
+
+(* Proof that this set spans *)
 Theorem product_spans : forall (m n : nat) (U : t F3 m) (V : t F2 n),
 	generates_32 U -> generates_21 V -> generates_31 (of_list (cart_vec U V)).
 Proof.
-	Admitted.
+	unfold generates_32; unfold in_span_32; unfold in_span_21.
+	unfold generates_31; unfold in_span_31. 
+	intros.
+	specialize (H5 v).
+	inversion H5.
+	induction U.
+	- 	specialize (empty_vector x); intros. rewrite H7.
+		rewrite H8 in H7. rewrite comb_0_3 in H7. subst. exists []. auto.
+	- 	induction V. 
+		+ 	assert (Fempty: generates_21 [] -> forall (f : F2), f = 0_2).
+			{ 	intros. unfold generates_21 in H8; unfold in_span_21 in H8.
+				specialize (H8 f). inversion H8. specialize (empty_vector x0); intros.
+				subst. apply comb_0_2. }
+			Admitted.
 
 (* Proof that this set forms a basis *)
 Theorem product_is_basis : forall (m n : nat) (U : t F3 m) (V : t F2 n),

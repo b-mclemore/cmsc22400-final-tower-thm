@@ -104,8 +104,8 @@ Global Notation "1" := r_mult_id.
 	Now let's match the pattern used in the standard library's definition
 	of rings to define notations for vector spaces:
 *)
-(* We make these local Variables instead of Axioms so we can use V in other files *)
-Variable (Sclrs V : Type).
+(* We make these local so we can use V in other files *)
+Local Axiom (Sclrs V : Type).
 Context `{Field Sclrs}.
 Axiom (vec_0 : V).
 Notation "0v" := vec_0.
