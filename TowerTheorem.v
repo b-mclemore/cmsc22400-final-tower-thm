@@ -212,7 +212,9 @@ Definition cardinality_31 (m : nat) : Prop
 	We also want a helper lemma that the length of a set-combination is equal to
 	the product of the lengths of each set.
 *)
-Require Import List.
+Definition cart_prod' : forall {m n : nat} (U : t F3 m) (V : t F2 n), t (t F3 n) m :=
+	fix cart_prod_fix {m} {n} (U : t F3 m) (V : t F2 n) : t (t F3 n) m := 
+		map (fun u => map (fun v => mult_32 v u) V) U.
 
 Fixpoint cart_prod (U : list F3) (V : list F2) : list F3 :=
 	match U with
@@ -276,11 +278,19 @@ Proof.
 	rewrite vec_length. rewrite vec_length. auto.
 Qed.
 
+(* Helper that a length 0 vector is empty *)
+Lemma empty_vector {F : Type} : forall (x : t F 0), x = [].
+Proof.
+	apply case0; auto.
+Qed.
+
 (* ============================================================================== *)
 
 (*	Main theorem	*)
 
 (* ============================================================================== *)
+
+Local Notation "h :: t" := (Vector.cons _ h _ t) (at level 60, right associativity).
 
 (* Proof that this set is linearly independent *)
 (* 
@@ -299,11 +309,43 @@ Qed.
 	3.) Therefore since we construct c_1 * u_1 * v_1 ... we see all c_i's
 		are zero so dependent
 *)
+Lemma chain_linear_com : forall (n0 : nat) (h : F3) (tl : t F3 n0) (coeffs: t F1 (S n0)),
+	linear_com_31 coeffs (h :: tl) = 
+		add_3 (mult_31 (Vector.hd coeffs) h) (linear_com_31 (Vector.tl coeffs) tl).
+intros.
+	Admitted.
+
+(* TODO: Should this be an axiom? Might want to remove *)
+Axiom lengths_typecheck : forall (m n : nat) (F : Type),
+	m = n ->
+	(t F m) = (t F n).
+
 Theorem product_independent : forall (m n : nat) (U : t F3 m) (V : t F2 n),
 	lin_indep_32 U -> lin_indep_21 V -> lin_indep_31 (of_list (cart_vec U V)).
 Proof.
-	unfold lin_indep_32; unfold lin_indep_21; intros. unfold lin_indep_31. intros.
-	Admitted.
+	intros. unfold lin_indep_31. intros.
+	induction coeffs. as [| Uhd Un Utl UIH].
+	- 	specialize (empty_vector coeffs); intros.
+		rewrite H8. econstructor.
+	- induction V as [| Vhd Vn Vtl VIH].
+		+	assert (length (cart_vec (Uhd :: Utl) []) = 0%nat).
+			{ specialize (product_length _ 0%nat (Uhd :: Utl) []). intros. rewrite H8. auto. }
+			unfold lin_indep_21 in H6.
+			specialize (lengths_typecheck (length (cart_vec (Uhd :: Utl) [])) 0 F3); intros.
+			apply H9 in H8. rewrite H8 in
+			specialize (H6 coeffs).
+			Admitted.
+
+	(*
+
+	induction (of_list (cart_vec U V)) as [| hd n0 tl IH].
+	- 	specialize (empty_vector coeffs); intros. 
+		rewrite H8. econstructor.
+	- 	specialize (chain_linear_com n0 hd tl coeffs); intros.
+		rewrite H7 in H8. unfold lin_indep_21 in H56.
+		assert (Vector.hd coeffs *_31 hd = 0_3 \/ ).
+		{ auto. }
+	Admitted. *)
 
 (*
 	To prove that this set spans:
@@ -320,12 +362,6 @@ Proof.
 	3. Each element is then a product c_ij * (u_i * v_j), so generates.
 *)
 
-(* Helper that a length 0 vector is empty *)
-Lemma empty_vector {F : Type} : forall (x : t F 0), x = [].
-Proof.
-	apply case0; auto.
-Qed.
-
 (* TODO: Delete these empty helpers if they prove unnecessary *)
 (* Helpers that linear combinations of [] and [] are 0 for that extension *)
 Lemma comb_0_3 : linear_com_32 [] [] = 0_3.
@@ -338,7 +374,6 @@ Proof. trivial. Qed.
 	Helper theorems that any vector in F3 is a linear_com_32 on top of a bunch of 
 	linear_com_21's
 *)
-Local Notation "h :: t" := (Vector.cons _ h _ t) (at level 60, right associativity).
 
 Theorem expand_vector_2 : forall (m n : nat) (V : t F2 n) (vs : t F2 m),
 	generates_21 V -> exists (cs : t (t F1 n) m), 
@@ -362,6 +397,8 @@ Proof.
 	subst. exists x0. auto.
 Qed.
 
+Axiom skip: forall p: Prop, True -> p.
+
 (* Therefore any linear_com_31 can be expressed in the same way *)
 Theorem expand_linear_com : forall (m n : nat) (U : t F3 m) (V : t F2 n) (v : F3),
 	generates_32 U -> generates_21 V ->
@@ -369,9 +406,23 @@ Theorem expand_linear_com : forall (m n : nat) (U : t F3 m) (V : t F2 n) (v : F3
 Proof.
 	intros.
 	specialize (expand_vector_3 m n U V v); intros. apply H7 in H5; auto.
-	inversion H5. rewrite H8. 
-	(* What to do now? *)
-	Admitted.
+	inversion H5.
+	induction x.
+	- 	specialize (empty_vector U); intros. rewrite H9 in H8. simpl in H8. subst.
+		assert (cart_vec [] V = nil).
+		{ auto. }
+		rewrite H8. simpl. exists []. auto.
+	- 	induction h.
+		+ 	specialize (empty_vector V); intros. rewrite H9 in H8. 
+			assert (cart_vec U [] = nil).
+			{ auto. }
+			rewrite H9; rewrite H10. simpl. exists []. simpl. rewrite H8.
+			assert (forall (com : t F1 0), linear_com_21 com [] = 0_2).
+			{ intros. specialize (empty_vector com); intros. rewrite H11. auto. }
+			assert ((fun com : t F1 0 => linear_com_21 com []) = (fun com : t F1 0 => 0_2)).
+			{ intros. apply functional_extensionality; assumption. }
+			rewrite H12.
+			Admitted.
 
 (* Main proof that this set spans *)
 Theorem product_spans : forall (m n : nat) (U : t F3 m) (V : t F2 n),
