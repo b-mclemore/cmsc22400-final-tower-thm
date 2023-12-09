@@ -1,0 +1,1769 @@
+DIGEST 09c429f0cc7a888cade864f149232540
+FLF.TowerTheorem
+R103:114 LF.VectorFields <> <> lib
+R156:160 Coq.setoid_ring.Field <> <> lib
+R170:181 Coq.setoid_ring.Field_theory <> <> mod
+R199:202 Coq.Lists.List <> <> lib
+R220:225 Coq.Vectors.Vector <> <> lib
+R243:272 Coq.Logic.FunctionalExtensionality <> <> lib
+modtype 1056:1067 <> TowerTheorem
+ax 1077:1078 TowerTheorem F1
+ax 1080:1081 TowerTheorem F2
+ax 1083:1084 TowerTheorem F3
+R1105:1109 LF.VectorFields VectorAxioms Field class
+R1111:1112 LF.TowerTheorem TowerTheorem F1 prfax
+binder 1105:1112 <> H0:5
+R1126:1130 LF.VectorFields VectorAxioms Field class
+R1132:1133 LF.TowerTheorem TowerTheorem F2 prfax
+binder 1126:1133 <> H2:7
+R1147:1151 LF.VectorFields VectorAxioms Field class
+R1153:1154 LF.TowerTheorem TowerTheorem F3 prfax
+binder 1147:1154 <> H4:9
+ax 1462:1465 TowerTheorem E1_0
+ax 1467:1470 TowerTheorem E1_1
+ax 1479:1482 TowerTheorem E2_0
+ax 1484:1487 TowerTheorem E2_1
+ax 1496:1499 TowerTheorem E3_0
+ax 1501:1504 TowerTheorem E3_1
+R1474:1475 LF.TowerTheorem TowerTheorem F1 prfax
+R1491:1492 LF.TowerTheorem TowerTheorem F2 prfax
+R1508:1509 LF.TowerTheorem TowerTheorem F3 prfax
+R1531:1534 LF.TowerTheorem TowerTheorem E1_0 prfax
+not 1522:1522 TowerTheorem :::'0_1'
+R1555:1558 LF.TowerTheorem TowerTheorem E1_1 prfax
+not 1546:1546 TowerTheorem :::'1_1'
+R1579:1582 LF.TowerTheorem TowerTheorem E2_0 prfax
+not 1570:1570 TowerTheorem :::'0_2'
+R1603:1606 LF.TowerTheorem TowerTheorem E2_1 prfax
+not 1594:1594 TowerTheorem :::'1_2'
+R1627:1630 LF.TowerTheorem TowerTheorem E3_1 prfax
+not 1618:1618 TowerTheorem :::'1_3'
+R1651:1654 LF.TowerTheorem TowerTheorem E3_0 prfax
+not 1642:1642 TowerTheorem :::'0_3'
+ax 1699:1703 TowerTheorem add_1
+ax 1724:1728 TowerTheorem add_2
+ax 1749:1753 TowerTheorem add_3
+R1709:1712 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1707:1708 LF.TowerTheorem TowerTheorem F1 prfax
+R1715:1718 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1713:1714 LF.TowerTheorem TowerTheorem F1 prfax
+R1719:1720 LF.TowerTheorem TowerTheorem F1 prfax
+R1734:1737 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1732:1733 LF.TowerTheorem TowerTheorem F2 prfax
+R1740:1743 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1738:1739 LF.TowerTheorem TowerTheorem F2 prfax
+R1744:1745 LF.TowerTheorem TowerTheorem F2 prfax
+R1759:1762 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1757:1758 LF.TowerTheorem TowerTheorem F3 prfax
+R1765:1768 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1763:1764 LF.TowerTheorem TowerTheorem F3 prfax
+R1769:1770 LF.TowerTheorem TowerTheorem F3 prfax
+R1789:1793 LF.TowerTheorem TowerTheorem add_1 prfax
+not 1780:1780 TowerTheorem :::x_'+_1'_x
+R1825:1829 LF.TowerTheorem TowerTheorem add_2 prfax
+not 1816:1816 TowerTheorem :::x_'+_2'_x
+R1861:1865 LF.TowerTheorem TowerTheorem add_3 prfax
+not 1852:1852 TowerTheorem :::x_'+_3'_x
+ax 1917:1922 TowerTheorem mult_1
+ax 1943:1948 TowerTheorem mult_2
+ax 1969:1974 TowerTheorem mult_3
+R1928:1931 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1926:1927 LF.TowerTheorem TowerTheorem F1 prfax
+R1934:1937 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1932:1933 LF.TowerTheorem TowerTheorem F1 prfax
+R1938:1939 LF.TowerTheorem TowerTheorem F1 prfax
+R1954:1957 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1952:1953 LF.TowerTheorem TowerTheorem F2 prfax
+R1960:1963 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1958:1959 LF.TowerTheorem TowerTheorem F2 prfax
+R1964:1965 LF.TowerTheorem TowerTheorem F2 prfax
+R1980:1983 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1978:1979 LF.TowerTheorem TowerTheorem F3 prfax
+R1986:1989 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1984:1985 LF.TowerTheorem TowerTheorem F3 prfax
+R1990:1991 LF.TowerTheorem TowerTheorem F3 prfax
+R2010:2015 LF.TowerTheorem TowerTheorem mult_1 prfax
+not 2001:2001 TowerTheorem :::x_'*_1'_x
+R2047:2052 LF.TowerTheorem TowerTheorem mult_2 prfax
+not 2038:2038 TowerTheorem :::x_'*_2'_x
+R2084:2089 LF.TowerTheorem TowerTheorem mult_3 prfax
+not 2075:2075 TowerTheorem :::x_'*_3'_x
+ax 2179:2185 TowerTheorem mult_21
+ax 2206:2212 TowerTheorem mult_32
+ax 2233:2239 TowerTheorem mult_31
+R2191:2194 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2189:2190 LF.TowerTheorem TowerTheorem F1 prfax
+R2197:2200 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2195:2196 LF.TowerTheorem TowerTheorem F2 prfax
+R2201:2202 LF.TowerTheorem TowerTheorem F2 prfax
+R2218:2221 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2216:2217 LF.TowerTheorem TowerTheorem F2 prfax
+R2224:2227 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2222:2223 LF.TowerTheorem TowerTheorem F3 prfax
+R2228:2229 LF.TowerTheorem TowerTheorem F3 prfax
+R2245:2248 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2243:2244 LF.TowerTheorem TowerTheorem F1 prfax
+R2251:2254 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2249:2250 LF.TowerTheorem TowerTheorem F3 prfax
+R2255:2256 LF.TowerTheorem TowerTheorem F3 prfax
+R2276:2282 LF.TowerTheorem TowerTheorem mult_21 prfax
+not 2266:2266 TowerTheorem :::x_'*_21'_x
+R2315:2321 LF.TowerTheorem TowerTheorem mult_32 prfax
+not 2305:2305 TowerTheorem :::x_'*_32'_x
+R2354:2360 LF.TowerTheorem TowerTheorem mult_31 prfax
+not 2344:2344 TowerTheorem :::x_'*_31'_x
+ax 2419:2424 TowerTheorem E21_th
+R2428:2446 LF.VectorFields VectorAxioms vector_space_theory rec
+R2448:2449 LF.TowerTheorem TowerTheorem F2 prfax
+R2451:2452 LF.TowerTheorem TowerTheorem F1 prfax
+R2454:2458 LF.TowerTheorem TowerTheorem add_2 prfax
+R2460:2466 LF.TowerTheorem TowerTheorem mult_21 prfax
+R2472:2476 LF.TowerTheorem TowerTheorem add_1 prfax
+R2478:2483 LF.TowerTheorem TowerTheorem mult_1 prfax
+ax 2496:2501 TowerTheorem E32_th
+R2505:2523 LF.VectorFields VectorAxioms vector_space_theory rec
+R2525:2526 LF.TowerTheorem TowerTheorem F3 prfax
+R2528:2529 LF.TowerTheorem TowerTheorem F2 prfax
+R2531:2535 LF.TowerTheorem TowerTheorem add_3 prfax
+R2537:2543 LF.TowerTheorem TowerTheorem mult_32 prfax
+R2549:2553 LF.TowerTheorem TowerTheorem add_2 prfax
+R2555:2560 LF.TowerTheorem TowerTheorem mult_2 prfax
+ax 2573:2578 TowerTheorem E31_th
+R2582:2600 LF.VectorFields VectorAxioms vector_space_theory rec
+R2602:2603 LF.TowerTheorem TowerTheorem F3 prfax
+R2605:2606 LF.TowerTheorem TowerTheorem F1 prfax
+R2608:2612 LF.TowerTheorem TowerTheorem add_3 prfax
+R2614:2620 LF.TowerTheorem TowerTheorem mult_31 prfax
+R2626:2630 LF.TowerTheorem TowerTheorem add_1 prfax
+R2632:2637 LF.TowerTheorem TowerTheorem mult_1 prfax
+ax 2861:2865 TowerTheorem min_1
+ax 2867:2871 TowerTheorem div_1
+ax 2892:2897 TowerTheorem ainv_1
+ax 2899:2904 TowerTheorem minv_1
+R2877:2880 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2875:2876 LF.TowerTheorem TowerTheorem F1 prfax
+R2883:2886 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2881:2882 LF.TowerTheorem TowerTheorem F1 prfax
+R2887:2888 LF.TowerTheorem TowerTheorem F1 prfax
+R2910:2913 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2908:2909 LF.TowerTheorem TowerTheorem F1 prfax
+R2914:2915 LF.TowerTheorem TowerTheorem F1 prfax
+ax 2925:2929 TowerTheorem F1_th
+R2933:2944 Coq.setoid_ring.Field_theory <> field_theory rec
+R2993:2994 Coq.Init.Logic <> eq ind
+R2986:2991 LF.TowerTheorem TowerTheorem minv_1 prfax
+R2980:2984 LF.TowerTheorem TowerTheorem div_1 prfax
+R2973:2978 LF.TowerTheorem TowerTheorem ainv_1 prfax
+R2966:2971 LF.TowerTheorem TowerTheorem mult_1 prfax
+R2960:2964 LF.TowerTheorem TowerTheorem min_1 prfax
+R2954:2958 LF.TowerTheorem TowerTheorem add_1 prfax
+ax 3004:3008 TowerTheorem min_2
+ax 3010:3014 TowerTheorem div_2
+ax 3035:3040 TowerTheorem ainv_2
+ax 3042:3047 TowerTheorem minv_2
+R3020:3023 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3018:3019 LF.TowerTheorem TowerTheorem F2 prfax
+R3026:3029 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3024:3025 LF.TowerTheorem TowerTheorem F2 prfax
+R3030:3031 LF.TowerTheorem TowerTheorem F2 prfax
+R3053:3056 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3051:3052 LF.TowerTheorem TowerTheorem F2 prfax
+R3057:3058 LF.TowerTheorem TowerTheorem F2 prfax
+ax 3068:3072 TowerTheorem F2_th
+R3076:3087 Coq.setoid_ring.Field_theory <> field_theory rec
+R3136:3137 Coq.Init.Logic <> eq ind
+R3129:3134 LF.TowerTheorem TowerTheorem minv_2 prfax
+R3123:3127 LF.TowerTheorem TowerTheorem div_2 prfax
+R3116:3121 LF.TowerTheorem TowerTheorem ainv_2 prfax
+R3109:3114 LF.TowerTheorem TowerTheorem mult_2 prfax
+R3103:3107 LF.TowerTheorem TowerTheorem min_2 prfax
+R3097:3101 LF.TowerTheorem TowerTheorem add_2 prfax
+ax 3147:3151 TowerTheorem min_3
+ax 3153:3157 TowerTheorem div_3
+ax 3178:3183 TowerTheorem ainv_3
+ax 3185:3190 TowerTheorem minv_3
+R3163:3166 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3161:3162 LF.TowerTheorem TowerTheorem F3 prfax
+R3169:3172 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3167:3168 LF.TowerTheorem TowerTheorem F3 prfax
+R3173:3174 LF.TowerTheorem TowerTheorem F3 prfax
+R3196:3199 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3194:3195 LF.TowerTheorem TowerTheorem F3 prfax
+R3200:3201 LF.TowerTheorem TowerTheorem F3 prfax
+ax 3211:3215 TowerTheorem F3_th
+R3219:3230 Coq.setoid_ring.Field_theory <> field_theory rec
+R3279:3280 Coq.Init.Logic <> eq ind
+R3272:3277 LF.TowerTheorem TowerTheorem minv_3 prfax
+R3266:3270 LF.TowerTheorem TowerTheorem div_3 prfax
+R3259:3264 LF.TowerTheorem TowerTheorem ainv_3 prfax
+R3252:3257 LF.TowerTheorem TowerTheorem mult_3 prfax
+R3246:3250 LF.TowerTheorem TowerTheorem min_3 prfax
+R3240:3244 LF.TowerTheorem TowerTheorem add_3 prfax
+R4004:4006 Coq.Vectors.Vector <> nil constr
+not 3994:3994 TowerTheorem :::'['_']'
+R4056:4059 Coq.Vectors.Vector <> cons constr
+not 4043:4043 TowerTheorem :::x_'::'_x
+def 4534:4546 TowerTheorem linear_com_21
+R4562:4564 Coq.Init.Datatypes <> nat ind
+binder 4558:4558 <> n:43
+R4572:4572 Coq.Vectors.Vector <> t ind
+R4574:4575 LF.TowerTheorem TowerTheorem F1 prfax
+R4577:4577 LF.TowerTheorem <> n:43 var
+binder 4568:4568 <> s:44
+R4585:4585 Coq.Vectors.Vector <> t ind
+R4587:4588 LF.TowerTheorem TowerTheorem F2 prfax
+R4590:4590 LF.TowerTheorem <> n:43 var
+binder 4581:4581 <> v:45
+R4594:4595 LF.TowerTheorem TowerTheorem F2 prfax
+binder 4621:4621 <> n:46
+R4629:4629 Coq.Vectors.Vector <> t ind
+R4631:4632 LF.TowerTheorem TowerTheorem F1 prfax
+R4634:4634 LF.TowerTheorem <> n:46 var
+binder 4625:4625 <> s:47
+R4642:4642 Coq.Vectors.Vector <> t ind
+R4644:4645 LF.TowerTheorem TowerTheorem F2 prfax
+R4647:4647 LF.TowerTheorem <> n:46 var
+binder 4638:4638 <> v:48
+R4652:4653 LF.TowerTheorem TowerTheorem F2 prfax
+R4661:4669 Coq.Vectors.Vector <> fold_left def
+R4683:4686 Coq.Vectors.Vector <> map2 def
+R4688:4694 LF.TowerTheorem TowerTheorem mult_21 prfax
+R4697:4697 LF.TowerTheorem <> s:47 var
+R4699:4699 LF.TowerTheorem <> v:48 var
+R4671:4675 LF.TowerTheorem TowerTheorem add_2 prfax
+def 4715:4727 TowerTheorem linear_com_32
+R4743:4745 Coq.Init.Datatypes <> nat ind
+binder 4739:4739 <> n:50
+R4753:4753 Coq.Vectors.Vector <> t ind
+R4755:4756 LF.TowerTheorem TowerTheorem F2 prfax
+R4758:4758 LF.TowerTheorem <> n:50 var
+binder 4749:4749 <> s:51
+R4766:4766 Coq.Vectors.Vector <> t ind
+R4768:4769 LF.TowerTheorem TowerTheorem F3 prfax
+R4771:4771 LF.TowerTheorem <> n:50 var
+binder 4762:4762 <> v:52
+R4775:4776 LF.TowerTheorem TowerTheorem F3 prfax
+binder 4802:4802 <> n:53
+R4810:4810 Coq.Vectors.Vector <> t ind
+R4812:4813 LF.TowerTheorem TowerTheorem F2 prfax
+R4815:4815 LF.TowerTheorem <> n:53 var
+binder 4806:4806 <> s:54
+R4823:4823 Coq.Vectors.Vector <> t ind
+R4825:4826 LF.TowerTheorem TowerTheorem F3 prfax
+R4828:4828 LF.TowerTheorem <> n:53 var
+binder 4819:4819 <> v:55
+R4833:4834 LF.TowerTheorem TowerTheorem F3 prfax
+R4842:4850 Coq.Vectors.Vector <> fold_left def
+R4864:4867 Coq.Vectors.Vector <> map2 def
+R4869:4875 LF.TowerTheorem TowerTheorem mult_32 prfax
+R4878:4878 LF.TowerTheorem <> s:54 var
+R4880:4880 LF.TowerTheorem <> v:55 var
+R4852:4856 LF.TowerTheorem TowerTheorem add_3 prfax
+def 4896:4908 TowerTheorem linear_com_31
+R4924:4926 Coq.Init.Datatypes <> nat ind
+binder 4920:4920 <> n:57
+R4934:4934 Coq.Vectors.Vector <> t ind
+R4936:4937 LF.TowerTheorem TowerTheorem F1 prfax
+R4939:4939 LF.TowerTheorem <> n:57 var
+binder 4930:4930 <> s:58
+R4947:4947 Coq.Vectors.Vector <> t ind
+R4949:4950 LF.TowerTheorem TowerTheorem F3 prfax
+R4952:4952 LF.TowerTheorem <> n:57 var
+binder 4943:4943 <> v:59
+R4956:4957 LF.TowerTheorem TowerTheorem F3 prfax
+binder 4983:4983 <> n:60
+R4991:4991 Coq.Vectors.Vector <> t ind
+R4993:4994 LF.TowerTheorem TowerTheorem F1 prfax
+R4996:4996 LF.TowerTheorem <> n:60 var
+binder 4987:4987 <> s:61
+R5004:5004 Coq.Vectors.Vector <> t ind
+R5006:5007 LF.TowerTheorem TowerTheorem F3 prfax
+R5009:5009 LF.TowerTheorem <> n:60 var
+binder 5000:5000 <> v:62
+R5014:5015 LF.TowerTheorem TowerTheorem F3 prfax
+R5023:5031 Coq.Vectors.Vector <> fold_left def
+R5045:5048 Coq.Vectors.Vector <> map2 def
+R5050:5056 LF.TowerTheorem TowerTheorem mult_31 prfax
+R5059:5059 LF.TowerTheorem <> s:61 var
+R5061:5061 LF.TowerTheorem <> v:62 var
+R5033:5037 LF.TowerTheorem TowerTheorem add_3 prfax
+def 5410:5421 TowerTheorem lin_indep_21
+R5428:5430 Coq.Init.Datatypes <> nat ind
+binder 5424:5424 <> n:64
+R5439:5439 Coq.Vectors.Vector <> t ind
+R5441:5442 LF.TowerTheorem TowerTheorem F2 prfax
+R5444:5444 LF.TowerTheorem <> n:64 var
+binder 5434:5435 <> vs:65
+R5476:5476 Coq.Vectors.Vector <> t ind
+R5478:5479 LF.TowerTheorem TowerTheorem F1 prfax
+R5481:5481 LF.TowerTheorem <> n:64 var
+binder 5467:5472 <> coeffs:66
+R5520:5608 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5489:5489 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5513:5516 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5490:5502 LF.TowerTheorem TowerTheorem linear_com_21 def
+R5511:5512 LF.TowerTheorem <> vs:65 var
+R5504:5509 LF.TowerTheorem <> coeffs:66 var
+R5609:5614 Coq.Vectors.Vector <> Forall ind
+R5635:5640 LF.TowerTheorem <> coeffs:66 var
+binder 5621:5621 <> y:67
+R5627:5629 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5626:5626 LF.TowerTheorem <> y:67 var
+def 5655:5666 TowerTheorem lin_indep_32
+R5673:5675 Coq.Init.Datatypes <> nat ind
+binder 5669:5669 <> n:68
+R5684:5684 Coq.Vectors.Vector <> t ind
+R5686:5687 LF.TowerTheorem TowerTheorem F3 prfax
+R5689:5689 LF.TowerTheorem <> n:68 var
+binder 5679:5680 <> vs:69
+R5720:5720 Coq.Vectors.Vector <> t ind
+R5722:5723 LF.TowerTheorem TowerTheorem F2 prfax
+R5725:5725 LF.TowerTheorem <> n:68 var
+binder 5711:5716 <> coeffs:70
+R5762:5767 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5731:5731 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5755:5758 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5732:5744 LF.TowerTheorem TowerTheorem linear_com_32 def
+R5753:5754 LF.TowerTheorem <> vs:69 var
+R5746:5751 LF.TowerTheorem <> coeffs:70 var
+R5768:5773 Coq.Vectors.Vector <> Forall ind
+R5794:5799 LF.TowerTheorem <> coeffs:70 var
+binder 5780:5780 <> y:71
+R5786:5788 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5785:5785 LF.TowerTheorem <> y:71 var
+def 5814:5825 TowerTheorem lin_indep_31
+R5832:5834 Coq.Init.Datatypes <> nat ind
+binder 5828:5828 <> n:72
+R5843:5843 Coq.Vectors.Vector <> t ind
+R5845:5846 LF.TowerTheorem TowerTheorem F3 prfax
+R5848:5848 LF.TowerTheorem <> n:72 var
+binder 5838:5839 <> vs:73
+R5879:5879 Coq.Vectors.Vector <> t ind
+R5881:5882 LF.TowerTheorem TowerTheorem F1 prfax
+R5884:5884 LF.TowerTheorem <> n:72 var
+binder 5870:5875 <> coeffs:74
+R5921:5926 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5890:5890 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5914:5917 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5891:5903 LF.TowerTheorem TowerTheorem linear_com_31 def
+R5912:5913 LF.TowerTheorem <> vs:73 var
+R5905:5910 LF.TowerTheorem <> coeffs:74 var
+R5927:5932 Coq.Vectors.Vector <> Forall ind
+R5953:5958 LF.TowerTheorem <> coeffs:74 var
+binder 5939:5939 <> y:75
+R5945:5947 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5944:5944 LF.TowerTheorem <> y:75 var
+def 6244:6253 TowerTheorem in_span_21
+R6260:6262 Coq.Init.Datatypes <> nat ind
+binder 6256:6256 <> n:76
+R6273:6273 Coq.Vectors.Vector <> t ind
+R6275:6276 LF.TowerTheorem TowerTheorem F2 prfax
+R6278:6278 LF.TowerTheorem <> n:76 var
+binder 6266:6269 <> vecs:77
+R6286:6287 LF.TowerTheorem TowerTheorem F2 prfax
+binder 6282:6282 <> v:78
+R6301:6307 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6314:6315 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6308:6313 <> coeffs:79
+R6317:6320 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6346:6346 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6316:6316 LF.TowerTheorem <> v:78 var
+R6321:6333 LF.TowerTheorem TowerTheorem linear_com_21 def
+R6342:6345 LF.TowerTheorem <> vecs:77 var
+R6335:6340 LF.TowerTheorem <> coeffs:79 var
+def 6361:6370 TowerTheorem in_span_32
+R6377:6379 Coq.Init.Datatypes <> nat ind
+binder 6373:6373 <> n:80
+R6390:6390 Coq.Vectors.Vector <> t ind
+R6392:6393 LF.TowerTheorem TowerTheorem F3 prfax
+R6395:6395 LF.TowerTheorem <> n:80 var
+binder 6383:6386 <> vecs:81
+R6403:6404 LF.TowerTheorem TowerTheorem F3 prfax
+binder 6399:6399 <> v:82
+R6418:6424 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6431:6432 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6425:6430 <> coeffs:83
+R6434:6437 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6463:6463 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6433:6433 LF.TowerTheorem <> v:82 var
+R6438:6450 LF.TowerTheorem TowerTheorem linear_com_32 def
+R6459:6462 LF.TowerTheorem <> vecs:81 var
+R6452:6457 LF.TowerTheorem <> coeffs:83 var
+def 6478:6487 TowerTheorem in_span_31
+R6494:6496 Coq.Init.Datatypes <> nat ind
+binder 6490:6490 <> n:84
+R6507:6507 Coq.Vectors.Vector <> t ind
+R6509:6510 LF.TowerTheorem TowerTheorem F3 prfax
+R6512:6512 LF.TowerTheorem <> n:84 var
+binder 6500:6503 <> vecs:85
+R6520:6521 LF.TowerTheorem TowerTheorem F3 prfax
+binder 6516:6516 <> v:86
+R6535:6541 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R6548:6549 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 6542:6547 <> coeffs:87
+R6551:6554 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6580:6580 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6550:6550 LF.TowerTheorem <> v:86 var
+R6555:6567 LF.TowerTheorem TowerTheorem linear_com_31 def
+R6576:6579 LF.TowerTheorem <> vecs:85 var
+R6569:6574 LF.TowerTheorem <> coeffs:87 var
+def 6720:6731 TowerTheorem generates_21
+R6738:6740 Coq.Init.Datatypes <> nat ind
+binder 6734:6734 <> n:88
+R6749:6749 Coq.Vectors.Vector <> t ind
+R6751:6752 LF.TowerTheorem TowerTheorem F2 prfax
+R6754:6754 LF.TowerTheorem <> n:88 var
+binder 6744:6745 <> vs:89
+R6780:6781 LF.TowerTheorem TowerTheorem F2 prfax
+binder 6776:6776 <> v:90
+R6785:6794 LF.TowerTheorem TowerTheorem in_span_21 def
+R6799:6799 LF.TowerTheorem <> v:90 var
+R6796:6797 LF.TowerTheorem <> vs:89 var
+def 6814:6825 TowerTheorem generates_32
+R6832:6834 Coq.Init.Datatypes <> nat ind
+binder 6828:6828 <> n:91
+R6843:6843 Coq.Vectors.Vector <> t ind
+R6845:6846 LF.TowerTheorem TowerTheorem F3 prfax
+R6848:6848 LF.TowerTheorem <> n:91 var
+binder 6838:6839 <> vs:92
+R6874:6875 LF.TowerTheorem TowerTheorem F3 prfax
+binder 6870:6870 <> v:93
+R6879:6888 LF.TowerTheorem TowerTheorem in_span_32 def
+R6893:6893 LF.TowerTheorem <> v:93 var
+R6890:6891 LF.TowerTheorem <> vs:92 var
+def 6908:6919 TowerTheorem generates_31
+R6926:6928 Coq.Init.Datatypes <> nat ind
+binder 6922:6922 <> n:94
+R6937:6937 Coq.Vectors.Vector <> t ind
+R6939:6940 LF.TowerTheorem TowerTheorem F3 prfax
+R6942:6942 LF.TowerTheorem <> n:94 var
+binder 6932:6933 <> vs:95
+R6968:6969 LF.TowerTheorem TowerTheorem F3 prfax
+binder 6964:6964 <> v:96
+R6973:6982 LF.TowerTheorem TowerTheorem in_span_31 def
+R6987:6987 LF.TowerTheorem <> v:96 var
+R6984:6985 LF.TowerTheorem <> vs:95 var
+def 7066:7073 TowerTheorem basis_21
+R7080:7082 Coq.Init.Datatypes <> nat ind
+binder 7076:7076 <> n:97
+R7091:7091 Coq.Vectors.Vector <> t ind
+R7093:7094 LF.TowerTheorem TowerTheorem F2 prfax
+R7096:7096 LF.TowerTheorem <> n:97 var
+binder 7086:7087 <> vs:98
+R7125:7128 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R7110:7121 LF.TowerTheorem TowerTheorem generates_21 def
+R7123:7124 LF.TowerTheorem <> vs:98 var
+R7129:7140 LF.TowerTheorem TowerTheorem lin_indep_21 def
+R7142:7143 LF.TowerTheorem <> vs:98 var
+def 7158:7165 TowerTheorem basis_32
+R7172:7174 Coq.Init.Datatypes <> nat ind
+binder 7168:7168 <> n:99
+R7183:7183 Coq.Vectors.Vector <> t ind
+R7185:7186 LF.TowerTheorem TowerTheorem F3 prfax
+R7188:7188 LF.TowerTheorem <> n:99 var
+binder 7178:7179 <> vs:100
+R7217:7220 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R7202:7213 LF.TowerTheorem TowerTheorem generates_32 def
+R7215:7216 LF.TowerTheorem <> vs:100 var
+R7221:7232 LF.TowerTheorem TowerTheorem lin_indep_32 def
+R7234:7235 LF.TowerTheorem <> vs:100 var
+def 7250:7257 TowerTheorem basis_31
+R7264:7266 Coq.Init.Datatypes <> nat ind
+binder 7260:7260 <> n:101
+R7275:7275 Coq.Vectors.Vector <> t ind
+R7277:7278 LF.TowerTheorem TowerTheorem F3 prfax
+R7280:7280 LF.TowerTheorem <> n:101 var
+binder 7270:7271 <> vs:102
+R7309:7312 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R7294:7305 LF.TowerTheorem TowerTheorem generates_31 def
+R7307:7308 LF.TowerTheorem <> vs:102 var
+R7313:7324 LF.TowerTheorem TowerTheorem lin_indep_31 def
+R7326:7327 LF.TowerTheorem <> vs:102 var
+def 7403:7416 TowerTheorem cardinality_21
+R7423:7425 Coq.Init.Datatypes <> nat ind
+binder 7419:7419 <> m:103
+R7439:7446 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7458:7460 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7452:7452 Coq.Vectors.Vector <> t ind
+R7454:7455 LF.TowerTheorem TowerTheorem F2 prfax
+R7457:7457 LF.TowerTheorem <> m:103 var
+binder 7447:7448 <> es:104
+R7461:7468 LF.TowerTheorem TowerTheorem basis_21 def
+R7470:7471 LF.TowerTheorem <> es:104 var
+def 7486:7499 TowerTheorem cardinality_32
+R7506:7508 Coq.Init.Datatypes <> nat ind
+binder 7502:7502 <> m:105
+R7522:7529 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7541:7543 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7535:7535 Coq.Vectors.Vector <> t ind
+R7537:7538 LF.TowerTheorem TowerTheorem F3 prfax
+R7540:7540 LF.TowerTheorem <> m:105 var
+binder 7530:7531 <> es:106
+R7544:7551 LF.TowerTheorem TowerTheorem basis_32 def
+R7553:7554 LF.TowerTheorem <> es:106 var
+def 7569:7582 TowerTheorem cardinality_31
+R7589:7591 Coq.Init.Datatypes <> nat ind
+binder 7585:7585 <> m:107
+R7605:7612 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7624:7626 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R7618:7618 Coq.Vectors.Vector <> t ind
+R7620:7621 LF.TowerTheorem TowerTheorem F3 prfax
+R7623:7623 LF.TowerTheorem <> m:107 var
+binder 7613:7614 <> es:108
+R7627:7634 LF.TowerTheorem TowerTheorem basis_31 def
+R7636:7637 LF.TowerTheorem <> es:108 var
+def 7843:7850 TowerTheorem vec_cast
+binder 7853:7853 <> X:109
+R7870:7872 Coq.Init.Datatypes <> nat ind
+binder 7864:7864 <> m:110
+binder 7866:7866 <> n:111
+R7881:7883 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7880:7880 LF.TowerTheorem <> m:110 var
+R7884:7884 LF.TowerTheorem <> n:111 var
+binder 7876:7876 <> H:112
+binder 7887:7887 <> v:113
+R7893:7899 Coq.Init.Logic <> eq_rect scheme
+R7924:7924 LF.TowerTheorem <> H:112 var
+R7920:7920 LF.TowerTheorem <> v:113 var
+binder 7908:7908 <> k:114
+R7913:7913 Coq.Vectors.Vector <> t ind
+R7915:7915 LF.TowerTheorem <> X:109 var
+R7917:7917 LF.TowerTheorem <> k:114 var
+prf 7934:7942 TowerTheorem cast_vecs
+R7951:7953 Coq.Init.Datatypes <> nat ind
+binder 7945:7945 <> m:115
+binder 7947:7947 <> n:116
+binder 7966:7966 <> F:117
+R7993:7993 Coq.Vectors.Vector <> t ind
+R7995:7995 LF.TowerTheorem <> F:117 var
+R7997:7997 LF.TowerTheorem <> n:116 var
+binder 7988:7989 <> l1:118
+R8006:8006 Coq.Vectors.Vector <> t ind
+R8008:8008 LF.TowerTheorem <> F:117 var
+R8010:8010 LF.TowerTheorem <> m:115 var
+binder 8001:8002 <> l2:119
+R8029:8031 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8028:8028 LF.TowerTheorem <> m:115 var
+R8032:8032 LF.TowerTheorem <> n:116 var
+binder 8024:8024 <> H:120
+R8042:8044 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8040:8041 LF.TowerTheorem <> l1:118 var
+R8045:8052 LF.TowerTheorem TowerTheorem vec_cast def
+R8056:8057 LF.TowerTheorem <> l2:119 var
+R8054:8054 LF.TowerTheorem <> H:120 var
+R8704:8716 Coq.Vectors.Vector <> append def
+not 8696:8696 TowerTheorem :::x_'++'_x
+R8747:8757 Coq.Vectors.Vector <> cons constr
+not 8734:8734 TowerTheorem :::x_'::'_x
+def 8816:8824 TowerTheorem cart_prod
+R8842:8844 Coq.Init.Datatypes <> nat ind
+binder 8836:8836 <> m:121
+binder 8838:8838 <> n:122
+R8852:8852 Coq.Vectors.Vector <> t ind
+R8854:8855 LF.TowerTheorem TowerTheorem F3 prfax
+R8857:8857 LF.TowerTheorem <> m:121 var
+binder 8848:8848 <> U:123
+R8865:8865 Coq.Vectors.Vector <> t ind
+R8867:8868 LF.TowerTheorem TowerTheorem F2 prfax
+R8870:8870 LF.TowerTheorem <> n:122 var
+binder 8861:8861 <> V:124
+R8874:8874 Coq.Vectors.Vector <> t ind
+R8876:8877 LF.TowerTheorem TowerTheorem F3 prfax
+R8881:8883 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R8880:8880 LF.TowerTheorem <> m:121 var
+R8884:8884 LF.TowerTheorem <> n:122 var
+binder 8910:8910 <> m:125
+binder 8914:8914 <> n:126
+R8922:8922 Coq.Vectors.Vector <> t ind
+R8924:8925 LF.TowerTheorem TowerTheorem F3 prfax
+R8927:8927 LF.TowerTheorem <> m:125 var
+binder 8918:8918 <> U:127
+R8935:8935 Coq.Vectors.Vector <> t ind
+R8937:8938 LF.TowerTheorem TowerTheorem F2 prfax
+R8940:8940 LF.TowerTheorem <> n:126 var
+binder 8931:8931 <> V:128
+R8945:8945 Coq.Vectors.Vector <> t ind
+R8947:8948 LF.TowerTheorem TowerTheorem F3 prfax
+R8952:8954 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R8951:8951 LF.TowerTheorem <> m:125 var
+R8955:8955 LF.TowerTheorem <> n:126 var
+R8970:8970 LF.TowerTheorem <> U:127 var
+R8981:8982 LF.TowerTheorem TowerTheorem :::'['_']' not
+R8987:8988 LF.TowerTheorem TowerTheorem :::'['_']' not
+R8996:8999 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R8994:8995 Coq.Vectors.Vector <> hd def
+R9007:9007 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R9037:9041 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R9008:9010 Coq.Vectors.Vector <> map def
+R9036:9036 LF.TowerTheorem <> V:128 var
+binder 9017:9017 <> v:131
+R9022:9028 LF.TowerTheorem TowerTheorem mult_32 prfax
+R9030:9030 LF.TowerTheorem <> v:131 var
+R9042:9054 LF.TowerTheorem <> cart_prod_fix:129 var
+R9060:9060 LF.TowerTheorem <> V:128 var
+prf 9150:9162 TowerTheorem preserve_cons
+R9178:9180 Coq.Init.Datatypes <> nat ind
+binder 9174:9174 <> n:132
+binder 9184:9184 <> F:133
+R9199:9199 LF.TowerTheorem <> F:133 var
+binder 9195:9195 <> h:134
+R9207:9207 Coq.Vectors.Vector <> t ind
+R9209:9209 LF.TowerTheorem <> F:133 var
+R9211:9211 LF.TowerTheorem <> n:132 var
+binder 9203:9203 <> U:135
+R9216:9216 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9233:9236 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9217:9223 Coq.Vectors.Vector <> to_list def
+R9227:9230 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R9226:9226 LF.TowerTheorem <> h:134 var
+R9231:9231 LF.TowerTheorem <> U:135 var
+R9237:9244 Coq.Lists.List <> app abbrev
+R9270:9276 Coq.Vectors.Vector <> to_list def
+R9278:9278 LF.TowerTheorem <> U:135 var
+R9247:9255 Coq.Lists.List <> cons abbrev
+R9259:9266 Coq.Lists.List <> nil abbrev
+R9257:9257 LF.TowerTheorem <> h:134 var
+def 9381:9391 TowerTheorem flatten_vec
+R9409:9411 Coq.Init.Datatypes <> nat ind
+binder 9403:9403 <> m:136
+binder 9405:9405 <> n:137
+binder 9415:9415 <> F:138
+R9430:9430 Coq.Vectors.Vector <> t ind
+R9433:9433 Coq.Vectors.Vector <> t ind
+R9435:9435 LF.TowerTheorem <> F:138 var
+R9437:9437 LF.TowerTheorem <> n:137 var
+R9440:9440 LF.TowerTheorem <> m:136 var
+binder 9426:9426 <> x:139
+R9444:9444 Coq.Vectors.Vector <> t ind
+R9446:9446 LF.TowerTheorem <> F:138 var
+R9450:9452 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R9449:9449 LF.TowerTheorem <> m:136 var
+R9453:9453 LF.TowerTheorem <> n:137 var
+binder 9481:9481 <> m:140
+binder 9485:9485 <> n:141
+binder 9489:9489 <> F:142
+R9497:9497 Coq.Vectors.Vector <> t ind
+R9500:9500 Coq.Vectors.Vector <> t ind
+R9502:9502 LF.TowerTheorem <> F:142 var
+R9504:9504 LF.TowerTheorem <> n:141 var
+R9507:9507 LF.TowerTheorem <> m:140 var
+binder 9493:9493 <> x:143
+R9512:9512 Coq.Vectors.Vector <> t ind
+R9514:9514 LF.TowerTheorem <> F:142 var
+R9518:9520 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R9517:9517 LF.TowerTheorem <> m:140 var
+R9521:9521 LF.TowerTheorem <> n:141 var
+R9536:9536 LF.TowerTheorem <> x:143 var
+R9547:9548 LF.TowerTheorem TowerTheorem :::'['_']' not
+R9553:9554 LF.TowerTheorem TowerTheorem :::'['_']' not
+R9562:9565 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R9560:9561 Coq.Vectors.Vector <> hd def
+R9575:9578 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R9579:9593 LF.TowerTheorem <> flatten_vec_fix:144 var
+prf 9668:9677 TowerTheorem vec_length
+binder 9681:9681 <> F:146
+R9704:9706 Coq.Init.Datatypes <> nat ind
+binder 9700:9700 <> n:147
+R9714:9714 Coq.Vectors.Vector <> t ind
+R9716:9716 LF.TowerTheorem <> F:146 var
+R9718:9718 LF.TowerTheorem <> n:147 var
+binder 9710:9710 <> U:148
+R9741:9743 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9723:9728 Coq.Init.Datatypes <> length def
+R9731:9737 Coq.Vectors.Vector <> to_list def
+R9739:9739 LF.TowerTheorem <> U:148 var
+R9744:9744 LF.TowerTheorem <> n:147 var
+R9810:9822 LF.TowerTheorem TowerTheorem preserve_cons thm
+R9810:9822 LF.TowerTheorem TowerTheorem preserve_cons thm
+R9810:9822 LF.TowerTheorem TowerTheorem preserve_cons thm
+prf 9913:9926 TowerTheorem product_length
+R9944:9946 Coq.Init.Datatypes <> nat ind
+binder 9938:9938 <> m:149
+binder 9940:9940 <> n:150
+R9954:9954 Coq.Vectors.Vector <> t ind
+R9956:9957 LF.TowerTheorem TowerTheorem F3 prfax
+R9959:9959 LF.TowerTheorem <> m:149 var
+binder 9950:9950 <> U:151
+R9967:9967 Coq.Vectors.Vector <> t ind
+R9969:9970 LF.TowerTheorem TowerTheorem F2 prfax
+R9972:9972 LF.TowerTheorem <> n:150 var
+binder 9963:9963 <> V:152
+R10009:10011 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9977:9982 Coq.Init.Datatypes <> length def
+R9985:9991 Coq.Vectors.Vector <> to_list def
+R9994:10002 LF.TowerTheorem TowerTheorem cart_prod def
+R10006:10006 LF.TowerTheorem <> V:152 var
+R10004:10004 LF.TowerTheorem <> U:151 var
+R10013:10015 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R10012:10012 LF.TowerTheorem <> m:149 var
+R10016:10016 LF.TowerTheorem <> n:150 var
+R10045:10053 LF.TowerTheorem TowerTheorem cart_prod def
+R10045:10053 LF.TowerTheorem TowerTheorem cart_prod def
+R10075:10084 LF.TowerTheorem TowerTheorem vec_length thm
+R10075:10084 LF.TowerTheorem TowerTheorem vec_length thm
+R10075:10084 LF.TowerTheorem TowerTheorem vec_length thm
+prf 10150:10161 TowerTheorem empty_vector
+binder 10164:10164 <> F:153
+R10188:10188 Coq.Vectors.Vector <> t ind
+R10190:10190 LF.TowerTheorem <> F:153 var
+binder 10184:10184 <> x:154
+R10197:10199 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10196:10196 LF.TowerTheorem <> x:154 var
+R10200:10201 LF.TowerTheorem TowerTheorem :::'['_']' not
+R10218:10222 Coq.Vectors.Vector <> case0 def
+R10218:10222 Coq.Vectors.Vector <> case0 def
+prf 10483:10504 TowerTheorem additive_injectivity_3
+R10524:10525 LF.TowerTheorem TowerTheorem F3 prfax
+binder 10516:10516 <> a:155
+binder 10518:10518 <> b:156
+binder 10520:10520 <> c:157
+R10546:10549 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10536:10538 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10530:10534 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10529:10529 LF.TowerTheorem <> a:155 var
+R10535:10535 LF.TowerTheorem <> b:156 var
+R10540:10544 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10539:10539 LF.TowerTheorem <> a:155 var
+R10545:10545 LF.TowerTheorem <> c:157 var
+R10551:10553 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10550:10550 LF.TowerTheorem <> b:156 var
+R10554:10554 LF.TowerTheorem <> c:157 var
+R10574:10578 LF.TowerTheorem TowerTheorem F3_th prfax
+R10605:10610 LF.TowerTheorem TowerTheorem E32_th prfax
+R10741:10743 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10735:10739 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10745:10749 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10741:10743 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10735:10739 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10745:10749 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10826:10828 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10820:10824 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10830:10834 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10826:10828 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10820:10824 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R10830:10834 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+prf 10955:10969 TowerTheorem zero_to_zero_32
+R10985:10986 LF.TowerTheorem TowerTheorem F3 prfax
+binder 10981:10981 <> a:158
+R11000:11002 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10993:10998 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R10999:10999 LF.TowerTheorem <> a:158 var
+R11025:11029 LF.TowerTheorem TowerTheorem F2_th prfax
+R11056:11061 LF.TowerTheorem TowerTheorem E32_th prfax
+R11092:11094 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11085:11090 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R11098:11103 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R11092:11094 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11085:11090 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R11098:11103 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R11218:11223 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R11218:11223 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R11218:11223 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R11247:11268 LF.TowerTheorem TowerTheorem additive_injectivity_3 thm
+R11247:11268 LF.TowerTheorem TowerTheorem additive_injectivity_3 thm
+prf 11304:11318 TowerTheorem zero_to_zero_31
+R11334:11335 LF.TowerTheorem TowerTheorem F3 prfax
+binder 11330:11330 <> a:159
+R11349:11351 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11342:11347 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11348:11348 LF.TowerTheorem <> a:159 var
+R11374:11378 LF.TowerTheorem TowerTheorem F1_th prfax
+R11405:11410 LF.TowerTheorem TowerTheorem E31_th prfax
+R11441:11443 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11434:11439 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11447:11452 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11441:11443 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11434:11439 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11447:11452 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11567:11572 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11567:11572 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11567:11572 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R11596:11617 LF.TowerTheorem TowerTheorem additive_injectivity_3 thm
+R11596:11617 LF.TowerTheorem TowerTheorem additive_injectivity_3 thm
+prf 11653:11674 TowerTheorem additive_injectivity_2
+R11694:11695 LF.TowerTheorem TowerTheorem F2 prfax
+binder 11686:11686 <> a:160
+binder 11688:11688 <> b:161
+binder 11690:11690 <> c:162
+R11716:11719 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11706:11708 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11700:11704 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R11699:11699 LF.TowerTheorem <> a:160 var
+R11705:11705 LF.TowerTheorem <> b:161 var
+R11710:11714 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R11709:11709 LF.TowerTheorem <> a:160 var
+R11715:11715 LF.TowerTheorem <> c:162 var
+R11721:11723 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11720:11720 LF.TowerTheorem <> b:161 var
+R11724:11724 LF.TowerTheorem <> c:162 var
+R11744:11748 LF.TowerTheorem TowerTheorem F2_th prfax
+R11775:11780 LF.TowerTheorem TowerTheorem E21_th prfax
+R11911:11913 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11905:11909 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R11915:11919 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R11911:11913 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11905:11909 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R11915:11919 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R11996:11998 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11990:11994 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R12000:12004 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R11996:11998 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11990:11994 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R12000:12004 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+prf 12125:12139 TowerTheorem zero_to_zero_21
+R12155:12156 LF.TowerTheorem TowerTheorem F2 prfax
+binder 12151:12151 <> a:163
+R12170:12172 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12163:12168 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12169:12169 LF.TowerTheorem <> a:163 var
+R12195:12199 LF.TowerTheorem TowerTheorem F1_th prfax
+R12226:12231 LF.TowerTheorem TowerTheorem E21_th prfax
+R12262:12264 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12255:12260 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12268:12273 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12262:12264 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12255:12260 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12268:12273 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12388:12393 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12388:12393 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12388:12393 LF.TowerTheorem TowerTheorem :::x_'*_21'_x not
+R12417:12438 LF.TowerTheorem TowerTheorem additive_injectivity_2 thm
+R12417:12438 LF.TowerTheorem TowerTheorem additive_injectivity_2 thm
+ax 12863:12866 TowerTheorem skip
+binder 12878:12878 <> p:164
+R12893:12896 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12889:12892 Coq.Init.Logic <> True ind
+R12897:12897 LF.TowerTheorem <> p:164 var
+R12923:12926 LF.TowerTheorem TowerTheorem skip prfax
+prf 13778:13790 TowerTheorem remove_vec_32
+R13806:13808 Coq.Init.Datatypes <> nat ind
+binder 13802:13802 <> m:166
+R13816:13816 Coq.Vectors.Vector <> t ind
+R13818:13819 LF.TowerTheorem TowerTheorem F3 prfax
+R13821:13821 LF.TowerTheorem <> m:166 var
+binder 13812:13812 <> U:167
+R13829:13830 LF.TowerTheorem TowerTheorem F3 prfax
+binder 13825:13825 <> h:168
+R13856:13859 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13835:13846 LF.TowerTheorem TowerTheorem lin_indep_32 def
+R13850:13853 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R13849:13849 LF.TowerTheorem <> h:168 var
+R13854:13854 LF.TowerTheorem <> U:167 var
+R13860:13871 LF.TowerTheorem TowerTheorem lin_indep_32 def
+R13873:13873 LF.TowerTheorem <> U:167 var
+R13892:13903 LF.TowerTheorem TowerTheorem lin_indep_32 def
+R13955:13955 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R13965:13969 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R13959:13962 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R13963:13964 LF.TowerTheorem TowerTheorem :::'['_']' not
+R13955:13955 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R13965:13969 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R13959:13962 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R13963:13964 LF.TowerTheorem TowerTheorem :::'['_']' not
+R14003:14017 LF.TowerTheorem TowerTheorem zero_to_zero_32 thm
+R14003:14017 LF.TowerTheorem TowerTheorem zero_to_zero_32 thm
+R14059:14063 LF.TowerTheorem TowerTheorem F3_th prfax
+R14152:14154 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14113:14121 Coq.Vectors.Vector <> fold_left def
+R14134:14137 Coq.Vectors.Vector <> map2 def
+R14139:14145 LF.TowerTheorem TowerTheorem mult_32 prfax
+R14123:14127 LF.TowerTheorem TowerTheorem add_3 prfax
+R14155:14167 LF.TowerTheorem TowerTheorem linear_com_32 def
+R14152:14154 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14113:14121 Coq.Vectors.Vector <> fold_left def
+R14134:14137 Coq.Vectors.Vector <> map2 def
+R14139:14145 LF.TowerTheorem TowerTheorem mult_32 prfax
+R14123:14127 LF.TowerTheorem TowerTheorem add_3 prfax
+R14155:14167 LF.TowerTheorem TowerTheorem linear_com_32 def
+R14281:14287 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R14239:14244 Coq.Vectors.Vector <> Forall ind
+R14274:14277 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R14255:14256 LF.TowerTheorem TowerTheorem F2 prfax
+binder 14251:14251 <> y:169
+R14262:14264 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14261:14261 LF.TowerTheorem <> y:169 var
+R14288:14293 Coq.Vectors.Vector <> Forall ind
+R14304:14305 LF.TowerTheorem TowerTheorem F2 prfax
+binder 14300:14300 <> y:170
+R14311:14313 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14310:14310 LF.TowerTheorem <> y:170 var
+R14281:14287 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R14239:14244 Coq.Vectors.Vector <> Forall ind
+R14274:14277 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R14255:14256 LF.TowerTheorem TowerTheorem F2 prfax
+binder 14251:14251 <> y:171
+R14262:14264 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14261:14261 LF.TowerTheorem <> y:171 var
+R14288:14293 Coq.Vectors.Vector <> Forall ind
+R14304:14305 LF.TowerTheorem TowerTheorem F2 prfax
+binder 14300:14300 <> y:172
+R14311:14313 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14310:14310 LF.TowerTheorem <> y:172 var
+prf 14375:14387 TowerTheorem remove_vec_21
+R14403:14405 Coq.Init.Datatypes <> nat ind
+binder 14399:14399 <> m:173
+R14413:14413 Coq.Vectors.Vector <> t ind
+R14415:14416 LF.TowerTheorem TowerTheorem F2 prfax
+R14418:14418 LF.TowerTheorem <> m:173 var
+binder 14409:14409 <> V:174
+R14426:14427 LF.TowerTheorem TowerTheorem F2 prfax
+binder 14422:14422 <> h:175
+R14453:14456 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R14432:14443 LF.TowerTheorem TowerTheorem lin_indep_21 def
+R14447:14450 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R14446:14446 LF.TowerTheorem <> h:175 var
+R14451:14451 LF.TowerTheorem <> V:174 var
+R14457:14468 LF.TowerTheorem TowerTheorem lin_indep_21 def
+R14470:14470 LF.TowerTheorem <> V:174 var
+R14542:14553 LF.TowerTheorem TowerTheorem lin_indep_21 def
+R14605:14605 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R14615:14619 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R14609:14612 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R14613:14614 LF.TowerTheorem TowerTheorem :::'['_']' not
+R14605:14605 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R14615:14619 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R14609:14612 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R14613:14614 LF.TowerTheorem TowerTheorem :::'['_']' not
+R14653:14667 LF.TowerTheorem TowerTheorem zero_to_zero_21 thm
+R14653:14667 LF.TowerTheorem TowerTheorem zero_to_zero_21 thm
+R14709:14713 LF.TowerTheorem TowerTheorem F2_th prfax
+R14802:14804 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14763:14771 Coq.Vectors.Vector <> fold_left def
+R14784:14787 Coq.Vectors.Vector <> map2 def
+R14789:14795 LF.TowerTheorem TowerTheorem mult_21 prfax
+R14773:14777 LF.TowerTheorem TowerTheorem add_2 prfax
+R14805:14817 LF.TowerTheorem TowerTheorem linear_com_21 def
+R14802:14804 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14763:14771 Coq.Vectors.Vector <> fold_left def
+R14784:14787 Coq.Vectors.Vector <> map2 def
+R14789:14795 LF.TowerTheorem TowerTheorem mult_21 prfax
+R14773:14777 LF.TowerTheorem TowerTheorem add_2 prfax
+R14805:14817 LF.TowerTheorem TowerTheorem linear_com_21 def
+R14931:14937 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R14889:14894 Coq.Vectors.Vector <> Forall ind
+R14924:14927 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R14905:14906 LF.TowerTheorem TowerTheorem F1 prfax
+binder 14901:14901 <> y:176
+R14912:14914 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14911:14911 LF.TowerTheorem <> y:176 var
+R14938:14943 Coq.Vectors.Vector <> Forall ind
+R14954:14955 LF.TowerTheorem TowerTheorem F1 prfax
+binder 14950:14950 <> y:177
+R14961:14963 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14960:14960 LF.TowerTheorem <> y:177 var
+R14931:14937 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R14889:14894 Coq.Vectors.Vector <> Forall ind
+R14924:14927 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R14905:14906 LF.TowerTheorem TowerTheorem F1 prfax
+binder 14901:14901 <> y:178
+R14912:14914 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14911:14911 LF.TowerTheorem <> y:178 var
+R14938:14943 Coq.Vectors.Vector <> Forall ind
+R14954:14955 LF.TowerTheorem TowerTheorem F1 prfax
+binder 14950:14950 <> y:179
+R14961:14963 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14960:14960 LF.TowerTheorem <> y:179 var
+prf 15027:15045 TowerTheorem product_independent
+R15063:15065 Coq.Init.Datatypes <> nat ind
+binder 15057:15057 <> m:180
+binder 15059:15059 <> n:181
+R15073:15073 Coq.Vectors.Vector <> t ind
+R15075:15076 LF.TowerTheorem TowerTheorem F3 prfax
+R15078:15078 LF.TowerTheorem <> m:180 var
+binder 15069:15069 <> U:182
+R15086:15086 Coq.Vectors.Vector <> t ind
+R15088:15089 LF.TowerTheorem TowerTheorem F2 prfax
+R15091:15091 LF.TowerTheorem <> n:181 var
+binder 15082:15082 <> V:183
+R15110:15113 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15096:15107 LF.TowerTheorem TowerTheorem lin_indep_32 def
+R15109:15109 LF.TowerTheorem <> U:182 var
+R15128:15131 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15114:15125 LF.TowerTheorem TowerTheorem lin_indep_21 def
+R15127:15127 LF.TowerTheorem <> V:183 var
+R15132:15143 LF.TowerTheorem TowerTheorem lin_indep_31 def
+R15146:15154 LF.TowerTheorem TowerTheorem cart_prod def
+R15158:15158 LF.TowerTheorem <> V:183 var
+R15156:15156 LF.TowerTheorem <> U:182 var
+R15185:15196 LF.TowerTheorem TowerTheorem lin_indep_31 def
+R15237:15248 LF.TowerTheorem TowerTheorem empty_vector thm
+R15237:15248 LF.TowerTheorem TowerTheorem empty_vector thm
+R15323:15334 LF.TowerTheorem TowerTheorem lin_indep_21 def
+R15454:15466 LF.TowerTheorem TowerTheorem remove_vec_32 thm
+R15454:15466 LF.TowerTheorem TowerTheorem remove_vec_32 thm
+R15500:15512 LF.TowerTheorem TowerTheorem remove_vec_21 thm
+R15500:15512 LF.TowerTheorem TowerTheorem remove_vec_21 thm
+prf 16136:16143 TowerTheorem comb_0_3
+R16166:16168 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16147:16159 LF.TowerTheorem TowerTheorem linear_com_32 def
+R16164:16165 LF.TowerTheorem TowerTheorem :::'['_']' not
+R16161:16162 LF.TowerTheorem TowerTheorem :::'['_']' not
+prf 16202:16209 TowerTheorem comb_0_2
+R16232:16234 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16213:16225 LF.TowerTheorem TowerTheorem linear_com_21 def
+R16230:16231 LF.TowerTheorem TowerTheorem :::'['_']' not
+R16227:16228 LF.TowerTheorem TowerTheorem :::'['_']' not
+prf 16374:16388 TowerTheorem expand_vector_2
+R16406:16408 Coq.Init.Datatypes <> nat ind
+binder 16400:16400 <> m:184
+binder 16402:16402 <> n:185
+R16416:16416 Coq.Vectors.Vector <> t ind
+R16418:16419 LF.TowerTheorem TowerTheorem F2 prfax
+R16421:16421 LF.TowerTheorem <> n:185 var
+binder 16412:16412 <> V:186
+R16430:16430 Coq.Vectors.Vector <> t ind
+R16432:16433 LF.TowerTheorem TowerTheorem F2 prfax
+R16435:16435 LF.TowerTheorem <> m:184 var
+binder 16425:16426 <> vs:187
+R16454:16457 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R16440:16451 LF.TowerTheorem TowerTheorem generates_21 def
+R16453:16453 LF.TowerTheorem <> V:186 var
+R16458:16465 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R16483:16487 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R16471:16471 Coq.Vectors.Vector <> t ind
+R16474:16474 Coq.Vectors.Vector <> t ind
+R16476:16477 LF.TowerTheorem TowerTheorem F1 prfax
+R16479:16479 LF.TowerTheorem <> n:185 var
+R16482:16482 LF.TowerTheorem <> m:184 var
+binder 16466:16467 <> cs:188
+R16490:16493 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16540:16540 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16488:16489 LF.TowerTheorem <> vs:187 var
+R16494:16503 Coq.Vectors.Vector <> map def
+R16538:16539 LF.TowerTheorem <> cs:188 var
+binder 16510:16512 <> com:189
+R16517:16529 LF.TowerTheorem TowerTheorem linear_com_21 def
+R16535:16535 LF.TowerTheorem <> V:186 var
+R16531:16533 LF.TowerTheorem <> com:189 var
+R16566:16577 LF.TowerTheorem TowerTheorem generates_21 def
+R16593:16602 LF.TowerTheorem TowerTheorem in_span_21 def
+R16636:16637 LF.TowerTheorem TowerTheorem :::'['_']' not
+R16636:16637 LF.TowerTheorem TowerTheorem :::'['_']' not
+R16782:16785 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R16782:16785 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+prf 16841:16855 TowerTheorem expand_vector_3
+R16873:16875 Coq.Init.Datatypes <> nat ind
+binder 16867:16867 <> m:190
+binder 16869:16869 <> n:191
+R16883:16883 Coq.Vectors.Vector <> t ind
+R16885:16886 LF.TowerTheorem TowerTheorem F3 prfax
+R16888:16888 LF.TowerTheorem <> m:190 var
+binder 16879:16879 <> U:192
+R16896:16896 Coq.Vectors.Vector <> t ind
+R16898:16899 LF.TowerTheorem TowerTheorem F2 prfax
+R16901:16901 LF.TowerTheorem <> n:191 var
+binder 16892:16892 <> V:193
+R16909:16910 LF.TowerTheorem TowerTheorem F3 prfax
+binder 16905:16905 <> v:194
+R16929:16932 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R16915:16926 LF.TowerTheorem TowerTheorem generates_32 def
+R16928:16928 LF.TowerTheorem <> U:192 var
+R16947:16951 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R16933:16944 LF.TowerTheorem TowerTheorem generates_21 def
+R16946:16946 LF.TowerTheorem <> V:193 var
+R16952:16959 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R16981:16983 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R16969:16969 Coq.Vectors.Vector <> t ind
+R16972:16972 Coq.Vectors.Vector <> t ind
+R16974:16975 LF.TowerTheorem TowerTheorem F1 prfax
+R16977:16977 LF.TowerTheorem <> n:191 var
+R16980:16980 LF.TowerTheorem <> m:190 var
+binder 16960:16965 <> coeffs:195
+R16985:16987 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R16984:16984 LF.TowerTheorem <> v:194 var
+R16988:17000 LF.TowerTheorem TowerTheorem linear_com_32 def
+R17055:17055 LF.TowerTheorem <> U:192 var
+R17003:17012 Coq.Vectors.Vector <> map def
+R17047:17052 LF.TowerTheorem <> coeffs:195 var
+binder 17019:17021 <> com:196
+R17026:17038 LF.TowerTheorem TowerTheorem linear_com_21 def
+R17044:17044 LF.TowerTheorem <> V:193 var
+R17040:17042 LF.TowerTheorem <> com:196 var
+R17073:17084 LF.TowerTheorem TowerTheorem generates_32 def
+R17094:17103 LF.TowerTheorem TowerTheorem in_span_32 def
+R17173:17187 LF.TowerTheorem TowerTheorem expand_vector_2 thm
+R17173:17187 LF.TowerTheorem TowerTheorem expand_vector_2 thm
+prf 17350:17359 TowerTheorem map_to_0_2
+binder 17362:17362 <> F:197
+R17386:17388 Coq.Init.Datatypes <> nat ind
+binder 17382:17382 <> n:198
+R17396:17396 Coq.Vectors.Vector <> t ind
+R17398:17399 LF.TowerTheorem TowerTheorem F3 prfax
+R17401:17401 LF.TowerTheorem <> n:198 var
+binder 17392:17392 <> U:199
+R17410:17410 Coq.Vectors.Vector <> t ind
+R17412:17412 LF.TowerTheorem <> F:197 var
+R17414:17414 LF.TowerTheorem <> n:198 var
+binder 17405:17406 <> x0:200
+R17462:17464 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17419:17431 LF.TowerTheorem TowerTheorem linear_com_32 def
+R17461:17461 LF.TowerTheorem <> U:199 var
+R17434:17436 Coq.Vectors.Vector <> map def
+R17457:17458 LF.TowerTheorem <> x0:200 var
+R17516:17527 LF.TowerTheorem TowerTheorem empty_vector thm
+R17516:17527 LF.TowerTheorem TowerTheorem empty_vector thm
+R17582:17583 Coq.Vectors.Vector <> tl def
+R17582:17583 Coq.Vectors.Vector <> tl def
+R17600:17605 LF.TowerTheorem TowerTheorem E32_th prfax
+R17669:17674 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17619:17631 LF.TowerTheorem TowerTheorem linear_com_32 def
+R17663:17666 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R17634:17636 Coq.Vectors.Vector <> map def
+R17675:17675 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R17686:17691 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R17679:17684 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R17692:17704 LF.TowerTheorem TowerTheorem linear_com_32 def
+R17707:17709 Coq.Vectors.Vector <> map def
+R17731:17732 Coq.Vectors.Vector <> tl def
+R17669:17674 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17619:17631 LF.TowerTheorem TowerTheorem linear_com_32 def
+R17663:17666 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R17634:17636 Coq.Vectors.Vector <> map def
+R17675:17675 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R17686:17691 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R17679:17684 LF.TowerTheorem TowerTheorem :::x_'*_32'_x not
+R17692:17704 LF.TowerTheorem TowerTheorem linear_com_32 def
+R17707:17709 Coq.Vectors.Vector <> map def
+R17731:17732 Coq.Vectors.Vector <> tl def
+R17787:17801 LF.TowerTheorem TowerTheorem zero_to_zero_32 thm
+R17787:17801 LF.TowerTheorem TowerTheorem zero_to_zero_32 thm
+prf 17885:17894 TowerTheorem map_to_0_1
+binder 17897:17897 <> F:201
+R17921:17923 Coq.Init.Datatypes <> nat ind
+binder 17917:17917 <> n:202
+R17931:17931 Coq.Vectors.Vector <> t ind
+R17933:17934 LF.TowerTheorem TowerTheorem F3 prfax
+R17936:17936 LF.TowerTheorem <> n:202 var
+binder 17927:17927 <> U:203
+R17945:17945 Coq.Vectors.Vector <> t ind
+R17947:17947 LF.TowerTheorem <> F:201 var
+R17949:17949 LF.TowerTheorem <> n:202 var
+binder 17940:17941 <> x0:204
+R17997:17999 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17954:17966 LF.TowerTheorem TowerTheorem linear_com_31 def
+R17996:17996 LF.TowerTheorem <> U:203 var
+R17969:17971 Coq.Vectors.Vector <> map def
+R17992:17993 LF.TowerTheorem <> x0:204 var
+R18051:18062 LF.TowerTheorem TowerTheorem empty_vector thm
+R18051:18062 LF.TowerTheorem TowerTheorem empty_vector thm
+R18117:18118 Coq.Vectors.Vector <> tl def
+R18117:18118 Coq.Vectors.Vector <> tl def
+R18135:18140 LF.TowerTheorem TowerTheorem E31_th prfax
+R18204:18209 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18154:18166 LF.TowerTheorem TowerTheorem linear_com_31 def
+R18198:18201 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R18169:18171 Coq.Vectors.Vector <> map def
+R18210:18210 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R18221:18226 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R18214:18219 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R18227:18239 LF.TowerTheorem TowerTheorem linear_com_31 def
+R18242:18244 Coq.Vectors.Vector <> map def
+R18266:18267 Coq.Vectors.Vector <> tl def
+R18204:18209 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18154:18166 LF.TowerTheorem TowerTheorem linear_com_31 def
+R18198:18201 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R18169:18171 Coq.Vectors.Vector <> map def
+R18210:18210 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R18221:18226 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R18214:18219 LF.TowerTheorem TowerTheorem :::x_'*_31'_x not
+R18227:18239 LF.TowerTheorem TowerTheorem linear_com_31 def
+R18242:18244 Coq.Vectors.Vector <> map def
+R18266:18267 Coq.Vectors.Vector <> tl def
+R18323:18337 LF.TowerTheorem TowerTheorem zero_to_zero_31 thm
+R18323:18337 LF.TowerTheorem TowerTheorem zero_to_zero_31 thm
+prf 18479:18499 TowerTheorem telescope_linear_coms
+R18508:18510 Coq.Init.Datatypes <> nat ind
+binder 18502:18502 <> m:205
+binder 18504:18504 <> n:206
+R18527:18527 Coq.Vectors.Vector <> t ind
+R18529:18530 LF.TowerTheorem TowerTheorem F3 prfax
+R18532:18532 LF.TowerTheorem <> m:205 var
+binder 18523:18523 <> U:207
+R18540:18540 Coq.Vectors.Vector <> t ind
+R18542:18543 LF.TowerTheorem TowerTheorem F2 prfax
+R18545:18545 LF.TowerTheorem <> n:206 var
+binder 18536:18536 <> V:208
+R18558:18558 Coq.Vectors.Vector <> t ind
+R18561:18561 Coq.Vectors.Vector <> t ind
+R18563:18564 LF.TowerTheorem TowerTheorem F1 prfax
+R18566:18566 LF.TowerTheorem <> n:206 var
+R18569:18569 LF.TowerTheorem <> m:205 var
+binder 18549:18554 <> coeffs:209
+R18644:18647 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18574:18586 LF.TowerTheorem TowerTheorem linear_com_32 def
+R18643:18643 LF.TowerTheorem <> U:207 var
+R18589:18591 Coq.Vectors.Vector <> map def
+R18635:18640 LF.TowerTheorem <> coeffs:209 var
+R18604:18604 Coq.Vectors.Vector <> t ind
+R18606:18607 LF.TowerTheorem TowerTheorem F1 prfax
+R18609:18609 LF.TowerTheorem <> n:206 var
+binder 18598:18600 <> com:210
+R18614:18626 LF.TowerTheorem TowerTheorem linear_com_21 def
+R18632:18632 LF.TowerTheorem <> V:208 var
+R18628:18630 LF.TowerTheorem <> com:210 var
+R18648:18660 LF.TowerTheorem TowerTheorem linear_com_31 def
+R18684:18692 LF.TowerTheorem TowerTheorem cart_prod def
+R18696:18696 LF.TowerTheorem <> V:208 var
+R18694:18694 LF.TowerTheorem <> U:207 var
+R18663:18673 LF.TowerTheorem TowerTheorem flatten_vec def
+R18675:18680 LF.TowerTheorem <> coeffs:209 var
+R18749:18760 LF.TowerTheorem TowerTheorem empty_vector thm
+R18749:18760 LF.TowerTheorem TowerTheorem empty_vector thm
+R18813:18814 Coq.Vectors.Vector <> tl def
+R18813:18814 Coq.Vectors.Vector <> tl def
+R18856:18859 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18883:18883 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18831:18841 LF.TowerTheorem TowerTheorem flatten_vec def
+R18845:18848 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R18861:18864 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R18865:18875 LF.TowerTheorem TowerTheorem flatten_vec def
+R18856:18859 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18883:18883 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18831:18841 LF.TowerTheorem TowerTheorem flatten_vec def
+R18845:18848 LF.TowerTheorem TowerTheorem :::x_'::'_x not
+R18861:18864 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R18865:18875 LF.TowerTheorem TowerTheorem flatten_vec def
+R18980:18984 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18923:18935 LF.TowerTheorem TowerTheorem linear_com_31 def
+R18966:18974 LF.TowerTheorem TowerTheorem cart_prod def
+R18939:18943 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R18962:18962 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R18944:18954 LF.TowerTheorem TowerTheorem flatten_vec def
+R18985:18985 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R19039:19047 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R19103:19103 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R18986:18998 LF.TowerTheorem TowerTheorem linear_com_31 def
+R19004:19006 Coq.Vectors.Vector <> map def
+binder 19013:19013 <> v:211
+R19018:19024 LF.TowerTheorem TowerTheorem mult_32 prfax
+R19026:19026 LF.TowerTheorem <> v:211 var
+R19029:19030 Coq.Vectors.Vector <> hd def
+R19048:19060 LF.TowerTheorem TowerTheorem linear_com_31 def
+R19084:19092 LF.TowerTheorem TowerTheorem cart_prod def
+R19095:19096 Coq.Vectors.Vector <> tl def
+R19063:19073 LF.TowerTheorem TowerTheorem flatten_vec def
+R18980:18984 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R18923:18935 LF.TowerTheorem TowerTheorem linear_com_31 def
+R18966:18974 LF.TowerTheorem TowerTheorem cart_prod def
+R18939:18943 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R18962:18962 LF.TowerTheorem TowerTheorem :::x_'++'_x not
+R18944:18954 LF.TowerTheorem TowerTheorem flatten_vec def
+R18985:18985 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R19039:19047 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R19103:19103 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R18986:18998 LF.TowerTheorem TowerTheorem linear_com_31 def
+R19004:19006 Coq.Vectors.Vector <> map def
+binder 19013:19013 <> v:212
+R19018:19024 LF.TowerTheorem TowerTheorem mult_32 prfax
+R19026:19026 LF.TowerTheorem <> v:212 var
+R19029:19030 Coq.Vectors.Vector <> hd def
+R19048:19060 LF.TowerTheorem TowerTheorem linear_com_31 def
+R19084:19092 LF.TowerTheorem TowerTheorem cart_prod def
+R19095:19096 Coq.Vectors.Vector <> tl def
+R19063:19073 LF.TowerTheorem TowerTheorem flatten_vec def
+R19151:19163 LF.TowerTheorem TowerTheorem linear_com_32 def
+prf 19199:19215 TowerTheorem expand_linear_com
+R19233:19235 Coq.Init.Datatypes <> nat ind
+binder 19227:19227 <> m:213
+binder 19229:19229 <> n:214
+R19243:19243 Coq.Vectors.Vector <> t ind
+R19245:19246 LF.TowerTheorem TowerTheorem F3 prfax
+R19248:19248 LF.TowerTheorem <> m:213 var
+binder 19239:19239 <> U:215
+R19256:19256 Coq.Vectors.Vector <> t ind
+R19258:19259 LF.TowerTheorem TowerTheorem F2 prfax
+R19261:19261 LF.TowerTheorem <> n:214 var
+binder 19252:19252 <> V:216
+R19269:19270 LF.TowerTheorem TowerTheorem F3 prfax
+binder 19265:19265 <> v:217
+R19289:19292 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19275:19286 LF.TowerTheorem TowerTheorem generates_32 def
+R19288:19288 LF.TowerTheorem <> U:215 var
+R19307:19311 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19293:19304 LF.TowerTheorem TowerTheorem generates_21 def
+R19306:19306 LF.TowerTheorem <> V:216 var
+R19312:19319 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R19340:19342 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R19328:19328 Coq.Vectors.Vector <> t ind
+R19330:19331 LF.TowerTheorem TowerTheorem F1 prfax
+R19335:19337 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R19334:19334 LF.TowerTheorem <> m:213 var
+R19338:19338 LF.TowerTheorem <> n:214 var
+binder 19320:19325 <> coeffs:218
+R19344:19346 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R19343:19343 LF.TowerTheorem <> v:217 var
+R19347:19359 LF.TowerTheorem TowerTheorem linear_com_31 def
+R19369:19377 LF.TowerTheorem TowerTheorem cart_prod def
+R19381:19381 LF.TowerTheorem <> V:216 var
+R19379:19379 LF.TowerTheorem <> U:215 var
+R19361:19366 LF.TowerTheorem <> coeffs:218 var
+R19414:19428 LF.TowerTheorem TowerTheorem expand_vector_3 thm
+R19414:19428 LF.TowerTheorem TowerTheorem expand_vector_3 thm
+R19496:19506 LF.TowerTheorem TowerTheorem flatten_vec def
+R19496:19506 LF.TowerTheorem TowerTheorem flatten_vec def
+R19531:19551 LF.TowerTheorem TowerTheorem telescope_linear_coms prfax
+R19531:19551 LF.TowerTheorem TowerTheorem telescope_linear_coms prfax
+prf 19606:19618 TowerTheorem product_spans
+R19636:19638 Coq.Init.Datatypes <> nat ind
+binder 19630:19630 <> m:219
+binder 19632:19632 <> n:220
+R19646:19646 Coq.Vectors.Vector <> t ind
+R19648:19649 LF.TowerTheorem TowerTheorem F3 prfax
+R19651:19651 LF.TowerTheorem <> m:219 var
+binder 19642:19642 <> U:221
+R19659:19659 Coq.Vectors.Vector <> t ind
+R19661:19662 LF.TowerTheorem TowerTheorem F2 prfax
+R19664:19664 LF.TowerTheorem <> n:220 var
+binder 19655:19655 <> V:222
+R19683:19686 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19669:19680 LF.TowerTheorem TowerTheorem generates_32 def
+R19682:19682 LF.TowerTheorem <> U:221 var
+R19701:19704 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19687:19698 LF.TowerTheorem TowerTheorem generates_21 def
+R19700:19700 LF.TowerTheorem <> V:222 var
+R19705:19716 LF.TowerTheorem TowerTheorem generates_31 def
+R19719:19727 LF.TowerTheorem TowerTheorem cart_prod def
+R19731:19731 LF.TowerTheorem <> V:222 var
+R19729:19729 LF.TowerTheorem <> U:221 var
+R19758:19769 LF.TowerTheorem TowerTheorem generates_31 def
+R19779:19788 LF.TowerTheorem TowerTheorem in_span_31 def
+R19812:19828 LF.TowerTheorem TowerTheorem expand_linear_com thm
+R19812:19828 LF.TowerTheorem TowerTheorem expand_linear_com thm
+prf 19927:19942 TowerTheorem product_is_basis
+R19960:19962 Coq.Init.Datatypes <> nat ind
+binder 19954:19954 <> m:223
+binder 19956:19956 <> n:224
+R19970:19970 Coq.Vectors.Vector <> t ind
+R19972:19973 LF.TowerTheorem TowerTheorem F3 prfax
+R19975:19975 LF.TowerTheorem <> m:223 var
+binder 19966:19966 <> U:225
+R19983:19983 Coq.Vectors.Vector <> t ind
+R19985:19986 LF.TowerTheorem TowerTheorem F2 prfax
+R19988:19988 LF.TowerTheorem <> n:224 var
+binder 19979:19979 <> V:226
+R20003:20006 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19993:20000 LF.TowerTheorem TowerTheorem basis_32 def
+R20002:20002 LF.TowerTheorem <> U:225 var
+R20017:20020 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R20007:20014 LF.TowerTheorem TowerTheorem basis_21 def
+R20016:20016 LF.TowerTheorem <> V:226 var
+R20021:20028 LF.TowerTheorem TowerTheorem basis_31 def
+R20031:20039 LF.TowerTheorem TowerTheorem cart_prod def
+R20043:20043 LF.TowerTheorem <> V:226 var
+R20041:20041 LF.TowerTheorem <> U:225 var
+R20099:20106 LF.TowerTheorem TowerTheorem basis_31 def
+R20136:20147 LF.TowerTheorem TowerTheorem lin_indep_31 def
+R20150:20158 LF.TowerTheorem TowerTheorem cart_prod def
+R20136:20147 LF.TowerTheorem TowerTheorem lin_indep_31 def
+R20150:20158 LF.TowerTheorem TowerTheorem cart_prod def
+R20176:20194 LF.TowerTheorem TowerTheorem product_independent prfax
+R20176:20194 LF.TowerTheorem TowerTheorem product_independent prfax
+R20232:20243 LF.TowerTheorem TowerTheorem generates_31 def
+R20246:20254 LF.TowerTheorem TowerTheorem cart_prod def
+R20232:20243 LF.TowerTheorem TowerTheorem generates_31 def
+R20246:20254 LF.TowerTheorem TowerTheorem cart_prod def
+R20272:20284 LF.TowerTheorem TowerTheorem product_spans thm
+R20272:20284 LF.TowerTheorem TowerTheorem product_spans thm
+prf 20389:20401 TowerTheorem tower_theorem
+R20419:20421 Coq.Init.Datatypes <> nat ind
+binder 20413:20413 <> m:227
+binder 20415:20415 <> n:228
+R20442:20445 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R20426:20439 LF.TowerTheorem TowerTheorem cardinality_32 def
+R20441:20441 LF.TowerTheorem <> m:227 var
+R20462:20465 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R20446:20459 LF.TowerTheorem TowerTheorem cardinality_21 def
+R20461:20461 LF.TowerTheorem <> n:228 var
+R20466:20479 LF.TowerTheorem TowerTheorem cardinality_31 def
+R20483:20485 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R20482:20482 LF.TowerTheorem <> m:227 var
+R20486:20486 LF.TowerTheorem <> n:228 var
+R20548:20555 LF.TowerTheorem TowerTheorem basis_31 def
+R20558:20566 LF.TowerTheorem TowerTheorem cart_prod def
+R20548:20555 LF.TowerTheorem TowerTheorem basis_31 def
+R20558:20566 LF.TowerTheorem TowerTheorem cart_prod def
+R20591:20606 LF.TowerTheorem TowerTheorem product_is_basis thm
+R20591:20606 LF.TowerTheorem TowerTheorem product_is_basis thm
+R20641:20654 LF.TowerTheorem TowerTheorem cardinality_31 def
+R20666:20674 LF.TowerTheorem TowerTheorem cart_prod def
+R20666:20674 LF.TowerTheorem TowerTheorem cart_prod def
+def 20996:21008 TowerTheorem lcom_21_lists
+R21015:21018 Coq.Init.Datatypes <> list ind
+R21020:21021 LF.TowerTheorem TowerTheorem F1 prfax
+binder 21011:21011 <> s:229
+R21029:21032 Coq.Init.Datatypes <> list ind
+R21034:21035 LF.TowerTheorem TowerTheorem F2 prfax
+binder 21025:21025 <> v:230
+R21040:21041 LF.TowerTheorem TowerTheorem F2 prfax
+R21057:21057 LF.TowerTheorem <> v:230 var
+R21054:21054 LF.TowerTheorem <> s:229 var
+R21068:21075 Coq.Lists.List <> nil abbrev
+R21094:21101 Coq.Lists.List <> nil abbrev
+R21114:21122 Coq.Lists.List <> cons abbrev
+R21133:21141 Coq.Lists.List <> cons abbrev
+R21158:21158 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R21174:21180 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R21202:21202 LF.TowerTheorem TowerTheorem :::x_'+_2'_x not
+R21159:21165 LF.TowerTheorem TowerTheorem mult_21 prfax
+R21181:21193 LF.TowerTheorem <> lcom_21_lists:231 def
+def 21221:21233 TowerTheorem lcom_32_lists
+R21240:21243 Coq.Init.Datatypes <> list ind
+R21245:21246 LF.TowerTheorem TowerTheorem F2 prfax
+binder 21236:21236 <> s:234
+R21254:21257 Coq.Init.Datatypes <> list ind
+R21259:21260 LF.TowerTheorem TowerTheorem F3 prfax
+binder 21250:21250 <> v:235
+R21265:21266 LF.TowerTheorem TowerTheorem F3 prfax
+R21282:21282 LF.TowerTheorem <> v:235 var
+R21279:21279 LF.TowerTheorem <> s:234 var
+R21293:21300 Coq.Lists.List <> nil abbrev
+R21319:21326 Coq.Lists.List <> nil abbrev
+R21339:21347 Coq.Lists.List <> cons abbrev
+R21358:21366 Coq.Lists.List <> cons abbrev
+R21383:21383 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R21399:21405 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R21427:21427 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R21384:21390 LF.TowerTheorem TowerTheorem mult_32 prfax
+R21406:21418 LF.TowerTheorem <> lcom_32_lists:236 def
+def 21446:21458 TowerTheorem lcom_31_lists
+R21465:21468 Coq.Init.Datatypes <> list ind
+R21470:21471 LF.TowerTheorem TowerTheorem F1 prfax
+binder 21461:21461 <> s:239
+R21479:21482 Coq.Init.Datatypes <> list ind
+R21484:21485 LF.TowerTheorem TowerTheorem F3 prfax
+binder 21475:21475 <> v:240
+R21490:21491 LF.TowerTheorem TowerTheorem F3 prfax
+R21506:21506 LF.TowerTheorem <> v:240 var
+R21503:21503 LF.TowerTheorem <> s:239 var
+R21516:21523 Coq.Lists.List <> nil abbrev
+R21541:21548 Coq.Lists.List <> nil abbrev
+R21560:21568 Coq.Lists.List <> cons abbrev
+R21579:21587 Coq.Lists.List <> cons abbrev
+R21603:21603 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R21619:21625 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R21647:21647 LF.TowerTheorem TowerTheorem :::x_'+_3'_x not
+R21604:21610 LF.TowerTheorem TowerTheorem mult_31 prfax
+R21626:21638 LF.TowerTheorem <> lcom_31_lists:241 def
+def 21667:21680 TowerTheorem lindep_21_list
+R21688:21691 Coq.Init.Datatypes <> list ind
+R21693:21694 LF.TowerTheorem TowerTheorem F2 prfax
+binder 21683:21684 <> vs:244
+R21725:21728 Coq.Init.Datatypes <> list ind
+R21730:21731 LF.TowerTheorem TowerTheorem F1 prfax
+binder 21716:21721 <> coeffs:245
+R21768:21773 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R21737:21737 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R21761:21764 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R21738:21750 LF.TowerTheorem TowerTheorem lcom_21_lists def
+R21752:21757 LF.TowerTheorem <> coeffs:245 var
+R21759:21760 LF.TowerTheorem <> vs:244 var
+R21774:21784 Coq.Lists.List <> Forall ind
+R21805:21810 LF.TowerTheorem <> coeffs:245 var
+binder 21791:21791 <> y:246
+R21797:21799 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R21796:21796 LF.TowerTheorem <> y:246 var
+def 21826:21839 TowerTheorem lindep_32_list
+R21847:21850 Coq.Init.Datatypes <> list ind
+R21852:21853 LF.TowerTheorem TowerTheorem F3 prfax
+binder 21842:21843 <> vs:247
+R21884:21887 Coq.Init.Datatypes <> list ind
+R21889:21890 LF.TowerTheorem TowerTheorem F2 prfax
+binder 21875:21880 <> coeffs:248
+R21927:21932 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R21896:21896 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R21920:21923 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R21897:21909 LF.TowerTheorem TowerTheorem lcom_32_lists def
+R21911:21916 LF.TowerTheorem <> coeffs:248 var
+R21918:21919 LF.TowerTheorem <> vs:247 var
+R21933:21943 Coq.Lists.List <> Forall ind
+R21964:21969 LF.TowerTheorem <> coeffs:248 var
+binder 21950:21950 <> y:249
+R21956:21958 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R21955:21955 LF.TowerTheorem <> y:249 var
+def 21984:21997 TowerTheorem lindep_31_list
+R22005:22008 Coq.Init.Datatypes <> list ind
+R22010:22011 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22000:22001 <> vs:250
+R22042:22045 Coq.Init.Datatypes <> list ind
+R22047:22048 LF.TowerTheorem TowerTheorem F1 prfax
+binder 22033:22038 <> coeffs:251
+R22085:22090 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22054:22054 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22078:22081 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22055:22067 LF.TowerTheorem TowerTheorem lcom_31_lists def
+R22069:22074 LF.TowerTheorem <> coeffs:251 var
+R22076:22077 LF.TowerTheorem <> vs:250 var
+R22091:22101 Coq.Lists.List <> Forall ind
+R22122:22127 LF.TowerTheorem <> coeffs:251 var
+binder 22108:22108 <> y:252
+R22114:22116 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22113:22113 LF.TowerTheorem <> y:252 var
+def 22142:22156 TowerTheorem in_span_21_list
+R22166:22169 Coq.Init.Datatypes <> list ind
+R22171:22172 LF.TowerTheorem TowerTheorem F2 prfax
+binder 22159:22162 <> vecs:253
+R22180:22181 LF.TowerTheorem TowerTheorem F2 prfax
+binder 22176:22176 <> v:254
+R22195:22201 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R22208:22209 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 22202:22207 <> coeffs:255
+R22211:22214 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22240:22240 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22210:22210 LF.TowerTheorem <> v:254 var
+R22215:22227 LF.TowerTheorem TowerTheorem lcom_21_lists def
+R22229:22234 LF.TowerTheorem <> coeffs:255 var
+R22236:22239 LF.TowerTheorem <> vecs:253 var
+def 22255:22269 TowerTheorem in_span_32_list
+R22279:22282 Coq.Init.Datatypes <> list ind
+R22284:22285 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22272:22275 <> vecs:256
+R22293:22294 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22289:22289 <> v:257
+R22308:22314 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R22321:22322 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 22315:22320 <> coeffs:258
+R22324:22327 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22353:22353 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22323:22323 LF.TowerTheorem <> v:257 var
+R22328:22340 LF.TowerTheorem TowerTheorem lcom_32_lists def
+R22342:22347 LF.TowerTheorem <> coeffs:258 var
+R22349:22352 LF.TowerTheorem <> vecs:256 var
+def 22368:22382 TowerTheorem in_span_31_list
+R22392:22395 Coq.Init.Datatypes <> list ind
+R22397:22398 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22385:22388 <> vecs:259
+R22406:22407 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22402:22402 <> v:260
+R22421:22427 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R22434:22435 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 22428:22433 <> coeffs:261
+R22437:22440 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22466:22466 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22436:22436 LF.TowerTheorem <> v:260 var
+R22441:22453 LF.TowerTheorem TowerTheorem lcom_31_lists def
+R22455:22460 LF.TowerTheorem <> coeffs:261 var
+R22462:22465 LF.TowerTheorem <> vecs:259 var
+def 22481:22497 TowerTheorem generates_21_list
+R22505:22508 Coq.Init.Datatypes <> list ind
+R22510:22511 LF.TowerTheorem TowerTheorem F2 prfax
+binder 22500:22501 <> vs:262
+R22537:22538 LF.TowerTheorem TowerTheorem F2 prfax
+binder 22533:22533 <> v:263
+R22542:22556 LF.TowerTheorem TowerTheorem in_span_21_list def
+R22558:22559 LF.TowerTheorem <> vs:262 var
+R22561:22561 LF.TowerTheorem <> v:263 var
+def 22576:22592 TowerTheorem generates_32_list
+R22600:22603 Coq.Init.Datatypes <> list ind
+R22605:22606 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22595:22596 <> vs:264
+R22632:22633 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22628:22628 <> v:265
+R22637:22651 LF.TowerTheorem TowerTheorem in_span_32_list def
+R22653:22654 LF.TowerTheorem <> vs:264 var
+R22656:22656 LF.TowerTheorem <> v:265 var
+def 22671:22687 TowerTheorem generates_31_list
+R22695:22698 Coq.Init.Datatypes <> list ind
+R22700:22701 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22690:22691 <> vs:266
+R22727:22728 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22723:22723 <> v:267
+R22732:22746 LF.TowerTheorem TowerTheorem in_span_31_list def
+R22748:22749 LF.TowerTheorem <> vs:266 var
+R22751:22751 LF.TowerTheorem <> v:267 var
+def 22766:22778 TowerTheorem basis_21_list
+R22786:22789 Coq.Init.Datatypes <> list ind
+R22791:22792 LF.TowerTheorem TowerTheorem F2 prfax
+binder 22781:22782 <> vs:268
+R22826:22829 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R22806:22822 LF.TowerTheorem TowerTheorem generates_21_list def
+R22824:22825 LF.TowerTheorem <> vs:268 var
+R22830:22843 LF.TowerTheorem TowerTheorem lindep_21_list def
+R22845:22846 LF.TowerTheorem <> vs:268 var
+def 22861:22873 TowerTheorem basis_32_list
+R22881:22884 Coq.Init.Datatypes <> list ind
+R22886:22887 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22876:22877 <> vs:269
+R22921:22924 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R22901:22917 LF.TowerTheorem TowerTheorem generates_32_list def
+R22919:22920 LF.TowerTheorem <> vs:269 var
+R22925:22938 LF.TowerTheorem TowerTheorem lindep_32_list def
+R22940:22941 LF.TowerTheorem <> vs:269 var
+def 22956:22968 TowerTheorem basis_31_list
+R22976:22979 Coq.Init.Datatypes <> list ind
+R22981:22982 LF.TowerTheorem TowerTheorem F3 prfax
+binder 22971:22972 <> vs:270
+R23016:23019 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R22996:23012 LF.TowerTheorem TowerTheorem generates_31_list def
+R23014:23015 LF.TowerTheorem <> vs:270 var
+R23020:23033 LF.TowerTheorem TowerTheorem lindep_31_list def
+R23035:23036 LF.TowerTheorem <> vs:270 var
+def 23112:23130 TowerTheorem cardinality_21_list
+R23137:23139 Coq.Init.Datatypes <> nat ind
+binder 23133:23133 <> m:271
+R23153:23160 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23173:23175 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23166:23169 Coq.Init.Datatypes <> list ind
+R23171:23172 LF.TowerTheorem TowerTheorem F2 prfax
+binder 23161:23162 <> es:272
+R23176:23188 LF.TowerTheorem TowerTheorem basis_21_list def
+R23190:23191 LF.TowerTheorem <> es:272 var
+def 23206:23224 TowerTheorem cardinality_32_list
+R23231:23233 Coq.Init.Datatypes <> nat ind
+binder 23227:23227 <> m:273
+R23247:23254 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23267:23269 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23260:23263 Coq.Init.Datatypes <> list ind
+R23265:23266 LF.TowerTheorem TowerTheorem F3 prfax
+binder 23255:23256 <> es:274
+R23270:23282 LF.TowerTheorem TowerTheorem basis_32_list def
+R23284:23285 LF.TowerTheorem <> es:274 var
+def 23300:23318 TowerTheorem cardinality_31_list
+R23325:23327 Coq.Init.Datatypes <> nat ind
+binder 23321:23321 <> m:275
+R23341:23348 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23361:23363 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R23354:23357 Coq.Init.Datatypes <> list ind
+R23359:23360 LF.TowerTheorem TowerTheorem F3 prfax
+binder 23349:23350 <> es:276
+R23364:23376 LF.TowerTheorem TowerTheorem basis_31_list def
+R23378:23379 LF.TowerTheorem <> es:276 var
+def 23392:23402 TowerTheorem cart_prod_l
+R23409:23412 Coq.Init.Datatypes <> list ind
+R23414:23415 LF.TowerTheorem TowerTheorem F3 prfax
+binder 23405:23405 <> U:277
+R23423:23426 Coq.Init.Datatypes <> list ind
+R23428:23429 LF.TowerTheorem TowerTheorem F2 prfax
+binder 23419:23419 <> V:278
+R23434:23437 Coq.Init.Datatypes <> list ind
+R23439:23440 LF.TowerTheorem TowerTheorem F3 prfax
+R23452:23452 LF.TowerTheorem <> U:277 var
+R23462:23469 Coq.Lists.List <> nil abbrev
+R23474:23481 Coq.Lists.List <> nil abbrev
+R23486:23494 Coq.Lists.List <> cons abbrev
+R23496:23497 Coq.Vectors.Vector <> hd def
+R23506:23513 Coq.Lists.List <> app abbrev
+R23553:23563 LF.TowerTheorem <> cart_prod_l:279 def
+R23569:23569 LF.TowerTheorem <> V:278 var
+R23516:23523 Coq.Lists.List <> map def
+R23549:23549 LF.TowerTheorem <> V:278 var
+binder 23530:23530 <> v:281
+R23535:23541 LF.TowerTheorem TowerTheorem mult_32 prfax
+R23543:23543 LF.TowerTheorem <> v:281 var
+prf 23587:23598 TowerTheorem remove_vec_2
+R23614:23617 Coq.Init.Datatypes <> list ind
+R23619:23620 LF.TowerTheorem TowerTheorem F2 prfax
+binder 23610:23610 <> V:282
+R23628:23629 LF.TowerTheorem TowerTheorem F2 prfax
+binder 23624:23624 <> v:283
+R23657:23660 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23634:23647 LF.TowerTheorem TowerTheorem lindep_21_list def
+R23651:23654 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R23650:23650 LF.TowerTheorem <> v:283 var
+R23655:23655 LF.TowerTheorem <> V:282 var
+R23661:23674 LF.TowerTheorem TowerTheorem lindep_21_list def
+R23676:23676 LF.TowerTheorem <> V:282 var
+R23694:23707 LF.TowerTheorem TowerTheorem lindep_21_list def
+prf 23738:23758 TowerTheorem product_independent_l
+R23774:23777 Coq.Init.Datatypes <> list ind
+R23779:23780 LF.TowerTheorem TowerTheorem F3 prfax
+binder 23770:23770 <> U:284
+R23788:23791 Coq.Init.Datatypes <> list ind
+R23793:23794 LF.TowerTheorem TowerTheorem F2 prfax
+binder 23784:23784 <> V:285
+R23815:23818 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23799:23812 LF.TowerTheorem TowerTheorem lindep_32_list def
+R23814:23814 LF.TowerTheorem <> U:284 var
+R23835:23838 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23819:23832 LF.TowerTheorem TowerTheorem lindep_21_list def
+R23834:23834 LF.TowerTheorem <> V:285 var
+R23839:23852 LF.TowerTheorem TowerTheorem lindep_31_list def
+R23855:23865 LF.TowerTheorem TowerTheorem cart_prod_l def
+R23867:23867 LF.TowerTheorem <> U:284 var
+R23869:23869 LF.TowerTheorem <> V:285 var
+R23896:23909 LF.TowerTheorem TowerTheorem lindep_31_list def
+R24033:24044 LF.TowerTheorem TowerTheorem remove_vec_2 prfax
+R24033:24044 LF.TowerTheorem TowerTheorem remove_vec_2 prfax
+prf 24234:24248 TowerTheorem product_spans_l
+R24264:24267 Coq.Init.Datatypes <> list ind
+R24269:24270 LF.TowerTheorem TowerTheorem F3 prfax
+binder 24260:24260 <> U:286
+R24278:24281 Coq.Init.Datatypes <> list ind
+R24283:24284 LF.TowerTheorem TowerTheorem F2 prfax
+binder 24274:24274 <> V:287
+R24308:24311 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R24289:24305 LF.TowerTheorem TowerTheorem generates_32_list def
+R24307:24307 LF.TowerTheorem <> U:286 var
+R24331:24334 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R24312:24328 LF.TowerTheorem TowerTheorem generates_21_list def
+R24330:24330 LF.TowerTheorem <> V:287 var
+R24335:24351 LF.TowerTheorem TowerTheorem generates_31_list def
+R24354:24364 LF.TowerTheorem TowerTheorem cart_prod_l def
+R24366:24366 LF.TowerTheorem <> U:286 var
+R24368:24368 LF.TowerTheorem <> V:287 var
+R24395:24411 LF.TowerTheorem TowerTheorem generates_31_list def
+R24421:24435 LF.TowerTheorem TowerTheorem in_span_31_list def
+R24504:24511 Coq.Lists.List <> nil abbrev
+R24504:24511 Coq.Lists.List <> nil abbrev
+R24654:24656 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R24628:24640 LF.TowerTheorem TowerTheorem lcom_32_lists def
+R24646:24649 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R24657:24669 LF.TowerTheorem TowerTheorem lcom_32_lists def
+R24654:24656 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R24628:24640 LF.TowerTheorem TowerTheorem lcom_32_lists def
+R24646:24649 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R24657:24669 LF.TowerTheorem TowerTheorem lcom_32_lists def
+R24721:24735 LF.TowerTheorem TowerTheorem in_span_21_list def
+prf 24830:24847 TowerTheorem product_is_basis_l
+R24863:24866 Coq.Init.Datatypes <> list ind
+R24868:24869 LF.TowerTheorem TowerTheorem F3 prfax
+binder 24859:24859 <> U:288
+R24877:24880 Coq.Init.Datatypes <> list ind
+R24882:24883 LF.TowerTheorem TowerTheorem F2 prfax
+binder 24873:24873 <> V:289
+R24903:24906 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R24888:24900 LF.TowerTheorem TowerTheorem basis_32_list def
+R24902:24902 LF.TowerTheorem <> U:288 var
+R24922:24925 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R24907:24919 LF.TowerTheorem TowerTheorem basis_21_list def
+R24921:24921 LF.TowerTheorem <> V:289 var
+R24926:24938 LF.TowerTheorem TowerTheorem basis_31_list def
+R24941:24951 LF.TowerTheorem TowerTheorem cart_prod_l def
+R24953:24953 LF.TowerTheorem <> U:288 var
+R24955:24955 LF.TowerTheorem <> V:289 var
+R25011:25023 LF.TowerTheorem TowerTheorem basis_31_list def
+R25053:25066 LF.TowerTheorem TowerTheorem lindep_31_list def
+R25069:25079 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25053:25066 LF.TowerTheorem TowerTheorem lindep_31_list def
+R25069:25079 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25097:25117 LF.TowerTheorem TowerTheorem product_independent_l prfax
+R25097:25117 LF.TowerTheorem TowerTheorem product_independent_l prfax
+R25149:25165 LF.TowerTheorem TowerTheorem generates_31_list def
+R25168:25178 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25149:25165 LF.TowerTheorem TowerTheorem generates_31_list def
+R25168:25178 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25196:25210 LF.TowerTheorem TowerTheorem product_spans_l prfax
+R25196:25210 LF.TowerTheorem TowerTheorem product_spans_l prfax
+prf 25309:25326 TowerTheorem tower_theorem_list
+R25344:25346 Coq.Init.Datatypes <> nat ind
+binder 25338:25338 <> m:290
+binder 25340:25340 <> n:291
+R25372:25375 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R25351:25369 LF.TowerTheorem TowerTheorem cardinality_32_list def
+R25371:25371 LF.TowerTheorem <> m:290 var
+R25397:25400 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R25376:25394 LF.TowerTheorem TowerTheorem cardinality_21_list def
+R25396:25396 LF.TowerTheorem <> n:291 var
+R25401:25419 LF.TowerTheorem TowerTheorem cardinality_31_list def
+R25423:25425 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R25422:25422 LF.TowerTheorem <> m:290 var
+R25426:25426 LF.TowerTheorem <> n:291 var
+R25488:25500 LF.TowerTheorem TowerTheorem basis_31_list def
+R25503:25513 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25488:25500 LF.TowerTheorem TowerTheorem basis_31_list def
+R25503:25513 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25538:25555 LF.TowerTheorem TowerTheorem product_is_basis_l thm
+R25538:25555 LF.TowerTheorem TowerTheorem product_is_basis_l thm
+R25586:25599 LF.TowerTheorem TowerTheorem cardinality_31 def
+R25611:25621 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25611:25621 LF.TowerTheorem TowerTheorem cart_prod_l def
+R25653:25664 LF.TowerTheorem TowerTheorem <> modtype

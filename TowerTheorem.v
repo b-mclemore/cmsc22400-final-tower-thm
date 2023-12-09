@@ -117,12 +117,6 @@ Definition linear_com_31 : forall {n : nat} (s : t F1 n) (v : t F3 n), F3 :=
 	fix linear_com_fix {n} (s : t F1 n) (v : t F3 n) : F3 := 
 		fold_left add_3 0_3 ((map2 mult_31) s v).
 
-(* Injectivity lemmas *)
-Lemma linear_com_32_inj : forall (n : nat) (x y : t F2 n) (U : t F3 n), 
-	linear_com_32 x U = linear_com_32 y U -> x = y.
-Proof.
-	intros. Admitted.
-
 (*
 	A linear combination of vectors is a sum
 	(a1v1 + a2v2 + a3v3 + ...) where a_i are scalars.
@@ -201,6 +195,21 @@ Definition cardinality_31 (m : nat) : Prop
 
 (* ============================================================================== *)
 
+(*	Typecasting	*)
+
+(* ============================================================================== *)
+
+Definition vec_cast {X : Type} {m n : nat} (H : m = n) v :=
+	eq_rect _ (fun k => t X k) v _ H.
+
+Lemma cast_vecs {m n : nat} : forall (F : Type),
+	  forall (l1 : t F n) (l2 : t F m),
+		forall (H : m = n),
+		  l1 = vec_cast H l2.
+Proof. Admitted.
+	
+(* ============================================================================== *)
+
 (*	Lengths of vectors	*)
 
 (* ============================================================================== *)
@@ -230,6 +239,14 @@ Proof.
 	trivial. (* <--- I wish this worked more often! *)
 Qed.
 
+(* Flatten a vector *)
+Definition flatten_vec : forall {m n : nat} {F : Type} (x : t (t F n) m), t F (m * n) :=
+	fix flatten_vec_fix {m} {n} {F} (x : t (t F n) m) : t F (m * n) := 
+		match x with
+		| [] => []
+		| hd :: lst => hd ++ flatten_vec_fix lst
+		end.
+
 (* The vector length is the same as the list length *)
 Lemma vec_length { F : Type}: forall (n : nat) (U : t F n),
 	length (to_list U) = n.
@@ -252,19 +269,100 @@ Proof.
 	apply case0; auto.
 Qed.
 
-(* Flatten a vector *)
-Definition flatten_vec : forall {m n : nat} (x : t (t F1 n) m), t F1 (m * n) :=
-	fix flatten_vec_fix {m} {n} (x : t (t F1 n) m) : t F1 (m * n) := 
-		match x with
-		| [] => []
-		| hd :: lst => hd ++ flatten_vec_fix lst
-		end.
+(* ============================================================================== *)
+
+(*	Useful vector theory lemmas (borrowed from VectorFields.v)	*)
+
+(* ============================================================================== *)
+
+Theorem additive_injectivity_3 : forall (a b c : F3), a +_3 b = a +_3 c -> b = c.
+Proof.
+	destruct F3_th; destruct F_R.
+	destruct E32_th.
+	intros.
+	rewrite <- (v_id0 b) at 1. specialize (v_inv0 a); inversion v_inv0.
+	rewrite <- H6. rewrite v_assoc0.
+	assert (a +_3 b = b +_3 a) as E1.
+	{ apply v_comm0. } 
+	rewrite <- E1. rewrite H5. 
+	assert (a +_3 c = c +_3 a) as E2.
+	{ apply v_comm0. } 
+	rewrite E2. rewrite <- v_assoc0. rewrite H6. rewrite v_id0.
+	reflexivity.
+Qed.
+
+Theorem zero_to_zero_32 : forall (a : F3), 0_2 *_32 a = 0_3.
+Proof.
+	destruct F2_th; destruct F_R.
+	destruct E32_th.
+	intros.
+	assert (0_2 *_32 a = 0_2 *_32 a) as E1.
+	{ reflexivity. }
+	rewrite <- (Radd_0_l 0_2) in E1 at 1.
+	rewrite s_dist0 in E1.
+	rewrite <- (v_id0 (0_2 *_32 a)) in E1 at 3.
+	apply additive_injectivity_3 in E1.
+	assumption.
+Qed.
+
+Theorem zero_to_zero_31 : forall (a : F3), 0_1 *_31 a = 0_3.
+Proof.
+	destruct F1_th; destruct F_R.
+	destruct E31_th.
+	intros.
+	assert (0_1 *_31 a = 0_1 *_31 a) as E1.
+	{ reflexivity. }
+	rewrite <- (Radd_0_l 0_1) in E1 at 1.
+	rewrite s_dist0 in E1.
+	rewrite <- (v_id0 (0_1 *_31 a)) in E1 at 3.
+	apply additive_injectivity_3 in E1.
+	assumption.
+Qed.
+
+Theorem additive_injectivity_2 : forall (a b c : F2), a +_2 b = a +_2 c -> b = c.
+Proof.
+	destruct F2_th; destruct F_R.
+	destruct E21_th.
+	intros.
+	rewrite <- (v_id0 b) at 1. specialize (v_inv0 a); inversion v_inv0.
+	rewrite <- H6. rewrite v_assoc0.
+	assert (a +_2 b = b +_2 a) as E1.
+	{ apply v_comm0. } 
+	rewrite <- E1. rewrite H5. 
+	assert (a +_2 c = c +_2 a) as E2.
+	{ apply v_comm0. } 
+	rewrite E2. rewrite <- v_assoc0. rewrite H6. rewrite v_id0.
+	reflexivity.
+Qed.
+
+Theorem zero_to_zero_21 : forall (a : F2), 0_1 *_21 a = 0_2.
+Proof.
+	destruct F1_th; destruct F_R.
+	destruct E21_th.
+	intros.
+	assert (0_1 *_21 a = 0_1 *_21 a) as E1.
+	{ reflexivity. }
+	rewrite <- (Radd_0_l 0_1) in E1 at 1.
+	rewrite s_dist0 in E1.
+	rewrite <- (v_id0 (0_1 *_21 a)) in E1 at 3.
+	apply additive_injectivity_2 in E1.
+	assumption.
+Qed.
+
 
 (* ============================================================================== *)
 
 (*	Main theorem	*)
 
 (* ============================================================================== *)
+(* 
+	The main theorem is not complete. When I've needed to skip something in the
+	middle of a proof, I use the following tactic (which is mostly for proving
+	assertions about manipulating lists)
+*)
+
+Axiom skip : forall (p : Prop), True -> p.
+Ltac ADMITTED := apply skip; auto.
 
 (* Proof that this set is linearly independent *)
 (* 
@@ -283,11 +381,45 @@ Definition flatten_vec : forall {m n : nat} (x : t (t F1 n) m), t F1 (m * n) :=
 	3.) Therefore since we construct c_1 * u_1 * v_1 ... we see all c_i's
 		are zero so dependent
 *)
-Lemma chain_linear_com : forall (n0 : nat) (h : F3) (tl : t F3 n0) (coeffs: t F1 (S n0)),
-	linear_com_31 coeffs (h :: tl) = 
-		add_3 (mult_31 (Vector.hd coeffs) h) (linear_com_31 (Vector.tl coeffs) tl).
-intros.
-	Admitted.
+
+(* Helpers that taking away a vector doesn't affect independence *)
+Lemma remove_vec_32 : forall (m : nat) (U : t F3 m) (h : F3),
+	lin_indep_32 (h :: U) -> lin_indep_32 U.
+Proof. 
+	unfold lin_indep_32; intros. rename coeffs into cs. 
+	specialize (H5 ((0_2 :: []) ++ cs)).
+	simpl in H5.
+	specialize (zero_to_zero_32 h); intros. rewrite H7 in H5.
+	destruct F3_th; destruct F_R. rewrite Radd_0_l in H5.
+	assert (fold_left add_3 0_3 (map2 mult_32 cs U) = linear_com_32 cs U).
+	{ ADMITTED. }
+	rewrite <- H8 in H6.
+	apply H5 in H6.
+	assert (Forall (fun y : F2 => y = 0_2) (0_2 :: cs) -> 
+		Forall (fun y : F2 => y = 0_2) cs).
+	{ ADMITTED. }
+	apply H9 in H6.
+	auto.
+Qed.
+
+Lemma remove_vec_21 : forall (m : nat) (V : t F2 m) (h : F2),
+	lin_indep_21 (h :: V) -> lin_indep_21 V.
+Proof. (* This should follow the same format as the above *)
+	unfold lin_indep_21; intros. rename coeffs into cs. 
+	specialize (H5 ((0_1 :: []) ++ cs)).
+	simpl in H5.
+	specialize (zero_to_zero_21 h); intros. rewrite H7 in H5.
+	destruct F2_th; destruct F_R. rewrite Radd_0_l in H5.
+	assert (fold_left add_2 0_2 (map2 mult_21 cs V) = linear_com_21 cs V).
+	{ ADMITTED. }
+	rewrite <- H8 in H6.
+	apply H5 in H6.
+	assert (Forall (fun y : F1 => y = 0_1) (0_1 :: cs) -> 
+		Forall (fun y : F1 => y = 0_1) cs).
+	{ ADMITTED. }
+	apply H9 in H6.
+	auto.
+Qed.
 
 Theorem product_independent : forall (m n : nat) (U : t F3 m) (V : t F2 n),
 	lin_indep_32 U -> lin_indep_21 V -> lin_indep_31 (cart_prod U V).
@@ -295,36 +427,16 @@ Proof.
 	intros. unfold lin_indep_31. intros.
 	induction U.
 	- 	specialize (empty_vector coeffs); intros.
-		rewrite H8; econstructor.
+		rewrite H8. econstructor.
 	-	induction V.
-		+ specialize (empty_vector coeffs).
-		unfold lin_indep_21 in H6. Admitted.
-	(*
-	unfold lin_indep_21 in H6.
-
-	intros. unfold lin_indep_31. intros.
-	induction coeffs. as [| Uhd Un Utl UIH].
-	- 	specialize (empty_vector coeffs); intros.
-		rewrite H8. econstructor.
-	- induction V as [| Vhd Vn Vtl VIH].
-		+	assert (length (cart_vec (Uhd :: Utl) []) = 0%nat).
-			{ specialize (product_length _ 0%nat (Uhd :: Utl) []). intros. rewrite H8. auto. }
-			unfold lin_indep_21 in H6.
-			specialize (lengths_typecheck (length (cart_vec (Uhd :: Utl) [])) 0 F3); intros.
-			apply H9 in H8. rewrite H8 in
-			specialize (H6 coeffs).
+		+ 	unfold lin_indep_21 in H6. 
+			(* Would like to say 'specialize (H6 coeffs)' but this fails typechecking *)
+			ADMITTED.
+		+ 	specialize (remove_vec_32 n0 U h); intros.
+			specialize (remove_vec_21 n V h0); intros.
+			apply H8 in H5; apply H9 in H6.
 			Admitted.
-
-
-
-	induction (of_list (cart_vec U V)) as [| hd n0 tl IH].
-	- 	specialize (empty_vector coeffs); intros. 
-		rewrite H8. econstructor.
-	- 	specialize (chain_linear_com n0 hd tl coeffs); intros.
-		rewrite H7 in H8. unfold lin_indep_21 in H56.
-		assert (Vector.hd coeffs *_31 hd = 0_3 \/ ).
-		{ auto. }
-	Admitted. *)
+			(* Why does 'apply H5 in IHU' not work? *)
 
 (*
 	To prove that this set spans:
@@ -335,13 +447,7 @@ Proof.
 	coefficient c_i is in F1, so we can describe any vector as a linear combination 
 	of vector products u_i*v_j, so this set indeed spans.
 
-	Informal coq version:
-	1. By H5, there are some coeffs in F2 to lin com. v out of vectors u
-	2. By H6, each coeff can be made of lin com. v's w/ coeffs in F1
-	3. Each element is then a product c_ij * (u_i * v_j), so generates.
 *)
-
-(* TODO: Delete these empty helpers if they prove unnecessary *)
 (* Helpers that linear combinations of [] and [] are 0 for that extension *)
 Lemma comb_0_3 : linear_com_32 [] [] = 0_3.
 Proof. trivial. Qed.
@@ -353,7 +459,6 @@ Proof. trivial. Qed.
 	Helper theorems that any vector in F3 is a linear_com_32 on top of a bunch of 
 	linear_com_21's
 *)
-
 Theorem expand_vector_2 : forall (m n : nat) (V : t F2 n) (vs : t F2 m),
 	generates_21 V -> exists (cs : t (t F1 n) m), 
 	vs = (Vector.map (fun com => linear_com_21 com V) cs).
@@ -376,53 +481,52 @@ Proof.
 	subst. exists x0. auto.
 Qed.
 
-(* Therefore any linear_com_31 can be expressed in the same way *)
-
 (* Lemmas that mapping to 0 and taking a combination results in 0 vector *)
 Lemma map_to_0_2 {F : Type }: forall (n : nat) (U : t F3 n) (x0 : t F n),
 	linear_com_32 (map (fun _ : _ => 0_2) x0) U = 0_3.
 Proof.
 	intros.
-	(* Will want to use field properties here *)
-	Admitted.
+	induction U.
+	- 	specialize (empty_vector x0); intros; subst. simpl. auto.
+	-	specialize (IHU (tl x0)). destruct E32_th. 
+		assert (linear_com_32 (map (fun _ : F => 0_2) x0) (h :: U) =
+			(0_2 *_32 h) +_3 linear_com_32 (map (fun _ : F => 0_2) (tl x0)) U).
+			{ ADMITTED. }
+			rewrite H5. specialize (zero_to_zero_32 h); intros.
+			rewrite H6. rewrite v_comm0. rewrite v_id0. apply IHU.
+Qed.
 
 Lemma map_to_0_1 {F : Type} : forall (n : nat) (U : t F3 n) (x0 : t F n),
 	linear_com_31 (map (fun _ : _ => 0_1) x0) U = 0_3.
 Proof.
-	Admitted.
-
-Lemma split_combination_21 {m n : nat} : forall (coeffs : t (t F1 n) m) (V : t F2 n) (h : (t F1 n)),
-	map (fun com : t F1 n => linear_com_21 com V) (h :: coeffs) =
-	(linear_com_21 h V :: []) ++
-	map (fun com : t F1 n => linear_com_21 com V) coeffs.
-Proof.
-	Admitted.
+	intros.
+	induction U.
+	- 	specialize (empty_vector x0); intros; subst. simpl. auto.
+	-	specialize (IHU (tl x0)). destruct E31_th. 
+		assert (linear_com_31 (map (fun _ : F => 0_1) x0) (h :: U) =
+			(0_1 *_31 h) +_3 linear_com_31 (map (fun _ : F => 0_1) (tl x0)) U).
+			{  ADMITTED. }
+			rewrite H5. specialize (zero_to_zero_31 h); intros.
+			rewrite H6. rewrite v_comm0. rewrite v_id0. apply IHU.
+Qed.
 
 (* Taking linear combinations can be one or two step *)
-(* I think this may be redundant with the next theorem (or it obfuscates it) *)
 Theorem telescope_linear_coms {m n : nat} : forall (U : t F3 m) (V : t F2 n) (coeffs : t (t F1 n) m),
 	linear_com_32 (map (fun com : t F1 n => linear_com_21 com V) coeffs) U =
 	linear_com_31 (flatten_vec coeffs) (cart_prod U V).
 Proof.
-	intros. (* induction coeffs.
-	- specialize (empty_vector U); intros. subst. auto.
+	intros. induction coeffs.
+	- specialize (empty_vector U); intros; subst. auto.
 	- 	specialize (IHcoeffs (tl U)).
-		assert ((map (fun com : t F1 n => linear_com_21 com V) (h :: coeffs)) = 
-			((linear_com_21 h V) :: [] ) ++ (map (fun com : t F1 n => linear_com_21 com V) coeffs)).
-			{ intros. apply split_combination_21. }
-			rewrite H5. apply split_combination_21.
-		simpl.
-	Admitted.
-	*) induction U.
-	- specialize (empty_vector coeffs); intros. subst. auto.
-	- induction V.
-		+	assert (forall (com : t F1 0), linear_com_21 com [] = 0_2).
-			{ intros. specialize (empty_vector com); intros. rewrite H5.  auto. }
-			assert ((fun com : t F1 0 => linear_com_21 com []) = (fun com : t F1 0 => 0_2)).
-			{ intros. apply functional_extensionality; assumption. }
-			rewrite H6.
-			specialize (map_to_0_2 (S n0) (h :: U) coeffs); intros.
-			rewrite H7. simpl. Admitted. (* induction coeffs. unfold flatten_vec. rewrite H8. auto. *)
+		assert (flatten_vec (h :: coeffs) = (h ++ flatten_vec coeffs)).
+		{ auto. }
+		rewrite H5.
+		assert (linear_com_31 (h ++ (flatten_vec coeffs)) (cart_prod U V) =
+		(linear_com_31 h ((map (fun v => mult_32 v (hd U)) V))) +_3
+		(linear_com_31 (flatten_vec coeffs) (cart_prod (tl U) V))).
+		{ ADMITTED. }
+		simpl. rewrite H6. unfold linear_com_32 in IHcoeffs.
+		Admitted.
 
 Theorem expand_linear_com : forall (m n : nat) (U : t F3 m) (V : t F2 n) (v : F3),
 	generates_32 U -> generates_21 V ->
@@ -431,24 +535,10 @@ Proof.
 	intros.
 	specialize (expand_vector_3 m n U V v); intros. apply H7 in H5; auto.
 	inversion H5.
-	induction U.
-	- 	exists []. 
-		inversion H5. specialize (empty_vector x0); intros. rewrite H10 in H9.
-		simpl in H9. simpl. assumption.
-	- 	induction V. 
-		+ 	inversion H5. simpl. rewrite H9.
-			assert (forall (com : t F1 0), linear_com_21 com [] = 0_2).
-			{ intros. specialize (empty_vector com); intros. rewrite H10. auto. }
-			assert ((fun com : t F1 0 => linear_com_21 com []) = (fun com : t F1 0 => 0_2)).
-			{ intros. apply functional_extensionality; assumption. }
-			exists (map (fun x => 0_1) (cart_prod U [])).
-			rewrite H11.
-			specialize (map_to_0_2 (S n0) (h :: U) x0); intros.
-			specialize (map_to_0_1 (n0 * 0) (cart_prod U []) (cart_prod U [])); intros.
-			rewrite H12. rewrite H13. auto.
-		+ rewrite H8. exists (flatten_vec x). apply telescope_linear_coms.
+	exists (flatten_vec x). rewrite H8.
+	apply telescope_linear_coms.
 Qed.
-
+ 
 (* Main proof that this set spans *)
 Theorem product_spans : forall (m n : nat) (U : t F3 m) (V : t F2 n),
 	generates_32 U -> generates_21 V -> generates_31 (cart_prod U V).
@@ -478,8 +568,166 @@ Proof.
 	intros. inversion H5; inversion H6.
 	assert (B31: basis_31 (cart_prod x x0)).
 	{ specialize (product_is_basis m n x x0 H7 H8). auto. }
-	simpl in B31.
 	unfold cardinality_31.
 	exists (cart_prod x x0).
 	assumption.
 Qed.
+
+
+
+(*
+	After running into issues with vectors, I tried to use lists instead to prove
+	the result. The work below replicates all the functions and most lemmas above,
+	but uses lists instead of vectors. The hope was that this would make induction
+	much easier, but I didn't finish.
+*)
+
+
+
+Fixpoint lcom_21_lists (s : list F1) (v : list F2) : F2 :=
+  match s, v with
+  | List.nil, _ => 0_2
+  | _, List.nil => 0_2
+  | List.cons shd stl, List.cons vhd vtl => 
+  	(mult_21 shd vhd) +_2 (lcom_21_lists stl vtl)
+  end.
+
+Fixpoint lcom_32_lists (s : list F2) (v : list F3) : F3 :=
+  match s, v with
+  | List.nil, _ => 0_3
+  | _, List.nil => 0_3
+  | List.cons shd stl, List.cons vhd vtl => 
+  	(mult_32 shd vhd) +_3 (lcom_32_lists stl vtl)
+  end.
+
+Fixpoint lcom_31_lists (s : list F1) (v : list F3) : F3 :=
+	match s, v with
+	| List.nil, _ => 0_3
+	| _, List.nil => 0_3
+	| List.cons shd stl, List.cons vhd vtl => 
+		(mult_31 shd vhd) +_3 (lcom_31_lists stl vtl)
+	end.
+
+Definition lindep_21_list (vs : list F2) : Prop :=
+	forall (coeffs : list F1),
+		(lcom_21_lists coeffs vs) = 0_2 ->
+		List.Forall (fun y => y = 0_1) coeffs.
+	
+Definition lindep_32_list (vs : list F3) : Prop :=
+	forall (coeffs : list F2),
+		(lcom_32_lists coeffs vs) = 0_3 ->
+		List.Forall (fun y => y = 0_2) coeffs.
+
+Definition lindep_31_list (vs : list F3) : Prop :=
+	forall (coeffs : list F1),
+		(lcom_31_lists coeffs vs) = 0_3 ->
+		List.Forall (fun y => y = 0_1) coeffs.
+
+Definition in_span_21_list (vecs : list F2) (v : F2) : Prop :=
+	exists coeffs, v = (lcom_21_lists coeffs vecs).
+
+Definition in_span_32_list (vecs : list F3) (v : F3) : Prop :=
+	exists coeffs, v = (lcom_32_lists coeffs vecs).
+
+Definition in_span_31_list (vecs : list F3) (v : F3) : Prop :=
+	exists coeffs, v = (lcom_31_lists coeffs vecs).
+
+Definition generates_21_list (vs : list F2) : Prop
+	:= forall (v : F2), in_span_21_list vs v.
+
+Definition generates_32_list (vs : list F3) : Prop
+	:= forall (v : F3), in_span_32_list vs v.
+
+Definition generates_31_list (vs : list F3) : Prop
+	:= forall (v : F3), in_span_31_list vs v.
+
+Definition basis_21_list (vs : list F2) : Prop
+	:= generates_21_list vs /\ lindep_21_list vs.
+
+Definition basis_32_list (vs : list F3) : Prop
+	:= generates_32_list vs /\ lindep_32_list vs.
+
+Definition basis_31_list (vs : list F3) : Prop
+	:= generates_31_list vs /\ lindep_31_list vs.
+
+(* The cardinality (degree) of a basis is simply its size *)
+Definition cardinality_21_list (m : nat) : Prop
+	:= exists (es : list F2), basis_21_list es.
+
+Definition cardinality_32_list (m : nat) : Prop
+	:= exists (es : list F3), basis_32_list es.
+
+Definition cardinality_31_list (m : nat) : Prop
+	:= exists (es : list F3), basis_31_list es.
+
+Fixpoint cart_prod_l (U : list F3) (V : list F2) : list F3 :=
+	match U with
+	| List.nil => List.nil
+	| List.cons hd lst => List.app (List.map (fun v => mult_32 v hd) V) (cart_prod_l lst V)
+	end.
+
+Theorem remove_vec_2 : forall (V : list F2) (v : F2),
+	lindep_21_list (v :: V) -> lindep_21_list V.
+Proof.
+	unfold lindep_21_list; intros.
+	Admitted.
+
+Theorem product_independent_l : forall (U : list F3) (V : list F2),
+	lindep_32_list U -> lindep_21_list V -> lindep_31_list (cart_prod_l U V).
+Proof.
+	intros. unfold lindep_31_list. intros.
+	induction coeffs.
+	- auto.
+	- induction V.
+		+ auto.
+		+ induction U.
+			* apply IHV; auto. intros. specialize (remove_vec_2 V a0). auto.
+			* intros. Admitted.
+
+(* 
+	Helper theorems that any vector in F3 is a linear_com_32 on top of a bunch of 
+	linear_com_21's
+*)
+	
+(* Main proof that this set spans *)
+Theorem product_spans_l : forall (U : list F3) (V : list F2),
+	generates_32_list U -> generates_21_list V -> generates_31_list (cart_prod_l U V).
+Proof.
+	intros. unfold generates_31_list; unfold in_span_31_list. intros.
+	specialize (H5 v). inversion H5.
+	induction x.
+	- exists List.nil. auto.
+	- specialize (H6 a). inversion H6. induction x0.
+		+ apply IHx. simpl in H8. rewrite H8 in H7. 
+			assert (lcom_32_lists (0_2 :: x) U = lcom_32_lists x U).
+			{ ADMITTED. }
+			subst; auto.
+		+ unfold in_span_21_list in H6. inversion H6. apply IHx0. Admitted.
+
+
+(* Proof that this set forms a basis *)
+Theorem product_is_basis_l : forall (U : list F3) (V : list F2),
+	basis_32_list U -> basis_21_list V -> basis_31_list (cart_prod_l U V).
+Proof.
+	intros. inversion H5; inversion H6.
+	unfold basis_31_list.
+	assert (IndependentLemma: lindep_31_list (cart_prod_l U V)).
+	{ apply product_independent_l; auto. }
+	assert (SpansLemma: generates_31_list (cart_prod_l U V)).
+	{ apply product_spans_l; auto. }
+	split; assumption.
+Qed.
+
+(* Proof of the Tower Theorem for field extensions *)
+Theorem tower_theorem_list : forall (m n : nat),
+	cardinality_32_list m -> cardinality_21_list n -> cardinality_31_list (m * n).
+Proof.
+	intros. inversion H5; inversion H6.
+	assert (B31: basis_31_list (cart_prod_l x x0)).
+	{ specialize (product_is_basis_l x x0 H7 H8). auto. }
+	unfold cardinality_31.
+	exists (cart_prod_l x x0).
+	assumption.
+Qed.
+
+End TowerTheorem.

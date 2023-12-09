@@ -293,10 +293,6 @@ Proof.
 	destruct v_th. assumption.
 Qed.
 
-(*
-	It's starting to look like we should just define a tactic:
-*)
-
 Ltac by_axiom H :=
 	destruct v_th; assumption.
 
@@ -321,7 +317,6 @@ Proof. by_axiom H1. Qed.
 (*	
 	Now let's try to prove some more interesting theorems.
 	We'll be using exercises in Linear Algebra Done Wrong (LADW).
-	
 *)
 
 (*	(LADW 1.4) Uniqueness of the additive vector identity *)
